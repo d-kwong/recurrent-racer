@@ -1,0 +1,16 @@
+*.cs text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.svg text eol=lf
+*.pt binary
+*.npz binary
+*.gif binary
+*.mp4 binary
+*.csv text eol=lf
+# Unity and Matplotlib generated serialization commonly leaves empty field padding.
+*.asset whitespace=-blank-at-eol
+*.meta whitespace=-blank-at-eol
+*.unity whitespace=-blank-at-eol
+*.prefab whitespace=-blank-at-eol
+*.mat whitespace=-blank-at-eol
+*.svg whitespace=-blank-at-eol

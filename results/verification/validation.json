@@ -1,0 +1,150 @@
+{
+  "checked_on": "2026-10-01",
+  "platform": "macOS arm64; existing Python 3.10.12 environment; CPU",
+  "python_tests_passed": 10,
+  "source_learner_ast_unchanged": [
+    "TwinQ",
+    "Replay",
+    "bellman_target",
+    "SAC",
+    "UnityStream",
+    "rng_restore",
+    "save",
+    "score_evaluation",
+    "rank",
+    "evaluate",
+    "file_sha",
+    "build_manifest",
+    "train"
+  ],
+  "unity_source_only_runtime_change": "RoadDistanceSensor adds opt-in copies of existing sample data; new presentation component is isolated.",
+  "original_runtime_source_parity": {
+    "RacingEnvironment/Assets/Racing/Scripts/UI/RaceHud.cs": true,
+    "RacingEnvironment/Assets/Racing/Scripts/Track/CheckpointGate.cs": true,
+    "RacingEnvironment/Assets/Racing/Scripts/Track/CrashBoundary.cs": true,
+    "RacingEnvironment/Assets/Racing/Scripts/Track/PrototypeSettings.cs": true,
+    "RacingEnvironment/Assets/Racing/Scripts/Track/RaceTrack.cs": true,
+    "RacingEnvironment/Assets/Racing/Scripts/Vehicle/KeyboardDriver.cs": true,
+    "RacingEnvironment/Assets/Racing/Scripts/Vehicle/WheelVisuals.cs": true,
+    "RacingEnvironment/Assets/Racing/Scripts/Vehicle/ArcadeVehicle.cs": true,
+    "RacingEnvironment/Assets/Racing/Scripts/Vehicle/DriftMarks.cs": true,
+    "RacingEnvironment/Assets/Racing/Scripts/Camera/ChaseCamera.cs": true,
+    "RacingEnvironment/Assets/Racing/Scripts/Episode/RaceEpisode.cs": true,
+    "RacingEnvironment/Assets/Racing/Scripts/RL/RacingAgent.cs": true,
+    "RacingEnvironment/Assets/Racing/Scripts/RL/RouteProgress.cs": true,
+    "RacingEnvironment/Assets/Racing/Scripts/RL/TrainingMode.cs": true,
+    "RacingEnvironment/Assets/Racing/Scripts/RL/RoadDistanceSensor.cs": false
+  },
+  "curated_build_sha256": "20ebb8b05d8774e13ddd020152f00ab16edbe03491517bf97948e764b3fb182a",
+  "export_parity": {
+    "observations": 1600,
+    "maximum_action_difference": 0.0,
+    "initializer_observations": 1000,
+    "initializer_maximum_action_difference": 0
+  },
+  "evaluation_original_start": {
+    "episodes": 3,
+    "finish_proxy_count": 3,
+    "estimated_times_seconds": [
+      20.0,
+      20.0,
+      20.0
+    ],
+    "returns": [
+      5.8846188130410155,
+      5.8846188130410155,
+      5.8846188130410155
+    ],
+    "mean_return": 5.8846188130410155
+  },
+  "curated_approach_episodes": 12,
+  "trace_comparison": {
+    "curated-headless": {
+      "maximum_absolute_difference": 0.0,
+      "arrays_compared": 18,
+      "exactly_equal": true
+    },
+    "hero-playback": {
+      "maximum_absolute_difference": 0.0,
+      "arrays_compared": 6,
+      "exactly_equal": true
+    },
+    "ray-playback": {
+      "maximum_absolute_difference": 0.0,
+      "arrays_compared": 6,
+      "exactly_equal": true
+    }
+  },
+  "sensor_snapshot_observation_match": {
+    "action_observations": 200,
+    "ray_fields": 11,
+    "exactly_equal": true
+  },
+  "training_smoke": {
+    "transitions": 128,
+    "updates": 100,
+    "outcome": "completed",
+    "overrides": {
+      "learning_starts": 32,
+      "batch_size": 32,
+      "replay_capacity": 256,
+      "eval_frequency": 64,
+      "checkpoint_frequency": 64
+    }
+  },
+  "resume_smoke": {
+    "cumulative_transitions": 192,
+    "new_transitions": 64,
+    "updates": 164,
+    "outcome": "completed"
+  },
+  "publication_content_audit": {
+    "files": 215,
+    "relative_markdown_links_checked": 42,
+    "broken_links": [],
+    "machine_paths_or_credential_patterns": [],
+    "unity_guid_references_checked": 721,
+    "missing_guids": []
+  },
+  "animations": {
+    "hero": {
+      "frames": 198,
+      "size": [
+        720,
+        405
+      ],
+      "bytes": 6643336
+    },
+    "perception": {
+      "frames": 80,
+      "size": [
+        720,
+        405
+      ],
+      "bytes": 2640929
+    }
+  },
+  "untested": [
+    "fresh dependency install",
+    "clean-machine reproduction",
+    "other operating systems",
+    "held-out tracks",
+    "independent training seeds",
+    "full sustained training rerun"
+  ],
+  "capture_build_sha256": "1798947bf962d06236bd29932d6a7e0a255c5e81c69105c4fa40cb8512545dec",
+  "final_source_rebuild": {
+    "result": "succeeded",
+    "post_cleanup_episodes": 12,
+    "arrays_compared_to_original": 72,
+    "exactly_equal": true,
+    "cleanup": "Removed cloud account identifiers, unavailable/editor-test default-volume components and obsolete probe-debug asset references."
+  },
+  "final_location_evaluation": {
+    "original_start_episodes": 1,
+    "reward_inferred_finish_count": 1,
+    "estimated_finished_seconds": 20.0,
+    "raw_return": 5.8846188130410155,
+    "result": "passed; imported final publication modules and loaded final export using independently built player"
+  }
+}

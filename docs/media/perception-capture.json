@@ -1,0 +1,35 @@
+{
+  "source": "Unity ScreenCapture.CaptureScreenshotAsTexture; actual selected-policy rollout",
+  "policy": "policies/selected.pt",
+  "policy_sha256": "13363bc38c08bbaea94c0cfa3817f28cf35d00aa42a012e736cb9dc08d37ed04",
+  "training_transitions": 49232,
+  "seed": 7,
+  "frame_count": 129,
+  "source_size": [
+    1280,
+    720
+  ],
+  "source_wall_duration_seconds": 8.016467160000001,
+  "simulation_interval_seconds": [
+    1.15999949,
+    9.119996
+  ],
+  "editing": "Contiguous frames only; original timestamp spacing resampled to MP4 30 fps and GIF 10 fps; no retiming.",
+  "camera": "Overhead ray view",
+  "rays": true,
+  "files": {
+    "perception.mp4": {
+      "bytes": 974195,
+      "sha256": "f6e8c2a1ebfb691a906c4b5c2302e6e765afd9df08aaa2ae41cf5f2e06700718"
+    },
+    "perception.gif": {
+      "bytes": 2640929,
+      "sha256": "0c7a779374157adcefdcfb07bdb449c57fe5731a5833b8e9cdc2fe9095e509a9"
+    },
+    "perception-poster.png": {
+      "bytes": 58030,
+      "sha256": "c3abbe3f994b8ead21f1b9d5602dfa18891c5e322280a12cc3a97aa9ffc6228e"
+    }
+  },
+  "capture_build_sha256": "1798947bf962d06236bd29932d6a7e0a255c5e81c69105c4fa40cb8512545dec"
+}

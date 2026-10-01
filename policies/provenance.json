@@ -1,0 +1,42 @@
+{
+  "selected_source": "runs/sac/lap-v2/best.pt",
+  "source_sha256": "fc2665086094b05968f0f99f8169579e161e45f4ff4f83ca65877e91594c1257",
+  "source_bytes": 714035,
+  "export": "policies/selected.pt",
+  "export_sha256": "13363bc38c08bbaea94c0cfa3817f28cf35d00aa42a012e736cb9dc08d37ed04",
+  "export_bytes": 25100,
+  "state": {
+    "transitions": 49232,
+    "updates": 47236,
+    "episodes": 426,
+    "eval_transitions": 2949,
+    "best_evaluation": {
+      "mean_return": 5.8846188130410155,
+      "reward_inferred_finish_fraction": 1.0,
+      "mean_finished_seconds": 20.0,
+      "best_finished_seconds": 20.0,
+      "mean_length": 200.0,
+      "approach_m": 0,
+      "transitions": 600,
+      "wall_seconds": 2.993510457978118
+    },
+    "last_evaluation_step": 49232,
+    "outcome": "interrupted",
+    "session_wall_seconds": 257.71670262500993
+  },
+  "selection": "Descending finish fraction, ascending estimated finished-lap time, descending raw return; original start only.",
+  "training_seed": 7,
+  "total_observed_training_transitions": 119798,
+  "requested_budget": 1000000,
+  "training_build_sha256": "825abd7d4f8627d438fc326d3e6fce2de89259a15ef1c1270b43b34d41b7d13e",
+  "original_trainer_sha256": "aa19b0c859efcd5173f48f01ac7bc474d7d7aa70e741f0b236ec472f75adbd09",
+  "warm_start": {
+    "source": "runs/value-baseline-experiment/baseline-to300k/best.pt",
+    "source_sha256": "8149e1c626cacbe1938cfb49d1c9d3d95a9a6ec8c844bc86ec361664c5500fd0",
+    "source_version": 75,
+    "rule": "Deterministic trunk and mean only; fresh SAC critics/replay/optimizers and log-std initialized to log(.3).",
+    "export": "policies/initial-mean.pt"
+  },
+  "resume_source_sha256": "2c743c3b3f237bea507c048eb7b3a741d660b2437a760b540281ae114087204b",
+  "scope": "One fixed rounded-square track; repeated original starts, not held-out tracks or independent training seeds."
+}

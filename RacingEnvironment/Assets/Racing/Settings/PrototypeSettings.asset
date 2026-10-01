@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdec963b11631436fa7d5bca35a9b8d1, type: 3}
+  m_Name: PrototypeSettings
+  m_EditorClassIdentifier: Assembly-CSharp::Racing.PrototypeSettings
+  carLength: 5.4
+  carWidth: 1.3333334
+  carHeight: 0.95
+  noseWidthRatio: 0.56
+  cockpitHeightRatio: 0.52
+  cockpitLongitudinalOffset: -0.3
+  collisionWidth: 3.38
+  wheelGap: 0.11958328
+  wheelWidth: 0.55
+  wheelDiameter: 0.95
+  wheelVerticalOffset: -0.08
+  roadWidth: 9
+  curbWidth: 1
+  straightLength: 100
+  cornerRadius: 16
+  bodyColor: {r: 1, g: 0.025, b: 0.015, a: 1}
+  accentColor: {r: 1, g: 1, b: 1, a: 1}
+  wheelColor: {r: 0.015, g: 0.015, b: 0.015, a: 1}
+  roadColor: {r: 0.32, g: 0.34, b: 0.36, a: 1}
+  groundColor: {r: 0.035, g: 0.19, b: 0.065, a: 1}

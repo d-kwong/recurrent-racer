@@ -1,0 +1,35 @@
+{
+  "source": "Unity ScreenCapture.CaptureScreenshotAsTexture; actual selected-policy rollout",
+  "policy": "policies/selected.pt",
+  "policy_sha256": "13363bc38c08bbaea94c0cfa3817f28cf35d00aa42a012e736cb9dc08d37ed04",
+  "training_transitions": 49232,
+  "seed": 7,
+  "frame_count": 326,
+  "source_size": [
+    1280,
+    720
+  ],
+  "source_wall_duration_seconds": 19.81603773,
+  "simulation_interval_seconds": [
+    0.119999953,
+    19.899992
+  ],
+  "editing": "Contiguous frames only; original timestamp spacing resampled to MP4 30 fps and GIF 10 fps; no retiming.",
+  "camera": "Chase camera: 35 degrees down, 22 m, 48 degree FOV",
+  "rays": false,
+  "files": {
+    "hero.mp4": {
+      "bytes": 2166154,
+      "sha256": "5cc83c71fe3bb9b1a66b9b527acaf3fa55a58850bbc6403209abcdd528a325c5"
+    },
+    "hero.gif": {
+      "bytes": 6643336,
+      "sha256": "895462469f56e93ad4c18daffb18ea8bb1a62dd6f426090acb144eee0166bfac"
+    },
+    "hero-poster.png": {
+      "bytes": 61577,
+      "sha256": "86d7cdce6cf4d1858fa0ca85537d966f298e955061e66b3bfb4890a2f8338f9c"
+    }
+  },
+  "capture_build_sha256": "1798947bf962d06236bd29932d6a7e0a255c5e81c69105c4fa40cb8512545dec"
+}

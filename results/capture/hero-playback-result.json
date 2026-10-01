@@ -1,0 +1,12 @@
+{
+  "0": {
+    "mean_return": 5.8846188130410155,
+    "reward_inferred_finish_fraction": 1.0,
+    "mean_finished_seconds": 20.0,
+    "best_finished_seconds": 20.0,
+    "mean_length": 200.0,
+    "approach_m": 0,
+    "transitions": 200,
+    "wall_seconds": 20.378152582998155
+  }
+}

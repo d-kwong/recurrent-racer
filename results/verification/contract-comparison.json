@@ -1,0 +1,17 @@
+{
+  "curated-headless": {
+    "maximum_absolute_difference": 0.0,
+    "arrays_compared": 18,
+    "exactly_equal": true
+  },
+  "hero-playback": {
+    "maximum_absolute_difference": 0.0,
+    "arrays_compared": 6,
+    "exactly_equal": true
+  },
+  "ray-playback": {
+    "maximum_absolute_difference": 0.0,
+    "arrays_compared": 6,
+    "exactly_equal": true
+  }
+}

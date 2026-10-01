@@ -1,0 +1,22 @@
+# Generated Unity and local experiment outputs
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]serSettings/
+**/[Bb]uilds/
+**/MemoryCaptures/
+**/.vs/
+**/.vscode/
+*.csproj
+*.sln
+*.slnx
+*.user
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+runs/
+# Resumable checkpoints belong in local runs, selected inference exports in policies.
+latest.pt
+*.tmp
