@@ -33,7 +33,7 @@ A one-million-transition budget was requested. The run was interrupted after 119
 
 ```sh
 .venv/bin/python python/train_sac.py evaluate \
-  --checkpoint policies/selected.pt --approaches --eval-episodes 3 \
+  --checkpoint policies/selected.pt --track-mode fixed --approaches --eval-episodes 3 \
   --seed 7 --output runs/selected-evaluation
 ```
 

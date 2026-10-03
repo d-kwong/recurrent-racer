@@ -1,0 +1,13 @@
+{
+  "decision": "No additional training",
+  "reason": "Preserved procedural actor finished all eight original development routes cleanly before training.",
+  "checkpoint": "policies/procedural-selected.pt",
+  "checkpoint_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
+  "historical_procedural_transitions": 12210,
+  "additional_transitions": 0,
+  "combined_training_session_seconds": 0,
+  "authorized_transition_ceiling": 200000,
+  "authorized_training_session_seconds": 1800,
+  "development_evidence": "results/quality/development-baseline.json",
+  "test_protocol": "Freeze before a single untouched evaluation; no selection or further training from test outcomes."
+}

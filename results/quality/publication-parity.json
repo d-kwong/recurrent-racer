@@ -1,0 +1,568 @@
+{
+  "policy_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
+  "held_out_actor_actions_checked": 6431,
+  "headless_actor_actions_checked": 870,
+  "camera_runs": [
+    {
+      "seed": 20001,
+      "camera": "chase",
+      "bitwise_equal": true,
+      "trace_sha256": "e16f7d1f131e08ed34165604bdd80a1ccc55a1ef36581114be29d6ddfef610ca",
+      "clean_finish": true,
+      "episode": {
+        "seed": 20001,
+        "geometrySha256": "ab33c42e1da308f2c0f5c3e5874e7ff6331e91b5bc69cc82a6ad88ea780c3a89",
+        "taskSha256": "6a81ecc2d3670b51f5451bb906bb450402387d687b86fbe62e72a6f2cd329e2f",
+        "reason": "Finish",
+        "interrupted": false,
+        "physicsTicks": 973,
+        "simulatedSeconds": 19.459991455078125,
+        "spawnTurnIndex": -1,
+        "quality": {
+          "version": "physics-quality-v1",
+          "ticks": 973,
+          "offAsphaltTicks": 0,
+          "offAsphaltFraction": 0.0,
+          "maximumReverseSeconds": 0.0,
+          "maximumStallSeconds": 0.0,
+          "firstCornerPassed": true,
+          "cleanFinish": true,
+          "firstCornerEntryDistance": 50.1499137878418,
+          "firstCornerExitDistance": 107.10389709472656,
+          "failureDistanceToFirstCorner": -408.12164306640625
+        },
+        "actualSpawnPosition": {
+          "x": 0.0,
+          "y": 0.5550000071525574,
+          "z": 4.0
+        },
+        "spawnForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "taskDistance": 460.4931640625,
+        "turnAngles": [
+          -94.00738525390625,
+          88.80575561523438,
+          -81.11665344238281,
+          56.57162094116211,
+          -48.031394958496094
+        ],
+        "turnRadii": [
+          34.717037200927734,
+          39.77802658081055,
+          37.967506408691406,
+          36.329410552978516,
+          35.13590621948242
+        ]
+      },
+      "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe"
+    },
+    {
+      "seed": 20001,
+      "camera": "overview",
+      "bitwise_equal": true,
+      "trace_sha256": "e16f7d1f131e08ed34165604bdd80a1ccc55a1ef36581114be29d6ddfef610ca",
+      "clean_finish": true,
+      "episode": {
+        "seed": 20001,
+        "geometrySha256": "ab33c42e1da308f2c0f5c3e5874e7ff6331e91b5bc69cc82a6ad88ea780c3a89",
+        "taskSha256": "6a81ecc2d3670b51f5451bb906bb450402387d687b86fbe62e72a6f2cd329e2f",
+        "reason": "Finish",
+        "interrupted": false,
+        "physicsTicks": 973,
+        "simulatedSeconds": 19.459991455078125,
+        "spawnTurnIndex": -1,
+        "quality": {
+          "version": "physics-quality-v1",
+          "ticks": 973,
+          "offAsphaltTicks": 0,
+          "offAsphaltFraction": 0.0,
+          "maximumReverseSeconds": 0.0,
+          "maximumStallSeconds": 0.0,
+          "firstCornerPassed": true,
+          "cleanFinish": true,
+          "firstCornerEntryDistance": 50.1499137878418,
+          "firstCornerExitDistance": 107.10389709472656,
+          "failureDistanceToFirstCorner": -408.12164306640625
+        },
+        "actualSpawnPosition": {
+          "x": 0.0,
+          "y": 0.5550000071525574,
+          "z": 4.0
+        },
+        "spawnForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "taskDistance": 460.4931640625,
+        "turnAngles": [
+          -94.00738525390625,
+          88.80575561523438,
+          -81.11665344238281,
+          56.57162094116211,
+          -48.031394958496094
+        ],
+        "turnRadii": [
+          34.717037200927734,
+          39.77802658081055,
+          37.967506408691406,
+          36.329410552978516,
+          35.13590621948242
+        ]
+      },
+      "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe"
+    },
+    {
+      "seed": 20003,
+      "camera": "chase",
+      "bitwise_equal": true,
+      "trace_sha256": "4d5775b89d8f56fb3f99412bb8f3984fd881b0df72500d8c94b23e5d72c08ae0",
+      "clean_finish": true,
+      "episode": {
+        "seed": 20003,
+        "geometrySha256": "426a0bd4c90ee8c49605d8a17048ac74c1f4e552aaca9a5419e143fbba1eb590",
+        "taskSha256": "a44971be205386089670680207ef1271a1a3d3bfab3c9191acc5968c3e302fbf",
+        "reason": "Finish",
+        "interrupted": false,
+        "physicsTicks": 829,
+        "simulatedSeconds": 16.579994201660156,
+        "spawnTurnIndex": -1,
+        "quality": {
+          "version": "physics-quality-v1",
+          "ticks": 829,
+          "offAsphaltTicks": 0,
+          "offAsphaltFraction": 0.0,
+          "maximumReverseSeconds": 0.0,
+          "maximumStallSeconds": 0.0,
+          "firstCornerPassed": true,
+          "cleanFinish": true,
+          "firstCornerEntryDistance": 47.337608337402344,
+          "firstCornerExitDistance": 73.8481216430664,
+          "failureDistanceToFirstCorner": -335.0855712890625
+        },
+        "actualSpawnPosition": {
+          "x": 0.0,
+          "y": 0.5550000071525574,
+          "z": 4.0
+        },
+        "spawnForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "taskDistance": 384.8622741699219,
+        "turnAngles": [
+          -67.52050018310547,
+          65.03861999511719,
+          -68.96772003173828,
+          31.953413009643555,
+          -37.675052642822266
+        ],
+        "turnRadii": [
+          22.50261878967285,
+          37.727577209472656,
+          31.15933609008789,
+          30.616565704345703,
+          35.77457046508789
+        ]
+      },
+      "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe"
+    },
+    {
+      "seed": 20003,
+      "camera": "overview",
+      "bitwise_equal": true,
+      "trace_sha256": "4d5775b89d8f56fb3f99412bb8f3984fd881b0df72500d8c94b23e5d72c08ae0",
+      "clean_finish": true,
+      "episode": {
+        "seed": 20003,
+        "geometrySha256": "426a0bd4c90ee8c49605d8a17048ac74c1f4e552aaca9a5419e143fbba1eb590",
+        "taskSha256": "a44971be205386089670680207ef1271a1a3d3bfab3c9191acc5968c3e302fbf",
+        "reason": "Finish",
+        "interrupted": false,
+        "physicsTicks": 829,
+        "simulatedSeconds": 16.579994201660156,
+        "spawnTurnIndex": -1,
+        "quality": {
+          "version": "physics-quality-v1",
+          "ticks": 829,
+          "offAsphaltTicks": 0,
+          "offAsphaltFraction": 0.0,
+          "maximumReverseSeconds": 0.0,
+          "maximumStallSeconds": 0.0,
+          "firstCornerPassed": true,
+          "cleanFinish": true,
+          "firstCornerEntryDistance": 47.337608337402344,
+          "firstCornerExitDistance": 73.8481216430664,
+          "failureDistanceToFirstCorner": -335.0855712890625
+        },
+        "actualSpawnPosition": {
+          "x": 0.0,
+          "y": 0.5550000071525574,
+          "z": 4.0
+        },
+        "spawnForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "taskDistance": 384.8622741699219,
+        "turnAngles": [
+          -67.52050018310547,
+          65.03861999511719,
+          -68.96772003173828,
+          31.953413009643555,
+          -37.675052642822266
+        ],
+        "turnRadii": [
+          22.50261878967285,
+          37.727577209472656,
+          31.15933609008789,
+          30.616565704345703,
+          35.77457046508789
+        ]
+      },
+      "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe"
+    },
+    {
+      "seed": 20007,
+      "camera": "chase",
+      "bitwise_equal": true,
+      "trace_sha256": "cc20546f044b58123fbf5f7bb86243ca8330bc3a345c960eea1a3a03b80b8d09",
+      "clean_finish": true,
+      "episode": {
+        "seed": 20007,
+        "geometrySha256": "2723c2a64389a5dff32a8335d904f1a79352baf488423ffef0dd4853aff9900b",
+        "taskSha256": "d4ef288c671aa191edf9a440aa0512d32a16875f431c8e5a5942810d7e7606f5",
+        "reason": "Finish",
+        "interrupted": false,
+        "physicsTicks": 845,
+        "simulatedSeconds": 16.899993896484375,
+        "spawnTurnIndex": -1,
+        "quality": {
+          "version": "physics-quality-v1",
+          "ticks": 845,
+          "offAsphaltTicks": 0,
+          "offAsphaltFraction": 0.0,
+          "maximumReverseSeconds": 0.0,
+          "maximumStallSeconds": 0.0,
+          "firstCornerPassed": true,
+          "cleanFinish": true,
+          "firstCornerEntryDistance": 45.4611930847168,
+          "firstCornerExitDistance": 72.27136993408203,
+          "failureDistanceToFirstCorner": -345.1186218261719
+        },
+        "actualSpawnPosition": {
+          "x": 0.0,
+          "y": 0.5550000071525574,
+          "z": 4.0
+        },
+        "spawnForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "taskDistance": 392.6763000488281,
+        "turnAngles": [
+          -54.425228118896484,
+          77.5098876953125,
+          -41.00076675415039,
+          63.90419387817383,
+          -77.79771423339844
+        ],
+        "turnRadii": [
+          28.22964096069336,
+          41.00947570800781,
+          40.61817932128906,
+          31.45471954345703,
+          36.667423248291016
+        ]
+      },
+      "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe"
+    },
+    {
+      "seed": 20007,
+      "camera": "overview",
+      "bitwise_equal": true,
+      "trace_sha256": "cc20546f044b58123fbf5f7bb86243ca8330bc3a345c960eea1a3a03b80b8d09",
+      "clean_finish": true,
+      "episode": {
+        "seed": 20007,
+        "geometrySha256": "2723c2a64389a5dff32a8335d904f1a79352baf488423ffef0dd4853aff9900b",
+        "taskSha256": "d4ef288c671aa191edf9a440aa0512d32a16875f431c8e5a5942810d7e7606f5",
+        "reason": "Finish",
+        "interrupted": false,
+        "physicsTicks": 845,
+        "simulatedSeconds": 16.899993896484375,
+        "spawnTurnIndex": -1,
+        "quality": {
+          "version": "physics-quality-v1",
+          "ticks": 845,
+          "offAsphaltTicks": 0,
+          "offAsphaltFraction": 0.0,
+          "maximumReverseSeconds": 0.0,
+          "maximumStallSeconds": 0.0,
+          "firstCornerPassed": true,
+          "cleanFinish": true,
+          "firstCornerEntryDistance": 45.4611930847168,
+          "firstCornerExitDistance": 72.27136993408203,
+          "failureDistanceToFirstCorner": -345.1186218261719
+        },
+        "actualSpawnPosition": {
+          "x": 0.0,
+          "y": 0.5550000071525574,
+          "z": 4.0
+        },
+        "spawnForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "taskDistance": 392.6763000488281,
+        "turnAngles": [
+          -54.425228118896484,
+          77.5098876953125,
+          -41.00076675415039,
+          63.90419387817383,
+          -77.79771423339844
+        ],
+        "turnRadii": [
+          28.22964096069336,
+          41.00947570800781,
+          40.61817932128906,
+          31.45471954345703,
+          36.667423248291016
+        ]
+      },
+      "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe"
+    },
+    {
+      "seed": 20002,
+      "camera": "chase",
+      "bitwise_equal": true,
+      "trace_sha256": "899f89b1951170adce3d0eee438f4e156c30c23ebed4171c9a3dbc6ee0ae7eae",
+      "clean_finish": true,
+      "episode": {
+        "seed": 20002,
+        "geometrySha256": "329913584689f02e0e8edfbf0e4cceedc7600c5f9170ca7d0de7fb4af3d53949",
+        "taskSha256": "da6d1d08d988696efff586353c43d1759a9510a61d884e34b8615555987cb774",
+        "reason": "Finish",
+        "interrupted": false,
+        "physicsTicks": 867,
+        "simulatedSeconds": 17.33999252319336,
+        "spawnTurnIndex": -1,
+        "quality": {
+          "version": "physics-quality-v1",
+          "ticks": 867,
+          "offAsphaltTicks": 0,
+          "offAsphaltFraction": 0.0,
+          "maximumReverseSeconds": 0.0,
+          "maximumStallSeconds": 0.0,
+          "firstCornerPassed": true,
+          "cleanFinish": true,
+          "firstCornerEntryDistance": 50.614990234375,
+          "firstCornerExitDistance": 87.87699890136719,
+          "failureDistanceToFirstCorner": -354.25201416015625
+        },
+        "actualSpawnPosition": {
+          "x": 0.0,
+          "y": 0.5550000071525574,
+          "z": 4.0
+        },
+        "spawnForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "taskDistance": 407.14788818359375,
+        "turnAngles": [
+          -59.651824951171875,
+          96.9662094116211,
+          -83.60752868652344,
+          39.9037971496582,
+          -47.16897201538086
+        ],
+        "turnRadii": [
+          35.79475784301758,
+          37.48743438720703,
+          29.63258171081543,
+          22.298717498779297,
+          29.648670196533203
+        ]
+      },
+      "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe"
+    },
+    {
+      "seed": 20002,
+      "camera": "overview",
+      "bitwise_equal": true,
+      "trace_sha256": "899f89b1951170adce3d0eee438f4e156c30c23ebed4171c9a3dbc6ee0ae7eae",
+      "clean_finish": true,
+      "episode": {
+        "seed": 20002,
+        "geometrySha256": "329913584689f02e0e8edfbf0e4cceedc7600c5f9170ca7d0de7fb4af3d53949",
+        "taskSha256": "da6d1d08d988696efff586353c43d1759a9510a61d884e34b8615555987cb774",
+        "reason": "Finish",
+        "interrupted": false,
+        "physicsTicks": 867,
+        "simulatedSeconds": 17.33999252319336,
+        "spawnTurnIndex": -1,
+        "quality": {
+          "version": "physics-quality-v1",
+          "ticks": 867,
+          "offAsphaltTicks": 0,
+          "offAsphaltFraction": 0.0,
+          "maximumReverseSeconds": 0.0,
+          "maximumStallSeconds": 0.0,
+          "firstCornerPassed": true,
+          "cleanFinish": true,
+          "firstCornerEntryDistance": 50.614990234375,
+          "firstCornerExitDistance": 87.87699890136719,
+          "failureDistanceToFirstCorner": -354.25201416015625
+        },
+        "actualSpawnPosition": {
+          "x": 0.0,
+          "y": 0.5550000071525574,
+          "z": 4.0
+        },
+        "spawnForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "taskDistance": 407.14788818359375,
+        "turnAngles": [
+          -59.651824951171875,
+          96.9662094116211,
+          -83.60752868652344,
+          39.9037971496582,
+          -47.16897201538086
+        ],
+        "turnRadii": [
+          35.79475784301758,
+          37.48743438720703,
+          29.63258171081543,
+          22.298717498779297,
+          29.648670196533203
+        ]
+      },
+      "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe"
+    },
+    {
+      "seed": 20005,
+      "camera": "chase",
+      "bitwise_equal": true,
+      "trace_sha256": "52469f3d1780a12e6daf449013055931fb1ca0a97faafa90f5861b5c4935e48e",
+      "clean_finish": true,
+      "episode": {
+        "seed": 20005,
+        "geometrySha256": "77b560458d7cc3288126c0fc1fc554cbc56169cbf9e3c0aabc8fe3de5f7fc250",
+        "taskSha256": "da3e94eb7d1f3bfcd674a0a977faf01599432919963d62a080a54e37e390b747",
+        "reason": "Finish",
+        "interrupted": false,
+        "physicsTicks": 829,
+        "simulatedSeconds": 16.579994201660156,
+        "spawnTurnIndex": -1,
+        "quality": {
+          "version": "physics-quality-v1",
+          "ticks": 829,
+          "offAsphaltTicks": 0,
+          "offAsphaltFraction": 0.0,
+          "maximumReverseSeconds": 0.0,
+          "maximumStallSeconds": 0.0,
+          "firstCornerPassed": true,
+          "cleanFinish": true,
+          "firstCornerEntryDistance": 48.275360107421875,
+          "firstCornerExitDistance": 89.64739990234375,
+          "failureDistanceToFirstCorner": -325.3835754394531
+        },
+        "actualSpawnPosition": {
+          "x": 0.0,
+          "y": 0.5550000071525574,
+          "z": 4.0
+        },
+        "spawnForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "taskDistance": 375.8504333496094,
+        "turnAngles": [
+          -79.11927032470703,
+          79.04609680175781,
+          -90.2103271484375,
+          93.21224975585938,
+          -36.83537292480469
+        ],
+        "turnRadii": [
+          29.965776443481445,
+          24.609140396118164,
+          25.10331153869629,
+          31.018726348876953,
+          26.564485549926758
+        ]
+      },
+      "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe"
+    },
+    {
+      "seed": 20005,
+      "camera": "overview",
+      "bitwise_equal": true,
+      "trace_sha256": "52469f3d1780a12e6daf449013055931fb1ca0a97faafa90f5861b5c4935e48e",
+      "clean_finish": true,
+      "episode": {
+        "seed": 20005,
+        "geometrySha256": "77b560458d7cc3288126c0fc1fc554cbc56169cbf9e3c0aabc8fe3de5f7fc250",
+        "taskSha256": "da3e94eb7d1f3bfcd674a0a977faf01599432919963d62a080a54e37e390b747",
+        "reason": "Finish",
+        "interrupted": false,
+        "physicsTicks": 829,
+        "simulatedSeconds": 16.579994201660156,
+        "spawnTurnIndex": -1,
+        "quality": {
+          "version": "physics-quality-v1",
+          "ticks": 829,
+          "offAsphaltTicks": 0,
+          "offAsphaltFraction": 0.0,
+          "maximumReverseSeconds": 0.0,
+          "maximumStallSeconds": 0.0,
+          "firstCornerPassed": true,
+          "cleanFinish": true,
+          "firstCornerEntryDistance": 48.275360107421875,
+          "firstCornerExitDistance": 89.64739990234375,
+          "failureDistanceToFirstCorner": -325.3835754394531
+        },
+        "actualSpawnPosition": {
+          "x": 0.0,
+          "y": 0.5550000071525574,
+          "z": 4.0
+        },
+        "spawnForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "taskDistance": 375.8504333496094,
+        "turnAngles": [
+          -79.11927032470703,
+          79.04609680175781,
+          -90.2103271484375,
+          93.21224975585938,
+          -36.83537292480469
+        ],
+        "turnRadii": [
+          29.965776443481445,
+          24.609140396118164,
+          25.10331153869629,
+          31.018726348876953,
+          26.564485549926758
+        ]
+      },
+      "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe"
+    }
+  ],
+  "comparison": "Exact array equality for observations,pre_tanh,actions,rewards,terminal_observation,boundary; rowwise exported mean actor recomputation."
+}

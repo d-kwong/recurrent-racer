@@ -1,0 +1,25 @@
+{
+  "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe",
+  "checks": [
+    {
+      "mode": "manual",
+      "track": "procedural",
+      "seed": 1009,
+      "original_start": true,
+      "started": true,
+      "procedural_record_count": 1,
+      "explicit_fixed_bypass": false,
+      "note": "Startup configuration only; no keyboard driving or policy inference. Fixed route checked by explicit bypass/no generated record, unchanged scene and separate historical fixed numerical regression."
+    },
+    {
+      "mode": "manual",
+      "track": "fixed",
+      "seed": null,
+      "original_start": true,
+      "started": true,
+      "procedural_record_count": 0,
+      "explicit_fixed_bypass": true,
+      "note": "Startup configuration only; no keyboard driving or policy inference. Fixed route checked by explicit bypass/no generated record, unchanged scene and separate historical fixed numerical regression."
+    }
+  ]
+}

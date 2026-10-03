@@ -1,0 +1,34 @@
+{
+  "source_frames": "frames-20002-chase",
+  "frame_count": 282,
+  "policy_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
+  "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe",
+  "seed": 20002,
+  "camera": "chase",
+  "spawn_turn_index": -1,
+  "measured_finish_fraction": 1.0,
+  "clean_finish_fraction": 1.0,
+  "terminal_simulated_seconds": 17.33999252319336,
+  "final_visual_to_terminal_seconds": 0.03999902319336002,
+  "full_recorded_interval_seconds": [
+    0.119999953,
+    17.2999935
+  ],
+  "initial_visual_acquisition_seconds": 0.119999953,
+  "terminal_hold_frames": 0,
+  "terminal_hold_playback_seconds": 0.0,
+  "discarded_post_reset_frames": 1,
+  "gif_episode_interval_seconds": [
+    1.0,
+    9.0
+  ],
+  "timing": "episode_seconds from physics-tick capture telemetry",
+  "full_mp4": "20002-chase.mp4",
+  "excerpt_gif": "20002-chase.gif",
+  "asset_sha256": {
+    "20002-chase.mp4": "2af2dc6508f17bfa99b9284d08b5b70ae81ac20378a6e6f564f87c4e776a4367",
+    "20002-chase.gif": "02d104b277d755fa91c52d1cc49288e85bab9c7af1ee5f21186d83070211b769",
+    "20002-chase.frames.csv": "7fb57de21a90590321d9d745fa35589e91c438b061ecd6278db159a4f1731388"
+  },
+  "note": "Run outcome, checkpoint/build identity and camera parity belong to the capture manifest."
+}

@@ -32,7 +32,7 @@ Temperature is learned: `alpha = exp(log_alpha)`, initially 0.02. The loss is `-
 
 ```sh
 .venv/bin/python python/train_sac.py train \
-  --config configs/train.json --output runs/my-sac
+  --config configs/train.json --track-mode fixed --output runs/my-sac
 .venv/bin/tensorboard --logdir runs/my-sac/tensorboard
 ```
 
@@ -40,7 +40,7 @@ Use Ctrl+C to save a consistent local `latest.pt`. Resume into a **new** output 
 
 ```sh
 .venv/bin/python python/train_sac.py train \
-  --config configs/train.json --resume runs/my-sac/latest.pt \
+  --config configs/train.json --track-mode fixed --resume runs/my-sac/latest.pt \
   --output runs/my-sac-resumed --max-transitions 2000000
 ```
 

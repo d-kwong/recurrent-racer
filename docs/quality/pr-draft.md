@@ -1,0 +1,11 @@
+# Refine procedural racing presentation and validate full-route driving
+
+The primary showcase now uses seeded procedural roads, green grass, a refined formula silhouette, and matched chase and stationary whole-route views. Historical fixed-track comparisons, perception media, checkpoints and metrics remain preserved and linked from `docs/history.md`.
+
+The existing procedural actor passed the original-start development baseline 8 / 8 clean, so no additional training was needed. Frozen before a single untouched test, it finished 40 / 40 test routes cleanly, averaging 16.03 s of actual physics-tick time. All five geometry-preselected demonstrations finished cleanly in both cameras with exact headless/chase/overview numerical parity; inference actions matched bit for bit. Passive telemetry measures reverse, unfinished stalls and time outside asphalt without changing actor observations, actions, rewards or dynamics.
+
+Bare Python view selects the accepted procedural actor on seed 1009. The native player requires Python for autonomous driving; keyboard manual mode uses procedural seed 1009, with explicit fixed geometry retained for historical reproduction. Final publication media uses one final presentation build, complete contiguous recorded first-episode MP4s and uniformly chosen 1–9 s GIF excerpts with acquisition-gap and reset-trim metadata. One actor and sampled generator routes do not establish robustness outside the generator or optimal driving.
+
+Validation: audited development and untouched reports, accepted ten-run capture gate, exact numerical camera parity and bitwise exported actions. All ten final-build captures also passed cleanliness and exact parity; all published MP4/GIF assets decoded successfully and their hashes were verified. No merge authorized.
+
+Refiner scope: `README.md`, `docs/history.md`, `docs/quality/showcase.md`, `docs/quality/refiner.md`, `docs/quality/pr-draft.md`, `tools/plot_quality.py`, `tools/encode_quality_media.py`, `docs/quality/showcase-candidate.md` redirect, `docs/quality/refiner-files.json`, historical command corrections in `docs/reproduction.md`, `docs/evaluation.md`, `docs/training.md`, `docs/procedural-tracks.md`, `docs/capture.md`, and audited new `docs/media/quality/` outputs (18.70 MB total; largest GIF 2.36 MB). Operator owns all Git/GitHub operations.

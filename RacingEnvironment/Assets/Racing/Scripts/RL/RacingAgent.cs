@@ -11,6 +11,7 @@ namespace Racing
         public int seed, physicsTicks, sequenceIndex, spawnSeed, spawnTurnIndex;
         public string geometrySha256, taskSha256, reason;
         public bool interrupted;
+        public DrivingQualityRecord quality;
         public float simulatedSeconds, travelMetres, routeLength, finishDistance, spawnDistance, spawnApproach;
     }
     public sealed class RacingAgent : Agent
@@ -40,6 +41,7 @@ namespace Racing
         float previousRewardPosition, bestProgress, episodeReward;
         int stagnantTicks;
         bool crashPending, finishPending;
+        DrivingQuality quality;
         int trackSequenceId=-1, trackSequenceIndex;
         readonly float[] observationBuffer=new float[ObservationCount];
         public override void Initialize()
@@ -62,11 +64,26 @@ namespace Racing
             previousRewardPosition=0; bestProgress=0; stagnantTicks=0; episodeReward=0;
             ElapsedSeconds=0; PhysicsTicks=0; LastActions=Vector2.zero;
             crashPending=false; finishPending=false;
+            quality=null;
+            if(Academy.Instance.EnvironmentParameters.GetWithDefault("racing_quality_telemetry",0)==1)
+            {
+                float entry=-1,exit=-1;
+                var generated=episode.track.GetComponent<ProceduralTrack>();
+                if(generated!=null && generated.Record!=null)
+                {
+                    var record=generated.Record;
+                    for(int i=0;i<record.turnExitDistances.Length;i++) if(record.turnExitDistances[i]>record.spawnDistance)
+                    { entry=record.turnEntryDistances[i]-record.spawnDistance;exit=record.turnExitDistances[i]-record.spawnDistance;break; }
+                }
+                quality=new DrivingQuality(entry,exit);
+            }
         }
-        void ConfigureTrack()
+        public void ConfigureTrack()
         {
             var parameters=Academy.Instance.EnvironmentParameters;
-            int mode=ProceduralTrack.Integer(parameters.GetWithDefault("racing_track_mode",0),0,1,"mode");
+            // Accepted showcase default; Python always supplies its explicit track mode.
+            int fallbackMode=System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--racing-fixed")>=0 ? 0 : 1;
+            int mode=ProceduralTrack.Integer(parameters.GetWithDefault("racing_track_mode",fallbackMode),0,1,"mode");
             var generator=episode.track.GetComponent<ProceduralTrack>();
             if(mode==0 && generator==null) return; // Exact fixed-track bypass.
             if(generator==null) generator=episode.track.gameObject.AddComponent<ProceduralTrack>();
@@ -74,7 +91,7 @@ namespace Racing
             if(sequenceId!=trackSequenceId) { trackSequenceId=sequenceId; trackSequenceIndex=0; }
             int seedCount=ProceduralTrack.Integer(parameters.GetWithDefault("racing_track_seed_count",0),0,64,"seed count");
             int index=trackSequenceIndex++;
-            float requested=seedCount==0 ? parameters.GetWithDefault("racing_track_seed",101) :
+            float requested=seedCount==0 ? parameters.GetWithDefault("racing_track_seed",1009) :
                 parameters.GetWithDefault("racing_track_seed_"+(index%seedCount),101);
             int seed=ProceduralTrack.Integer(requested,0,16777215,"seed");
             generator.Configure(episode.track,episode,mode,seed,ProceduralTrack.ReadParameters(),index);
@@ -127,6 +144,11 @@ namespace Racing
         {
             float dt=Time.fixedDeltaTime; ElapsedSeconds=PhysicsTicks*dt;
             bool valid=progress.Advance(vehicle.Body.position,vehicle.maximumSpeed*dt*1.5f+0.25f);
+            if(quality!=null)
+            {
+                Vector3 local=Quaternion.Inverse(vehicle.Body.rotation)*vehicle.Body.linearVelocity;
+                quality.Sample(dt,ElapsedSeconds,progress.LateralDistance,episode.track.roadWidth/2,local.z,vehicle.Body.linearVelocity.magnitude,progress.TravelMetres);
+            }
             float position=progress.RewardPosition;
             Reward((position-previousRewardPosition)*progressRewardPerMetre+timeRewardPerSecond*dt);
             previousRewardPosition=position;
@@ -149,7 +171,13 @@ namespace Racing
                     spawnDistance=generated.Record.spawnDistance, spawnApproach=generated.Record.spawnApproach,
                     reason=reason.ToString(), interrupted=interrupted, physicsTicks=PhysicsTicks,
                     simulatedSeconds=ElapsedSeconds, travelMetres=progress.TravelMetres,
-                    routeLength=progress.RouteLength, finishDistance=generated.Record.taskDistance }));
+                    routeLength=progress.RouteLength, finishDistance=generated.Record.taskDistance,
+                    quality=quality==null ? null : quality.Complete(reason==RacingEndReason.Finish,progress.TravelMetres) }));
+            else if(quality!=null)
+                Debug.Log("RACING_QUALITY_EPISODE: "+JsonUtility.ToJson(new ProceduralEpisodeRecord {
+                    reason=reason.ToString(),interrupted=interrupted,physicsTicks=PhysicsTicks,simulatedSeconds=ElapsedSeconds,
+                    travelMetres=progress.TravelMetres,routeLength=progress.RouteLength,
+                    quality=quality.Complete(reason==RacingEndReason.Finish,progress.TravelMetres) }));
             Reward(bonus); LastEndReason=reason; LastEndInterrupted=interrupted; LastEpisodeReward=episodeReward;
             if(interrupted) EpisodeInterrupted(); else EndEpisode();
         }

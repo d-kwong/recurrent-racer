@@ -1,0 +1,11 @@
+{
+  "gate_passed": true,
+  "checkpoint": "policies/procedural-selected.pt",
+  "checkpoint_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
+  "track_mode": "procedural",
+  "track_seed": 1009,
+  "track_eval_spawn_indices": [-1],
+  "quality_telemetry": true,
+  "quality_gate_evidence": "results/quality/capture-gate.json",
+  "untouched_test_evidence": "results/quality/held-out.json"
+}

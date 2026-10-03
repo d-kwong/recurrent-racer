@@ -95,6 +95,7 @@ def procedural_tasks(config, evaluation=False):
 
 def configure_track(env, config, evaluation=False):
     """Configure deterministic episode-boundary seed cycling; fixed remains default."""
+    env.racing_parameters.set_float_parameter('racing_quality_telemetry', int(config.get('quality_selection', False) or config.get('quality_telemetry', False)))
     mode = config.get('track_mode', 'fixed')
     if mode not in ('fixed', 'procedural'):
         raise ValueError('Unknown track_mode')
