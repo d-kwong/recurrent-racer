@@ -200,3 +200,10 @@ tools/plot_performance.py
 tools/run_bounded_training.py
 tools/summarize_curriculum_run.py
 ```
+
+## Published draft PR
+
+- Draft PR: [#1 — Add seeded tracks with turn-spawn curriculum and arcade presentation](https://github.com/d-kwong/recurrent-racer/pull/1), attached to this chat.
+- Reviewed implementation head: `3a9e5a91cc60568eb14c98521af4098a092af8a9`; branch `codex/seeded-tracks-portfolio`, base `main`.
+- GitHub reports mergeable/clean, with zero check runs and zero commit statuses. Its aggregate status is pending because no statuses are reported; this is not passing CI. Local validation evidence is included.
+- No publication blockers. No merge, force push, license change, baseline overwrite or unrelated files. A small subsequent documentation commit records this publication status; GitHub PR head advances accordingly.
