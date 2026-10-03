@@ -1,0 +1,55 @@
+{
+  "samples": [
+    {
+      "seed": 101,
+      "draws": 400,
+      "originalCount": 100,
+      "nearTurnCount": 300,
+      "leftCount": 188,
+      "rightCount": 112,
+      "turnCounts": [
+        50,
+        39,
+        63,
+        73,
+        75
+      ],
+      "nearTurnFraction": 0.75
+    },
+    {
+      "seed": 211,
+      "draws": 400,
+      "originalCount": 97,
+      "nearTurnCount": 303,
+      "leftCount": 184,
+      "rightCount": 119,
+      "turnCounts": [
+        72,
+        65,
+        55,
+        54,
+        57
+      ],
+      "nearTurnFraction": 0.7574999928474426
+    },
+    {
+      "seed": 307,
+      "draws": 400,
+      "originalCount": 100,
+      "nearTurnCount": 300,
+      "leftCount": 161,
+      "rightCount": 139,
+      "turnCounts": [
+        59,
+        51,
+        54,
+        88,
+        48
+      ],
+      "nearTurnFraction": 0.75
+    }
+  ],
+  "production_source_unchanged": true,
+  "verification_exit_code": 0,
+  "note": "400draws for each training track seed with independent spawnseed7; alloriginal+turnindices+left/right reached, approaches10\u201320m. Finite deterministic sample verifies coverage, not exact75% on every short run."
+}

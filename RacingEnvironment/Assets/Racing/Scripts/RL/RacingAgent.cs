@@ -5,6 +5,14 @@ using Unity.MLAgents.Sensors;
 namespace Racing
 {
     public enum RacingEndReason { None, Crash, OffTrack, InvalidProgress, Finish, NoProgress, Timeout }
+    [System.Serializable]
+    public sealed class ProceduralEpisodeRecord
+    {
+        public int seed, physicsTicks, sequenceIndex, spawnSeed, spawnTurnIndex;
+        public string geometrySha256, taskSha256, reason;
+        public bool interrupted;
+        public float simulatedSeconds, travelMetres, routeLength, finishDistance, spawnDistance, spawnApproach;
+    }
     public sealed class RacingAgent : Agent
     {
         public const int ObservationCount = RoadDistanceSensor.RayCount+4;
@@ -32,6 +40,7 @@ namespace Racing
         float previousRewardPosition, bestProgress, episodeReward;
         int stagnantTicks;
         bool crashPending, finishPending;
+        int trackSequenceId=-1, trackSequenceIndex;
         readonly float[] observationBuffer=new float[ObservationCount];
         public override void Initialize()
         {
@@ -48,15 +57,43 @@ namespace Racing
         }
         public override void OnEpisodeBegin()
         {
+            ConfigureTrack();
             episode.ResetRun(); ApplyCurriculumSpawn(); progress.ResetProgress(vehicle.Body.position);
             previousRewardPosition=0; bestProgress=0; stagnantTicks=0; episodeReward=0;
             ElapsedSeconds=0; PhysicsTicks=0; LastActions=Vector2.zero;
             crashPending=false; finishPending=false;
         }
+        void ConfigureTrack()
+        {
+            var parameters=Academy.Instance.EnvironmentParameters;
+            int mode=ProceduralTrack.Integer(parameters.GetWithDefault("racing_track_mode",0),0,1,"mode");
+            var generator=episode.track.GetComponent<ProceduralTrack>();
+            if(mode==0 && generator==null) return; // Exact fixed-track bypass.
+            if(generator==null) generator=episode.track.gameObject.AddComponent<ProceduralTrack>();
+            int sequenceId=ProceduralTrack.Integer(parameters.GetWithDefault("racing_track_sequence_id",0),0,16777215,"sequence id");
+            if(sequenceId!=trackSequenceId) { trackSequenceId=sequenceId; trackSequenceIndex=0; }
+            int seedCount=ProceduralTrack.Integer(parameters.GetWithDefault("racing_track_seed_count",0),0,64,"seed count");
+            int index=trackSequenceIndex++;
+            float requested=seedCount==0 ? parameters.GetWithDefault("racing_track_seed",101) :
+                parameters.GetWithDefault("racing_track_seed_"+(index%seedCount),101);
+            int seed=ProceduralTrack.Integer(requested,0,16777215,"seed");
+            generator.Configure(episode.track,episode,mode,seed,ProceduralTrack.ReadParameters(),index);
+            if(mode==1)
+            {
+                int spawnMode=ProceduralTrack.Integer(parameters.GetWithDefault("racing_track_spawn_mode",0),0,2,"spawn mode");
+                int spawnSeed=ProceduralTrack.Integer(parameters.GetWithDefault("racing_track_spawn_seed",7),0,16777215,"spawn seed");
+                int turn=ProceduralTrack.Integer(parameters.GetWithDefault("racing_track_spawn_turn_"+(seedCount==0 ? 0 : index%seedCount),-1),-1,11,"spawn turn");
+                generator.SetSpawn(episode,spawnMode,spawnSeed,index,
+                    parameters.GetWithDefault("racing_track_spawn_min",10),parameters.GetWithDefault("racing_track_spawn_max",20),
+                    parameters.GetWithDefault("racing_track_original_fraction",.25f),turn,parameters.GetWithDefault("racing_track_spawn_approach",15));
+                Debug.Log("RACING_TRACK: "+JsonUtility.ToJson(generator.Record));
+            }
+        }
         // Optional Python environment parameters. Default zero preserves original gameplay.
         // Only the episode pose changes; the finish line, gates and physics stay fixed.
         void ApplyCurriculumSpawn()
         {
+            if(!episode.track.closedLoop) return;
             var parameters=Academy.Instance.EnvironmentParameters;
             float minimum=parameters.GetWithDefault("racing_spawn_min",0);
             float maximum=parameters.GetWithDefault("racing_spawn_max",0);
@@ -104,6 +141,15 @@ namespace Racing
         }
         void Complete(RacingEndReason reason,bool interrupted,float bonus)
         {
+            var generated=episode.track.GetComponent<ProceduralTrack>();
+            if(generated!=null && generated.Record!=null)
+                Debug.Log("RACING_EPISODE: " + JsonUtility.ToJson(new ProceduralEpisodeRecord {
+                    seed=generated.Record.seed, sequenceIndex=Mathf.Max(0,trackSequenceIndex-1), geometrySha256=generated.Record.geometrySha256, taskSha256=generated.Record.taskSha256,
+                    spawnSeed=generated.Record.spawnSeed, spawnTurnIndex=generated.Record.spawnTurnIndex,
+                    spawnDistance=generated.Record.spawnDistance, spawnApproach=generated.Record.spawnApproach,
+                    reason=reason.ToString(), interrupted=interrupted, physicsTicks=PhysicsTicks,
+                    simulatedSeconds=ElapsedSeconds, travelMetres=progress.TravelMetres,
+                    routeLength=progress.RouteLength, finishDistance=generated.Record.taskDistance }));
             Reward(bonus); LastEndReason=reason; LastEndInterrupted=interrupted; LastEpisodeReward=episodeReward;
             if(interrupted) EpisodeInterrupted(); else EndEpisode();
         }

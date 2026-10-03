@@ -1,0 +1,303 @@
+{
+  "generated_seed_count": 1000,
+  "generator_version": "open-arcs-v1",
+  "representative_tracks": [
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 101,
+      "acceptedAttempt": 0,
+      "geometrySha256": "30fb48cb43baae29615b74f399a06c6d10f10816f253a3cf7aba375b08c470d5",
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "roadWidth": 9.0,
+      "curbWidth": 1.0,
+      "length": 433.34063720703125,
+      "spawnDistance": 4.0,
+      "finishDistance": 427.34063720703125,
+      "taskDistance": 423.34063720703125,
+      "spawnPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 4.0
+      },
+      "finishPosition": {
+        "x": -327.5684814453125,
+        "y": 0.0,
+        "z": 110.52609252929688
+      },
+      "gateDistances": [
+        427.34063720703125,
+        30.52433204650879,
+        61.04866409301758,
+        91.57299041748047,
+        122.09732818603516,
+        152.6216583251953,
+        183.14598083496094,
+        213.67031860351562,
+        244.1946563720703,
+        274.718994140625,
+        305.2433166503906,
+        335.76763916015625,
+        366.2919616699219,
+        396.8163146972656
+      ]
+    },
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 211,
+      "acceptedAttempt": 0,
+      "geometrySha256": "671982a07a2e659b0782625442c3f1e0dfe2d8b36b94c885c490f4f71408f8d2",
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "roadWidth": 9.0,
+      "curbWidth": 1.0,
+      "length": 462.2721862792969,
+      "spawnDistance": 4.0,
+      "finishDistance": 456.2721862792969,
+      "taskDistance": 452.2721862792969,
+      "spawnPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 4.0
+      },
+      "finishPosition": {
+        "x": -314.13690185546875,
+        "y": 0.0,
+        "z": 218.3010711669922
+      },
+      "gateDistances": [
+        456.2721862792969,
+        30.41814613342285,
+        60.8362922668457,
+        91.25444030761719,
+        121.6725845336914,
+        152.09072875976562,
+        182.50888061523438,
+        212.92701721191406,
+        243.3451690673828,
+        273.7633056640625,
+        304.18145751953125,
+        334.599609375,
+        365.01776123046875,
+        395.4358825683594,
+        425.8540344238281
+      ]
+    },
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 307,
+      "acceptedAttempt": 0,
+      "geometrySha256": "c1899bd8cedad00838db005fc9a1fa28956777e188533ca7bd41ba15c03a48cf",
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "roadWidth": 9.0,
+      "curbWidth": 1.0,
+      "length": 504.0003662109375,
+      "spawnDistance": 4.0,
+      "finishDistance": 498.0003662109375,
+      "taskDistance": 494.0003662109375,
+      "spawnPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 4.0
+      },
+      "finishPosition": {
+        "x": -257.736328125,
+        "y": 0.0,
+        "z": 329.9825439453125
+      },
+      "gateDistances": [
+        498.0003662109375,
+        31.125022888183594,
+        62.25004577636719,
+        93.37506866455078,
+        124.50009155273438,
+        155.6251220703125,
+        186.75013732910156,
+        217.87515258789062,
+        249.00018310546875,
+        280.1252136230469,
+        311.250244140625,
+        342.375244140625,
+        373.5002746582031,
+        404.62530517578125,
+        435.75030517578125,
+        466.8753356933594
+      ]
+    },
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 1009,
+      "acceptedAttempt": 0,
+      "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "roadWidth": 9.0,
+      "curbWidth": 1.0,
+      "length": 385.03021240234375,
+      "spawnDistance": 4.0,
+      "finishDistance": 379.03021240234375,
+      "taskDistance": 375.03021240234375,
+      "spawnPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 4.0
+      },
+      "finishPosition": {
+        "x": -221.7762451171875,
+        "y": 0.0,
+        "z": 214.54379272460938
+      },
+      "gateDistances": [
+        379.03021240234375,
+        29.156169891357422,
+        58.312339782714844,
+        87.46851348876953,
+        116.62467956542969,
+        145.78085327148438,
+        174.93702697753906,
+        204.0931854248047,
+        233.24935913085938,
+        262.405517578125,
+        291.56170654296875,
+        320.7178649902344,
+        349.8740539550781
+      ]
+    },
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 2003,
+      "acceptedAttempt": 0,
+      "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "roadWidth": 9.0,
+      "curbWidth": 1.0,
+      "length": 412.5727233886719,
+      "spawnDistance": 4.0,
+      "finishDistance": 406.5727233886719,
+      "taskDistance": 402.5727233886719,
+      "spawnPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 4.0
+      },
+      "finishPosition": {
+        "x": -264.1932373046875,
+        "y": 0.0,
+        "z": -29.852012634277344
+      },
+      "gateDistances": [
+        406.5727233886719,
+        31.274824142456055,
+        62.54964828491211,
+        93.82447814941406,
+        125.09929656982422,
+        156.37413024902344,
+        187.64895629882812,
+        218.92376708984375,
+        250.19859313964844,
+        281.4734191894531,
+        312.7482604980469,
+        344.0230712890625,
+        375.29791259765625
+      ]
+    },
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 3001,
+      "acceptedAttempt": 0,
+      "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "roadWidth": 9.0,
+      "curbWidth": 1.0,
+      "length": 375.4491882324219,
+      "spawnDistance": 4.0,
+      "finishDistance": 369.4491882324219,
+      "taskDistance": 365.4491882324219,
+      "spawnPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 4.0
+      },
+      "finishPosition": {
+        "x": -89.9677505493164,
+        "y": 0.0,
+        "z": 318.2642822265625
+      },
+      "gateDistances": [
+        369.4491882324219,
+        30.787431716918945,
+        61.57486343383789,
+        92.36229705810547,
+        123.14972686767578,
+        153.93716430664062,
+        184.72459411621094,
+        215.51202392578125,
+        246.29945373535156,
+        277.0868835449219,
+        307.87432861328125,
+        338.6617431640625
+      ]
+    }
+  ],
+  "geometry_export_sha256": "0306ecfb3f64d2b0c35c668c6cb20fed970316a014850bbeeaf6f5aeb42fb64c",
+  "checks": [
+    "1000 seeds deterministic and valid",
+    "sensor/crash ribbons aligned and physically ray-hit",
+    "ordered gates and finish before cap",
+    "open route no closing chord/no wrap",
+    "same-count length cache refreshed",
+    "fixed mode restored without active procedural colliders"
+  ],
+  "note": "Editor geometry diagnostics; not actual policy driving or complete environment reset/termination evidence."
+}

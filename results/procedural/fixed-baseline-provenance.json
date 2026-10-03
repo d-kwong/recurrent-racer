@@ -1,0 +1,19 @@
+{
+  "source_git_commit": "ccb6b29672b9bf91b4c0e92c822b8af36afad4ee",
+  "unity": "6000.6.3f1",
+  "build_sha256": "f3d79aa0a5457e274cce9d4a07ff9c9e2c77efda50f22e81a8463e1152fea264",
+  "policy": "policies/selected.pt",
+  "policy_sha256": "13363bc38c08bbaea94c0cfa3817f28cf35d00aa42a012e736cb9dc08d37ed04",
+  "seed": 7,
+  "mode": "fixed",
+  "spawn_curriculum": false,
+  "episodes": 3,
+  "trace_episodes_exactly_equal_historical": [
+    0,
+    1,
+    2
+  ],
+  "physics_seconds": 0.02,
+  "decision_ticks": 5,
+  "time_scale": 20
+}

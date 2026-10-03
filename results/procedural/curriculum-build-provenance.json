@@ -1,0 +1,25 @@
+{
+  "unity": "6000.6.3f1",
+  "build_sha256": "127c413280637dc9e72058ba1331fa9c14087dd7c155038f762f27e1d00157dc",
+  "unit_tests": 18,
+  "geometry_determinism_seeds": 1000,
+  "production_source_hashes": {
+    "RacingEnvironment/Assets/Racing/Scripts/Camera/ChaseCamera.cs": "e55b9e27e263f34fa710de69b3348038feb215f7b4c1f453b632a00a13e9f358",
+    "RacingEnvironment/Assets/Racing/Scripts/Episode/RaceEpisode.cs": "101a74347e5f9aaa42326573f5ad661f1f61ecbc47631ca040a7297db1920483",
+    "RacingEnvironment/Assets/Racing/Scripts/Presentation/PortfolioPresentation.cs": "031027d644a12f09614e6b94614947d830717526f5554c968e250a7606c02eee",
+    "RacingEnvironment/Assets/Racing/Scripts/RL/RacingAgent.cs": "2ad33fd962efd5917715195b80c641dfa2f8dabf9f884a9522d03065480ef5ad",
+    "RacingEnvironment/Assets/Racing/Scripts/RL/RoadDistanceSensor.cs": "15d14e8b2ec9b2cc96d2e04bbdbe0408498b086e98f34180def64f03374a216e",
+    "RacingEnvironment/Assets/Racing/Scripts/RL/RouteProgress.cs": "e722f70ede672d3b63a9c2967edd98e8ddee983d17fe1014944249752a094e0d",
+    "RacingEnvironment/Assets/Racing/Scripts/RL/TrainingMode.cs": "300240d4b29e318d059081bf462845b3bc22b873fffe50ab814c2db280ea9691",
+    "RacingEnvironment/Assets/Racing/Scripts/Track/CheckpointGate.cs": "f243c6702a41378a94293c4d4dc9e2014f5bb82a754e8aea69848495f5028d26",
+    "RacingEnvironment/Assets/Racing/Scripts/Track/CrashBoundary.cs": "fce6eef012df8de5ed30788499268016a851674bf60f6fe42f987513df620842",
+    "RacingEnvironment/Assets/Racing/Scripts/Track/ProceduralTrack.cs": "9d2890d83b35c05abf44226991c7de70cf0b6d71258fdec04f79a774c4144fa3",
+    "RacingEnvironment/Assets/Racing/Scripts/Track/PrototypeSettings.cs": "4a15e64e68a48fb15d85f5ff3424d8eabe59bc1e3098ff35b65ad13197802ba4",
+    "RacingEnvironment/Assets/Racing/Scripts/Track/RaceTrack.cs": "54389ba0864ea56253f1700ce25bdc83c1b9b869f12c661f3bf7632a188d192f",
+    "RacingEnvironment/Assets/Racing/Scripts/UI/RaceHud.cs": "16ed50353b70572205cb7965419639f30dc6c1565c1e43a57b16867733f5f50b",
+    "RacingEnvironment/Assets/Racing/Scripts/Vehicle/ArcadeVehicle.cs": "29bbacae44af73b4217917f3b1edaea65cceca939aa4a5588161be5398ba94ca",
+    "RacingEnvironment/Assets/Racing/Scripts/Vehicle/DriftMarks.cs": "3a73ebea5a1db2e784b2379c318d3645529aae92ce3f83c395f92803b941ff5a",
+    "RacingEnvironment/Assets/Racing/Scripts/Vehicle/KeyboardDriver.cs": "2bcf1178621bdf543ec39877e163acabbbaad908b2ebe10488a4135a0506d89f",
+    "RacingEnvironment/Assets/Racing/Scripts/Vehicle/WheelVisuals.cs": "94ddb1627ed234dd0715f9049e15419d3a8a8e549c2736de53ef0e49f97b19d8"
+  }
+}

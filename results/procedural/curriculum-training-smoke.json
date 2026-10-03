@@ -1,0 +1,179 @@
+{
+  "runs": {
+    "curriculum-smoke": {
+      "state": {
+        "transitions": 128,
+        "updates": 100,
+        "episodes": 1,
+        "eval_transitions": 5606,
+        "best_evaluation": {
+          "mean_return": 1.5822729159028515,
+          "reward_inferred_finish_fraction": 0.3333333333333333,
+          "mean_finished_seconds": 7.766666666666667,
+          "best_finished_seconds": 3.4000000000000004,
+          "mean_length": 180.22222222222223,
+          "approach_m": 0,
+          "transitions": 3244,
+          "wall_seconds": 16.205413915999088,
+          "normalized_progress": 0.6731974465973696,
+          "track_mode": "procedural",
+          "evaluation_tasks": "1009:-1,1009:0,1009:1,1009:2,1009:3,1009:4,2003:-1,2003:0,2003:1,2003:2,2003:3,2003:4,3001:-1,3001:0,3001:1,3001:2,3001:3,3001:4"
+        },
+        "last_evaluation_step": 128,
+        "outcome": "completed",
+        "session_wall_seconds": 30.42314691700085
+      },
+      "config": {
+        "seed": 7,
+        "track_train_seeds": [
+          101,
+          211,
+          307
+        ],
+        "track_eval_seeds": [
+          1009,
+          2003,
+          3001
+        ],
+        "track_train_spawn_mode": "curriculum",
+        "track_spawn_seed": 7,
+        "track_eval_spawn_indices": [
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "track_eval_spawn_approach": 15,
+        "spawn_min": 10,
+        "spawn_max": 20,
+        "original_fraction": 0.25,
+        "learning_starts": 32,
+        "batch_size": 32,
+        "replay_capacity": 256
+      },
+      "build_sha256": "127c413280637dc9e72058ba1331fa9c14087dd7c155038f762f27e1d00157dc",
+      "checkpoint_sha256": "a60de39640f221154a89006905eb40388e7647ea8170eb13ae32749e23f24c89",
+      "resume_source_sha256": null,
+      "evaluation_batches": [
+        {
+          "step": "0",
+          "mean_return": "1.5822729159028515",
+          "reward_inferred_finish_fraction": "0.3333333333333333",
+          "mean_finished_seconds": "7.766666666666667",
+          "best_finished_seconds": "3.4000000000000004",
+          "mean_length": "180.22222222222223",
+          "approach_m": "0",
+          "transitions": "3244",
+          "wall_seconds": "16.205413915999088",
+          "normalized_progress": "0.6731974465973696",
+          "track_mode": "procedural",
+          "evaluation_tasks": "1009:-1,1009:0,1009:1,1009:2,1009:3,1009:4,2003:-1,2003:0,2003:1,2003:2,2003:3,2003:4,3001:-1,3001:0,3001:1,3001:2,3001:3,3001:4"
+        },
+        {
+          "step": "128",
+          "mean_return": "0.05300615458327229",
+          "reward_inferred_finish_fraction": "0.0",
+          "mean_finished_seconds": "",
+          "best_finished_seconds": "",
+          "mean_length": "131.22222222222223",
+          "approach_m": "0",
+          "transitions": "2362",
+          "wall_seconds": "11.779157541997847",
+          "normalized_progress": "0.05556712015848696",
+          "track_mode": "procedural",
+          "evaluation_tasks": "1009:-1,1009:0,1009:1,1009:2,1009:3,1009:4,2003:-1,2003:0,2003:1,2003:2,2003:3,2003:4,3001:-1,3001:0,3001:1,3001:2,3001:3,3001:4"
+        }
+      ]
+    },
+    "curriculum-smoke-resumed": {
+      "state": {
+        "transitions": 192,
+        "updates": 164,
+        "episodes": 2,
+        "eval_transitions": 10536,
+        "best_evaluation": {
+          "mean_return": 1.5822729159028515,
+          "reward_inferred_finish_fraction": 0.3333333333333333,
+          "mean_finished_seconds": 7.766666666666667,
+          "best_finished_seconds": 3.4000000000000004,
+          "mean_length": 180.22222222222223,
+          "approach_m": 0,
+          "transitions": 3244,
+          "wall_seconds": 16.205413915999088,
+          "normalized_progress": 0.6731974465973696,
+          "track_mode": "procedural",
+          "evaluation_tasks": "1009:-1,1009:0,1009:1,1009:2,1009:3,1009:4,2003:-1,2003:0,2003:1,2003:2,2003:3,2003:4,3001:-1,3001:0,3001:1,3001:2,3001:3,3001:4"
+        },
+        "last_evaluation_step": 192,
+        "outcome": "completed",
+        "session_wall_seconds": 25.604947874999198
+      },
+      "config": {
+        "seed": 7,
+        "track_train_seeds": [
+          101,
+          211,
+          307
+        ],
+        "track_eval_seeds": [
+          1009,
+          2003,
+          3001
+        ],
+        "track_train_spawn_mode": "curriculum",
+        "track_spawn_seed": 7,
+        "track_eval_spawn_indices": [
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "track_eval_spawn_approach": 15,
+        "spawn_min": 10,
+        "spawn_max": 20,
+        "original_fraction": 0.25,
+        "learning_starts": 32,
+        "batch_size": 32,
+        "replay_capacity": 256
+      },
+      "build_sha256": "127c413280637dc9e72058ba1331fa9c14087dd7c155038f762f27e1d00157dc",
+      "checkpoint_sha256": "f65161fa2a329a3a4478389cd289e4e320225457eb6d5f2abafda494c22d0263",
+      "resume_source_sha256": "a60de39640f221154a89006905eb40388e7647ea8170eb13ae32749e23f24c89",
+      "evaluation_batches": [
+        {
+          "step": "128",
+          "mean_return": "0.05300615458327229",
+          "reward_inferred_finish_fraction": "0.0",
+          "mean_finished_seconds": "",
+          "best_finished_seconds": "",
+          "mean_length": "131.22222222222223",
+          "approach_m": "0",
+          "transitions": "2362",
+          "wall_seconds": "11.793312707999576",
+          "normalized_progress": "0.05556712015848696",
+          "track_mode": "procedural",
+          "evaluation_tasks": "1009:-1,1009:0,1009:1,1009:2,1009:3,1009:4,2003:-1,2003:0,2003:1,2003:2,2003:3,2003:4,3001:-1,3001:0,3001:1,3001:2,3001:3,3001:4"
+        },
+        {
+          "step": "192",
+          "mean_return": "0.20051517010900474",
+          "reward_inferred_finish_fraction": "0.0",
+          "mean_finished_seconds": "",
+          "best_finished_seconds": "",
+          "mean_length": "142.66666666666666",
+          "approach_m": "0",
+          "transitions": "2568",
+          "wall_seconds": "12.805634667001868",
+          "normalized_progress": "0.14984754401504327",
+          "track_mode": "procedural",
+          "evaluation_tasks": "1009:-1,1009:0,1009:1,1009:2,1009:3,1009:4,2003:-1,2003:0,2003:1,2003:2,2003:3,2003:4,3001:-1,3001:0,3001:1,3001:2,3001:3,3001:4"
+        }
+      ]
+    }
+  },
+  "note": "Infrastructure smoke, not learned-policy performance; held-out selection task6/18 initial baseline finishes are suffix finishes,0/3 original starts."
+}

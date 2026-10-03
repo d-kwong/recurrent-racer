@@ -1,0 +1,93 @@
+{
+  "source": "Actual Unity screenshots from separate fixed-track episodes",
+  "unity_seed": 7,
+  "track_mode": "fixed",
+  "start": "original",
+  "camera": "Chase: 35 degrees down, distance 22m, FOV48",
+  "effective_time_scale": 1,
+  "config_note": "Viewer overrides stored trainer time_scale20 to effective1; evaluation disables stored curriculum flag",
+  "simulation_interval_seconds": [
+    0.2399999,
+    20.0
+  ],
+  "final_hold_seconds": 1,
+  "playback_speed": 1,
+  "alignment": "Previous captured frame at shared simulated time, 10fps; MP4 duplicates to30fps. No interpolated positions. Last source frame visibly held after terminal.",
+  "source_title_edit": "Header replaced to correct generic viewer SAC label on historical initial mean; Only title and status overlays replace source HUD areas; driving imagery unchanged",
+  "panels": [
+    {
+      "label": "Historical initial mean",
+      "lineage": "Earlier controller lineage; no SAC training",
+      "checkpoint_sha256": "47932192683f7e1d02638e4ccff54d8af062fda6e7174d7b4649920ac81197f5",
+      "source_frames_csv": "runs/capture-initial-mean-fixed-frames/frames.csv",
+      "frames_csv_sha256": "20a5eddfa3a507f0656c60d37b3a1f4dfc92a42eb060c287fb9678d4c305a63a",
+      "frame_count": 142,
+      "source_simulation_interval_seconds": [
+        0.119999953,
+        8.659997
+      ],
+      "estimated_episode_seconds": 8.700000000000001,
+      "finish_proxy": false,
+      "result": {
+        "mean_return": 0.610721959877992,
+        "reward_inferred_finish_fraction": 0.0,
+        "mean_finished_seconds": null,
+        "best_finished_seconds": null,
+        "mean_length": 87.0,
+        "approach_m": 0,
+        "transitions": 87,
+        "wall_seconds": 8.951018416999432
+      },
+      "source_checkpoint": "policies/initial-mean.pt",
+      "source_checkpoint_format": "racer-mean-v1",
+      "source_checkpoint_sha256": "84d307a3812db50f9c43eb5f7d70538bbaff86fc36a402b35d7dd30067aa512d",
+      "actual_capture_actor_format": "racer-sac-actor-v1",
+      "conversion_parity_evidence": "results/procedural/initial-mean-viewer-conversion.json"
+    },
+    {
+      "label": "Selected SAC \u00b7 49,232 transitions",
+      "lineage": "Preserved fixed-track selected actor",
+      "checkpoint_sha256": "13363bc38c08bbaea94c0cfa3817f28cf35d00aa42a012e736cb9dc08d37ed04",
+      "source_frames_csv": "runs/capture-selected-fixed-frames/frames.csv",
+      "frames_csv_sha256": "9617bb9a004a3fa1dff230e5d905bf2ec806362192b92e5fc4871cdfe3bb0163",
+      "frame_count": 323,
+      "source_simulation_interval_seconds": [
+        0.2399999,
+        19.9199924
+      ],
+      "estimated_episode_seconds": 20.0,
+      "finish_proxy": true,
+      "result": {
+        "mean_return": 5.8846188130410155,
+        "reward_inferred_finish_fraction": 1.0,
+        "mean_finished_seconds": 20.0,
+        "best_finished_seconds": 20.0,
+        "mean_length": 200.0,
+        "approach_m": 0,
+        "transitions": 200,
+        "wall_seconds": 21.020066790999408
+      },
+      "source_checkpoint": "policies/selected.pt",
+      "source_checkpoint_format": "racer-sac-actor-v1",
+      "source_checkpoint_sha256": "13363bc38c08bbaea94c0cfa3817f28cf35d00aa42a012e736cb9dc08d37ed04",
+      "exact_trace_evidence": "results/procedural/rendered-fixed-comparison.json"
+    }
+  ],
+  "files": {
+    "comparison.gif": {
+      "bytes": 4510049,
+      "sha256": "7228ac2cba9ec26f3aa9298952a4e4d6fc0e289b5d949d5aa2916b7b5b6ac26b"
+    },
+    "comparison.mp4": {
+      "bytes": 969964,
+      "sha256": "ee0bdaaef099823b83b49cd1e6c5e11990bd0588c83b41414a3cc8835a092ce0"
+    },
+    "comparison-poster.png": {
+      "bytes": 88119,
+      "sha256": "1eee0d9b81ba1b89ae5ee915fdd5e0a9af4e02f751d745d25badd51ec5175202"
+    }
+  },
+  "build_sha256": "d2242814774302d4d3d8b8b7efbff1a6f966d211fd8c6ba40019038d2eccdfa8",
+  "unity_version": "6000.6.3f1",
+  "build_provenance": "results/procedural/fixed-capture-provenance.json"
+}

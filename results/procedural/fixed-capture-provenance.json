@@ -1,0 +1,13 @@
+{
+  "build_sha256": "d2242814774302d4d3d8b8b7efbff1a6f966d211fd8c6ba40019038d2eccdfa8",
+  "unity": "6000.6.3f1",
+  "unity_seed": 7,
+  "track_mode": "fixed",
+  "start": "original",
+  "time_scale": 1,
+  "runs": [
+    "capture-initial-mean-fixed",
+    "capture-selected-fixed"
+  ],
+  "selected_rendered_trace_exact_historical": true
+}

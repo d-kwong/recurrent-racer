@@ -1,0 +1,7 @@
+{
+  "unity": "6000.6.3f1",
+  "build_sha256": "d2242814774302d4d3d8b8b7efbff1a6f966d211fd8c6ba40019038d2eccdfa8",
+  "unit_tests": 17,
+  "generator_verification_seed_count": 1000,
+  "selected_policy_sha256": "13363bc38c08bbaea94c0cfa3817f28cf35d00aa42a012e736cb9dc08d37ed04"
+}

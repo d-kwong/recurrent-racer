@@ -1,0 +1,91 @@
+{
+  "runs": {
+    "procedural-smoke": {
+      "state": {
+        "transitions": 128,
+        "updates": 100,
+        "episodes": 0,
+        "eval_transitions": 1169,
+        "best_evaluation": {
+          "mean_return": 1.3390203686188518,
+          "reward_inferred_finish_fraction": 0.0,
+          "mean_finished_seconds": null,
+          "best_finished_seconds": null,
+          "mean_length": 189.33333333333334,
+          "approach_m": 0,
+          "transitions": 568,
+          "wall_seconds": 2.8475785000009637,
+          "normalized_progress": 0.3852756080899609,
+          "track_mode": "procedural",
+          "evaluation_seeds": "1009,2003,3001"
+        },
+        "last_evaluation_step": 128,
+        "outcome": "completed",
+        "session_wall_seconds": 7.069996916998207
+      },
+      "seed": 7,
+      "track_mode": "procedural",
+      "train_seeds": [
+        101,
+        211,
+        307
+      ],
+      "eval_seeds": [
+        1009,
+        2003,
+        3001
+      ],
+      "learning_starts": 32,
+      "batch_size": 32,
+      "replay_capacity": 256,
+      "checkpoint_sha256": "76ab2710978cf1b530010816f9f0241ad70c63b1c38bcb16acdc2731de8346f8",
+      "build_sha256": "d2242814774302d4d3d8b8b7efbff1a6f966d211fd8c6ba40019038d2eccdfa8",
+      "resume_source_sha256": null,
+      "warm_start_source_sha256": "bed858572b7c4a24eb492691c7ac21f43bd012e07b243793d9cb0a9479502a58"
+    },
+    "procedural-smoke-resumed": {
+      "state": {
+        "transitions": 192,
+        "updates": 164,
+        "episodes": 0,
+        "eval_transitions": 2239,
+        "best_evaluation": {
+          "mean_return": 1.3390203686188518,
+          "reward_inferred_finish_fraction": 0.0,
+          "mean_finished_seconds": null,
+          "best_finished_seconds": null,
+          "mean_length": 189.33333333333334,
+          "approach_m": 0,
+          "transitions": 568,
+          "wall_seconds": 2.8475785000009637,
+          "normalized_progress": 0.3852756080899609,
+          "track_mode": "procedural",
+          "evaluation_seeds": "1009,2003,3001"
+        },
+        "last_evaluation_step": 192,
+        "outcome": "completed",
+        "session_wall_seconds": 6.229244875001314
+      },
+      "seed": 7,
+      "track_mode": "procedural",
+      "train_seeds": [
+        101,
+        211,
+        307
+      ],
+      "eval_seeds": [
+        1009,
+        2003,
+        3001
+      ],
+      "learning_starts": 32,
+      "batch_size": 32,
+      "replay_capacity": 256,
+      "checkpoint_sha256": "a031a20481002b30fd77e89866881a63e8974395f67a6213418cbbc60e24e65b",
+      "build_sha256": "d2242814774302d4d3d8b8b7efbff1a6f966d211fd8c6ba40019038d2eccdfa8",
+      "resume_source_sha256": "76ab2710978cf1b530010816f9f0241ad70c63b1c38bcb16acdc2731de8346f8",
+      "warm_start_source_sha256": null
+    }
+  },
+  "limitations": "128+64 transitions verified collection,100 then164 cumulative updates,checkpoint restore,evaluations; no completed training episodes within tiny smoke. No learned completion claim."
+}

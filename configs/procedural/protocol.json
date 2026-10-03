@@ -1,0 +1,56 @@
+{
+  "version": 2,
+  "training_rng_seed": 7,
+  "training_track_seeds": [
+    101,
+    211,
+    307
+  ],
+  "evaluation_track_seeds": [
+    1009,
+    2003,
+    3001
+  ],
+  "evaluation_start": "Cartesian held-out track seed \u00d7 explicit spawn index[-1 original,0..4 turn] at15m approach",
+  "finish_position": "centerline_length-6m",
+  "normalized_progress_denominator": "finish_s-spawn_s",
+  "spawn_curriculum": false,
+  "smoke": {
+    "initial_transitions": 128,
+    "resumed_cumulative_transitions": 192,
+    "learning_starts": 32,
+    "batch_size": 32,
+    "replay_capacity": 256
+  },
+  "pilot": {
+    "max_training_transitions": 20000,
+    "max_session_wall_seconds": 900,
+    "requires_parent_smoke_approval": true
+  },
+  "timing": {
+    "physics_seconds": 0.02,
+    "decision_ticks": 5,
+    "estimate_seconds_per_transition": 0.1
+  },
+  "note": "Protocol manifest, not train_sac CLI configuration. Fixed spawn curriculum flag remains false; procedural curriculum uses track_train_spawn_mode=curriculum. Runtime configs/actual poses/task hashes recorded with each run.",
+  "training_spawn_seed": 7,
+  "training_spawn_mix": {
+    "near_turn_fraction": 0.75,
+    "original_fraction": 0.25,
+    "approach_metres": [
+      10,
+      20
+    ],
+    "turns": "all generated left/right entries"
+  },
+  "evaluation_spawn_indices": [
+    -1,
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "evaluation_spawn_approach_metres": 15,
+  "selection_protocol": "Same18seed\u00d7spawn tasks used for checkpoint selection; original-route completion reported separately; not untouched final testing"
+}

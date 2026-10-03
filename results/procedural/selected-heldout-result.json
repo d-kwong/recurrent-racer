@@ -1,0 +1,15 @@
+{
+  "0": {
+    "mean_return": 1.3390203686188518,
+    "reward_inferred_finish_fraction": 0.0,
+    "mean_finished_seconds": null,
+    "best_finished_seconds": null,
+    "mean_length": 189.33333333333334,
+    "approach_m": 0,
+    "transitions": 568,
+    "wall_seconds": 2.886558750000404,
+    "normalized_progress": 0.3852756080899609,
+    "track_mode": "procedural",
+    "evaluation_seeds": "1009,2003,3001"
+  }
+}

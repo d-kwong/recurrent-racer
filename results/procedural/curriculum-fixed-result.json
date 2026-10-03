@@ -1,0 +1,42 @@
+{
+  "0": {
+    "mean_return": 5.8846188130410155,
+    "reward_inferred_finish_fraction": 1.0,
+    "mean_finished_seconds": 20.0,
+    "best_finished_seconds": 20.0,
+    "mean_length": 200.0,
+    "approach_m": 0,
+    "transitions": 200,
+    "wall_seconds": 1.0400216249981895
+  },
+  "10": {
+    "mean_return": 5.494760140180006,
+    "reward_inferred_finish_fraction": 1.0,
+    "mean_finished_seconds": 18.6,
+    "best_finished_seconds": 18.6,
+    "mean_length": 186.0,
+    "approach_m": 10,
+    "transitions": 186,
+    "wall_seconds": 0.9284537079984148
+  },
+  "15": {
+    "mean_return": 5.5390160915703746,
+    "reward_inferred_finish_fraction": 1.0,
+    "mean_finished_seconds": 18.8,
+    "best_finished_seconds": 18.8,
+    "mean_length": 188.0,
+    "approach_m": 15,
+    "transitions": 188,
+    "wall_seconds": 0.938103874999797
+  },
+  "20": {
+    "mean_return": 5.593471167172538,
+    "reward_inferred_finish_fraction": 1.0,
+    "mean_finished_seconds": 19.0,
+    "best_finished_seconds": 19.0,
+    "mean_length": 190.0,
+    "approach_m": 20,
+    "transitions": 190,
+    "wall_seconds": 0.9477712080006313
+  }
+}

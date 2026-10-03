@@ -1,0 +1,72 @@
+{
+  "export": "policies/procedural-selected.pt",
+  "export_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
+  "export_bytes": 25232,
+  "source_selected_checkpoint": "runs/curriculum-pilot/best.pt (local, not published)",
+  "source_sha256": "212000346744f016d6485c13d93c5c9c3ae9289da15912ebe6a2262e9133aa04",
+  "selected_additional_training_transitions": 12210,
+  "total_pilot_training_transitions": 20000,
+  "selected_update_cycles": 10212,
+  "initialization": {
+    "source": "policies/selected.pt",
+    "source_sha256": "13363bc38c08bbaea94c0cfa3817f28cf35d00aa42a012e736cb9dc08d37ed04",
+    "source_training_transitions": 49232,
+    "rule": "Trunk/mean transfer only; fresh critics, optimizers, replay and standard deviation0.3"
+  },
+  "build_sha256": "127c413280637dc9e72058ba1331fa9c14087dd7c155038f762f27e1d00157dc",
+  "generator_version": "open-arcs-v1",
+  "config": "configs/procedural/curriculum-pilot.json",
+  "selection": "Completion fraction, normalized task progress; mean estimated time only when all identical tasks finish. Raw return unused for ranking.",
+  "evaluation": {
+    "task_count": 18,
+    "completed": 18,
+    "original_start_count": 3,
+    "original_start_completed": 3,
+    "training_seeds": [
+      101,
+      211,
+      307
+    ],
+    "validation_seeds": [
+      1009,
+      2003,
+      3001
+    ],
+    "spawn_indices": [
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "approach_metres": 15,
+    "mean_estimated_task_seconds": 10.761111111111113,
+    "original_route_estimated_seconds_by_seed": {
+      "1009": 16.4,
+      "2003": 16.9,
+      "3001": 15.8
+    }
+  },
+  "parity": {
+    "synthetic_observations": 1000,
+    "maximum_action_difference": 0,
+    "fresh_evaluation_episodes": 18,
+    "all_trace_arrays_exact": true
+  },
+  "evidence": "results/procedural/pilot-summary.json",
+  "limitations": "One training RNG seed, three training routes, three evaluation routes; evaluation tasks reused for selection, no untouched final track suite. Task suffix finishes distinguished from original-route completion.",
+  "timing": {
+    "physics_seconds": 0.02,
+    "decision_ticks": 5,
+    "estimated_seconds_per_transition": 0.1,
+    "terminal_estimate_max_overstatement_seconds": 0.08
+  },
+  "run_budget": {
+    "max_training_transitions": 20000,
+    "max_session_wall_seconds": 900,
+    "actual_session_wall_seconds": 168.01432850000128,
+    "watchdog_signaled": false
+  },
+  "final_presentation_capture_build_sha256": "21d0e5991bf9750c09567dcf63dc4c6c9c96518e86b746dd2f2eb639426033e5"
+}

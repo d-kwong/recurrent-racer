@@ -1,0 +1,15 @@
+{
+  "source": "policies/initial-mean.pt",
+  "source_format": "racer-mean-v1",
+  "source_sha256": "84d307a3812db50f9c43eb5f7d70538bbaff86fc36a402b35d7dd30067aa512d",
+  "viewer_actor_format": "racer-sac-actor-v1",
+  "viewer_actor_sha256": "47932192683f7e1d02638e4ccff54d8af062fda6e7174d7b4649920ac81197f5",
+  "conversion": "Actor.warm_start loads source trunk/mean into identical15\u219264\u219264 actor; only inference mean is used. Fresh log_std does not affect deterministic playback.",
+  "synthetic_observations": 1000,
+  "maximum_synthetic_action_difference": 0.0,
+  "actual_capture_observations": 87,
+  "maximum_capture_conversion_action_difference": 0.0,
+  "maximum_actual_sent_action_difference": 0.0,
+  "sent_comparison_batch_size": 1,
+  "note": "Converted viewer actor stays ignored; source mean preserved; zero SAC training transitions in export does not imply source controller was untrained."
+}

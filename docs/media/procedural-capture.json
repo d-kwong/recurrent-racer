@@ -1,0 +1,95 @@
+{
+  "source": "Actual Unity screenshots; one procedural original-start episode",
+  "policy": "policies/procedural-selected.pt",
+  "policy_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
+  "training_transitions": 12210,
+  "build_sha256": "21d0e5991bf9750c09567dcf63dc4c6c9c96518e86b746dd2f2eb639426033e5",
+  "pilot_build_sha256": "127c413280637dc9e72058ba1331fa9c14087dd7c155038f762f27e1d00157dc",
+  "build_provenance": "results/procedural/final-capture-build-provenance.json",
+  "unity_seed": 7,
+  "track_seed": 1009,
+  "start": "original centerline s=4m",
+  "effective_time_scale": 1,
+  "camera": "Chase:35 degrees down,distance22m,FOV48",
+  "frame_count": 265,
+  "frames_csv_sha256": "f8bb43e35d48eab647afce1fafad2a453338e717d0418895d40ed3166fcaa936",
+  "source_simulation_interval_seconds": [
+    0.2399999,
+    16.2999935
+  ],
+  "gif_simulation_interval_seconds": [
+    0.2399999,
+    12.2399999
+  ],
+  "mp4": "Entire captured episode,30fps",
+  "gif": "Contiguous first12 captured seconds,720px10fps",
+  "editing": "Source simulation timestamp spacing retained;1x simulation playback;no invented frames or removed failures",
+  "result": {
+    "mean_return": 4.648179661700851,
+    "reward_inferred_finish_fraction": 1.0,
+    "mean_finished_seconds": 16.400000000000002,
+    "best_finished_seconds": 16.400000000000002,
+    "mean_length": 164.0,
+    "approach_m": 0,
+    "transitions": 164,
+    "wall_seconds": 17.460802624998905,
+    "normalized_progress": 1.0,
+    "track_mode": "procedural",
+    "evaluation_tasks": "1009:-1"
+  },
+  "terminal_telemetry": {
+    "seed": 1009,
+    "physicsTicks": 816,
+    "sequenceIndex": 0,
+    "spawnSeed": 7,
+    "spawnTurnIndex": -1,
+    "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+    "taskSha256": "66acd712da661b3837f8eac90782d78140e527c951b8e48ce824464b901e0ee9",
+    "reason": "Finish",
+    "interrupted": false,
+    "simulatedSeconds": 16.31999397277832,
+    "travelMetres": 372.97796630859375,
+    "routeLength": 385.03021240234375,
+    "finishDistance": 375.03021240234375,
+    "spawnDistance": 4.0,
+    "spawnApproach": 0.0
+  },
+  "geometry_sha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+  "task_sha256": "66acd712da661b3837f8eac90782d78140e527c951b8e48ce824464b901e0ee9",
+  "generation_parameters": {
+    "segments": 5,
+    "straightMin": 25.0,
+    "straightMax": 55.0,
+    "radiusMin": 22.0,
+    "radiusMax": 42.0,
+    "angleMin": 25.0,
+    "angleMax": 100.0,
+    "spacing": 2.0
+  },
+  "actual_spawn_position": {
+    "x": 0.0,
+    "y": 0.5550000071525574,
+    "z": 4.0
+  },
+  "spawn_forward": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 1.0
+  },
+  "source_end_note": "Capture stops before terminal delivery; finish outcome is independently recorded in runtime telemetry",
+  "rendered_parity_evidence": "results/procedural/final-rendered-parity.json",
+  "files": {
+    "procedural.gif": {
+      "bytes": 3335103,
+      "sha256": "93f9dc1f27f4a9768f1bf95357848a6364c6dc818f7ba247a7c7d12c2631b177"
+    },
+    "procedural.mp4": {
+      "bytes": 1159935,
+      "sha256": "1bbe1bdd8d0c6442de7c649c21aacee110eaef1c35816caf09c1e5470303edf5"
+    },
+    "procedural-poster.png": {
+      "bytes": 57220,
+      "sha256": "4f6880942bfbec3f23bf3bed1dc6fd691ab4d86f8a7b1a4422d53902a19c9c81"
+    }
+  }
+}
