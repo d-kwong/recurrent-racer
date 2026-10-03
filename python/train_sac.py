@@ -258,6 +258,9 @@ def score_evaluation(episodes):
 
 def rank(result):
     # Full laps outrank partial progress. Reliability precedes speed.
+    if result.get('track_mode')=='procedural':
+        return (result['reward_inferred_finish_fraction'], result['normalized_progress'],
+                -result['mean_finished_seconds'] if result['reward_inferred_finish_fraction']==1 else 0.)
     return (result['reward_inferred_finish_fraction'],
             -result['mean_finished_seconds'] if result['mean_finished_seconds'] is not None else -float('inf'),
             result['mean_return'])
@@ -265,12 +268,29 @@ def rank(result):
 
 def evaluate(env,actor,config,out,step,episodes,approaches=False,writer=None):
     rng=unity.rng_state(); results={}
+    procedural=config.get('track_mode', 'fixed')=='procedural'
+    if procedural and approaches:
+        raise ValueError('Fixed-track approach curriculum is unavailable for procedural routes')
+    if procedural:
+        episodes *= len(unity.procedural_tasks(config, evaluation=True))
     try:
         for start in ([0,10,15,20] if approaches else [0]):
-            spawn=dict(config,spawn_curriculum=bool(start),spawn_min=start,spawn_max=start,original_fraction=0)
-            unity.configure_spawn(env,spawn)
+            spawn=dict(config) if procedural else dict(config,spawn_curriculum=bool(start),spawn_min=start,spawn_max=start,original_fraction=0)
+            unity.configure_spawn(env,spawn,track_evaluation=True)
             rollouts,seconds,n=unity.evaluate(env,actor,episodes)
             result=score_evaluation(rollouts); result.update(approach_m=start,transitions=n,wall_seconds=seconds)
+            if procedural:
+                telemetry=unity.track_records(env.racing_log_path)
+                endings=telemetry['episodes'][-len(rollouts):]
+                if len(endings)!=len(rollouts):
+                    raise RuntimeError('Missing realized procedural episode telemetry; selection cannot infer geometry')
+                expected=unity.procedural_tasks(config,evaluation=True)
+                if [(e['seed'],e['spawnTurnIndex']) for e in endings]!=[expected[i % len(expected)] for i in range(len(rollouts))]:
+                    raise RuntimeError('Realized evaluation seed sequence disagrees with requested seeds')
+                result['normalized_progress']=float(np.mean([1. if e['reason']=='Finish' else np.clip(e['travelMetres']/e['finishDistance'],0,1) for e in endings]))
+                result['track_mode']='procedural'
+                result['evaluation_tasks']=','.join(f'{seed}:{turn}' for seed,turn in expected)
+                (out/f'track-eval-{step:09d}.json').write_text(json.dumps(telemetry,indent=2))
             unity.save_trajectories(out/f'eval-{step:09d}-start{start}.npz',rollouts)
             for i,e in enumerate(rollouts):
                 unity.append_csv(out/'evaluation-episodes.csv',dict(step=step,start_m=start,episode=i,
@@ -326,6 +346,13 @@ def train(config,resume=None,warm_start=None):
             raise ValueError('Unity build changed; use a new experiment rather than resume')
         for key in ('spawn_curriculum','spawn_min','spawn_max','original_fraction','env','learning_starts'):
             if config[key]!=restored['config'][key]: raise ValueError(f'Resume must preserve {key}')
+        for key in ('track_mode','track_seed','track_train_seeds','track_eval_seeds','track_segments',
+                    'track_straight_min','track_straight_max','track_radius_min','track_radius_max',
+                    'track_angle_min','track_angle_max','track_spacing','track_train_spawn_mode','track_spawn_seed',
+                    'track_eval_spawn_indices','track_eval_spawn_approach'):
+            # Older fixed checkpoints have no procedural fields; defaults retain fixed compatibility.
+            old=restored['config'].get(key, 'fixed' if key=='track_mode' else config.get(key))
+            if config.get(key)!=old: raise ValueError(f'Resume must preserve {key}')
         config['resume']=dict(path=str(resume.resolve()),sha256=file_sha(resume))
         candidate=resume.parent/'best.pt'
         if candidate.exists():
@@ -450,6 +477,18 @@ def main():
     parser.add_argument('--log-frequency',type=int,default=1000)
     parser.add_argument('--evaluate-initial',action=argparse.BooleanOptionalAction,default=True)
     parser.add_argument('--spawn-curriculum',action=argparse.BooleanOptionalAction,default=True)
+    parser.add_argument('--track-mode',choices=['fixed','procedural'],default='fixed')
+    parser.add_argument('--track-seed',type=int,default=101)
+    parser.add_argument('--track-train-seeds',type=int,nargs='+')
+    parser.add_argument('--track-eval-seeds',type=int,nargs='+')
+    parser.add_argument('--track-train-spawn-mode',choices=['original','curriculum'],default='curriculum')
+    parser.add_argument('--track-spawn-seed',type=int,default=7)
+    parser.add_argument('--track-eval-spawn-indices',type=int,nargs='+',help='-1 original, 0..segments-1 turn entry; default all')
+    parser.add_argument('--track-eval-spawn-approach',type=float,default=15)
+    parser.add_argument('--track-segments',type=int,default=5)
+    for name, default in [('straight-min',25),('straight-max',55),('radius-min',22),
+                          ('radius-max',42),('angle-min',25),('angle-max',100),('spacing',2)]:
+        parser.add_argument('--track-'+name,type=float,default=default)
     parser.add_argument('--spawn-min',type=float,default=10)
     parser.add_argument('--spawn-max',type=float,default=20)
     parser.add_argument('--original-fraction',type=float,default=.25)
@@ -476,6 +515,21 @@ def main():
     if not 0<=args.gamma<=1 or not 0<args.tau<=1 or args.max_seconds<0: parser.error('Invalid discount/tau/wall cap')
     if args.learning_starts>args.replay_capacity: parser.error('learning-starts exceeds replay capacity')
     if not 5<=args.spawn_min<=args.spawn_max<=50 or not 0<=args.original_fraction<=1: parser.error('Invalid curriculum')
+    if args.track_mode=='procedural':
+        train_seeds=args.track_train_seeds or [args.track_seed]
+        eval_seeds=args.track_eval_seeds or [args.track_seed]
+        if any(not isinstance(s,int) or not 0<=s<=16777215 for s in train_seeds+eval_seeds) or max(len(train_seeds),len(eval_seeds))>64:
+            parser.error('Invalid exact float-safe track seeds')
+        if args.mode=='train' and set(train_seeds)&set(eval_seeds):
+            parser.error('Procedural training requires disjoint --track-train-seeds and --track-eval-seeds')
+        if args.approaches: parser.error('Approach evaluation applies only to the fixed track')
+        if not 0<=args.track_spawn_seed<=16777215 or not 10<=args.spawn_min<=args.spawn_max<=20 or not 10<=args.track_eval_spawn_approach<=20:
+            parser.error('Invalid procedural spawn seed/approach range')
+        if args.track_straight_min < max(args.spawn_max,args.track_eval_spawn_approach)+4:
+            parser.error('Procedural straight-min must leave 4m cap clearance before every near-turn start')
+        try: unity.procedural_tasks(vars(args),evaluation=True)
+        except ValueError as error: parser.error(str(error))
+        args.spawn_curriculum=False
     if args.mode!='train' and args.checkpoint is None: parser.error('evaluate/view requires --checkpoint')
     config=vars(args).copy()
     for key in ('resume','checkpoint','warm_start','from_scratch','approaches','config','capture_dir','sensor_overlay'): config.pop(key)

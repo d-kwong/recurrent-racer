@@ -1,0 +1,2143 @@
+{
+  "state": {
+    "transitions": 20000,
+    "updates": 18004,
+    "episodes": 232,
+    "eval_transitions": 12039,
+    "best_evaluation": {
+      "mean_return": 3.3187390261632066,
+      "reward_inferred_finish_fraction": 1.0,
+      "mean_finished_seconds": 10.761111111111113,
+      "best_finished_seconds": 3.6,
+      "mean_length": 107.61111111111111,
+      "approach_m": 0,
+      "transitions": 1937,
+      "wall_seconds": 9.613182791999861,
+      "normalized_progress": 1.0,
+      "track_mode": "procedural",
+      "evaluation_tasks": "1009:-1,1009:0,1009:1,1009:2,1009:3,1009:4,2003:-1,2003:0,2003:1,2003:2,2003:3,2003:4,3001:-1,3001:0,3001:1,3001:2,3001:3,3001:4"
+    },
+    "last_evaluation_step": 20000,
+    "outcome": "completed",
+    "session_wall_seconds": 165.60534225000083
+  },
+  "selected_checkpoint_step": 12210,
+  "selected_full_checkpoint_sha256": "212000346744f016d6485c13d93c5c9c3ae9289da15912ebe6a2262e9133aa04",
+  "config": {
+    "seed": 7,
+    "max_transitions": 20000,
+    "max_seconds": 900,
+    "batch_size": 256,
+    "replay_capacity": 250000,
+    "learning_starts": 2000,
+    "track_mode": "procedural",
+    "track_seed": 101,
+    "track_train_seeds": [
+      101,
+      211,
+      307
+    ],
+    "track_eval_seeds": [
+      1009,
+      2003,
+      3001
+    ],
+    "track_train_spawn_mode": "curriculum",
+    "track_spawn_seed": 7,
+    "track_eval_spawn_indices": [
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "track_eval_spawn_approach": 15,
+    "track_segments": 5,
+    "track_straight_min": 25,
+    "track_straight_max": 55,
+    "track_radius_min": 22,
+    "track_radius_max": 42,
+    "track_angle_min": 25,
+    "track_angle_max": 100,
+    "track_spacing": 2,
+    "spawn_min": 10,
+    "spawn_max": 20,
+    "original_fraction": 0.25
+  },
+  "build_sha256": "127c413280637dc9e72058ba1331fa9c14087dd7c155038f762f27e1d00157dc",
+  "initialization": {
+    "sha256": "bed858572b7c4a24eb492691c7ac21f43bd012e07b243793d9cb0a9479502a58",
+    "source_version": 49232
+  },
+  "aggregate_evaluations": [
+    {
+      "step": "0",
+      "mean_return": "1.5822729159028515",
+      "reward_inferred_finish_fraction": "0.3333333333333333",
+      "mean_finished_seconds": "7.766666666666667",
+      "best_finished_seconds": "3.4000000000000004",
+      "mean_length": "180.22222222222223",
+      "approach_m": "0",
+      "transitions": "3244",
+      "wall_seconds": "16.20355579199895",
+      "normalized_progress": "0.6731974465973696",
+      "track_mode": "procedural",
+      "evaluation_tasks": "1009:-1,1009:0,1009:1,1009:2,1009:3,1009:4,2003:-1,2003:0,2003:1,2003:2,2003:3,2003:4,3001:-1,3001:0,3001:1,3001:2,3001:3,3001:4"
+    },
+    {
+      "step": "4006",
+      "mean_return": "0.5930247974957107",
+      "reward_inferred_finish_fraction": "0.1111111111111111",
+      "mean_finished_seconds": "3.95",
+      "best_finished_seconds": "3.6",
+      "mean_length": "91.0",
+      "approach_m": "0",
+      "transitions": "1638",
+      "wall_seconds": "8.152954375000263",
+      "normalized_progress": "0.3096568079874539",
+      "track_mode": "procedural",
+      "evaluation_tasks": "1009:-1,1009:0,1009:1,1009:2,1009:3,1009:4,2003:-1,2003:0,2003:1,2003:2,2003:3,2003:4,3001:-1,3001:0,3001:1,3001:2,3001:3,3001:4"
+    },
+    {
+      "step": "8018",
+      "mean_return": "1.393385257565266",
+      "reward_inferred_finish_fraction": "0.16666666666666666",
+      "mean_finished_seconds": "3.9333333333333336",
+      "best_finished_seconds": "3.4000000000000004",
+      "mean_length": "60.333333333333336",
+      "approach_m": "0",
+      "transitions": "1086",
+      "wall_seconds": "5.382041000000754",
+      "normalized_progress": "0.6170306580563777",
+      "track_mode": "procedural",
+      "evaluation_tasks": "1009:-1,1009:0,1009:1,1009:2,1009:3,1009:4,2003:-1,2003:0,2003:1,2003:2,2003:3,2003:4,3001:-1,3001:0,3001:1,3001:2,3001:3,3001:4"
+    },
+    {
+      "step": "12210",
+      "mean_return": "3.3187390261632066",
+      "reward_inferred_finish_fraction": "1.0",
+      "mean_finished_seconds": "10.761111111111113",
+      "best_finished_seconds": "3.6",
+      "mean_length": "107.61111111111111",
+      "approach_m": "0",
+      "transitions": "1937",
+      "wall_seconds": "9.613182791999861",
+      "normalized_progress": "1.0",
+      "track_mode": "procedural",
+      "evaluation_tasks": "1009:-1,1009:0,1009:1,1009:2,1009:3,1009:4,2003:-1,2003:0,2003:1,2003:2,2003:3,2003:4,3001:-1,3001:0,3001:1,3001:2,3001:3,3001:4"
+    },
+    {
+      "step": "16248",
+      "mean_return": "3.312613162310097",
+      "reward_inferred_finish_fraction": "1.0",
+      "mean_finished_seconds": "11.838888888888889",
+      "best_finished_seconds": "3.7",
+      "mean_length": "118.38888888888889",
+      "approach_m": "0",
+      "transitions": "2131",
+      "wall_seconds": "10.597471290999238",
+      "normalized_progress": "1.0",
+      "track_mode": "procedural",
+      "evaluation_tasks": "1009:-1,1009:0,1009:1,1009:2,1009:3,1009:4,2003:-1,2003:0,2003:1,2003:2,2003:3,2003:4,3001:-1,3001:0,3001:1,3001:2,3001:3,3001:4"
+    },
+    {
+      "step": "20000",
+      "mean_return": "3.316890374847086",
+      "reward_inferred_finish_fraction": "1.0",
+      "mean_finished_seconds": "11.127777777777778",
+      "best_finished_seconds": "3.7",
+      "mean_length": "111.27777777777777",
+      "approach_m": "0",
+      "transitions": "2003",
+      "wall_seconds": "9.976678749997518",
+      "normalized_progress": "1.0",
+      "track_mode": "procedural",
+      "evaluation_tasks": "1009:-1,1009:0,1009:1,1009:2,1009:3,1009:4,2003:-1,2003:0,2003:1,2003:2,2003:3,2003:4,3001:-1,3001:0,3001:1,3001:2,3001:3,3001:4"
+    }
+  ],
+  "batches": {
+    "initial": {
+      "step": 0,
+      "complete_tasks": 18,
+      "finishes": 6,
+      "original_tasks": 3,
+      "original_finishes": 0,
+      "mean_normalized_progress": 0.6731974465973697,
+      "task_records": [
+        {
+          "seed": 1009,
+          "spawnTurnIndex": -1,
+          "taskSha256": "66acd712da661b3837f8eac90782d78140e527c951b8e48ce824464b901e0ee9",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "NoProgress",
+          "interrupted": false,
+          "physicsTicks": 1303,
+          "simulatedSeconds": 26.05998992919922,
+          "travelMetres": 177.98065185546875,
+          "spawnDistance": 4.0,
+          "spawnApproach": 0.0,
+          "estimatedSeconds": 26.1,
+          "taskDistance": 375.03021240234375,
+          "normalized_progress": 0.4745768366643638,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 4.0
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 0,
+          "taskSha256": "46c84e1ba81e3238e6dbad729b6e5ac2c3702045a75665da7d316493ad9de9bf",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "NoProgress",
+          "interrupted": false,
+          "physicsTicks": 1200,
+          "simulatedSeconds": 23.999990463256836,
+          "travelMetres": 148.57591247558594,
+          "spawnDistance": 35.25584411621094,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 24.0,
+          "taskDistance": 343.77435302734375,
+          "normalized_progress": 0.43219021770297167,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 35.25584411621094
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 1,
+          "taskSha256": "6071c09a46fd491181216121ae125056ea21c2cdf75ca2c5225423840f033eba",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "NoProgress",
+          "interrupted": false,
+          "physicsTicks": 1075,
+          "simulatedSeconds": 21.49999237060547,
+          "travelMetres": 94.19305419921875,
+          "spawnDistance": 87.85011291503906,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 21.5,
+          "taskDistance": 291.18011474609375,
+          "normalized_progress": 0.3234872487132378,
+          "actualSpawnPosition": {
+            "x": -18.61009979248047,
+            "y": 0.5550000071525574,
+            "z": 81.21456909179688
+          },
+          "spawnForward": {
+            "x": -0.7508320212364197,
+            "y": 0.0,
+            "z": 0.6604931950569153
+          },
+          "activeGateIndices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 2,
+          "taskSha256": "fe4592436c95fc8c92d28a3e0a96833a7860bf7e8a324b40279cb84e92dfe60e",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "NoProgress",
+          "interrupted": false,
+          "physicsTicks": 1361,
+          "simulatedSeconds": 27.219989776611328,
+          "travelMetres": 200.86279296875,
+          "spawnDistance": 144.30291748046875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 27.3,
+          "taskDistance": 234.727294921875,
+          "normalized_progress": 0.8557283167072827,
+          "actualSpawnPosition": {
+            "x": -43.62255859375,
+            "y": 0.5550000071525574,
+            "z": 129.33596801757812
+          },
+          "spawnForward": {
+            "x": -0.20251624286174774,
+            "y": 0.0,
+            "z": 0.9792789220809937
+          },
+          "activeGateIndices": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 3,
+          "taskSha256": "6176b8af6de8954ebdcfa17f02b4e1a43b04f8082febb00ab2cf9d6a1c59a061",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "NoProgress",
+          "interrupted": false,
+          "physicsTicks": 1139,
+          "simulatedSeconds": 22.779991149902344,
+          "travelMetres": 117.43951416015625,
+          "spawnDistance": 227.49664306640625,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 22.8,
+          "taskDistance": 151.5335693359375,
+          "normalized_progress": 0.7750065855031929,
+          "actualSpawnPosition": {
+            "x": -105.3955307006836,
+            "y": 0.5550000071525574,
+            "z": 162.544677734375
+          },
+          "spawnForward": {
+            "x": -0.9996346831321716,
+            "y": 0.0,
+            "z": -0.027027945965528488
+          },
+          "activeGateIndices": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 4,
+          "taskSha256": "ceda06b10c912e907b5a7c0f523130c19ab10dbcf9ce83970f8e202da1cd9ea0",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 271,
+          "simulatedSeconds": 5.419997692108154,
+          "travelMetres": 75.3076171875,
+          "spawnDistance": 301.3907165527344,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 5.5,
+          "taskDistance": 77.63949584960938,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -162.42877197265625,
+            "y": 0.5550000071525574,
+            "z": 197.1071319580078
+          },
+          "spawnForward": {
+            "x": -0.4250391721725464,
+            "y": 0.0,
+            "z": 0.905174970626831
+          },
+          "activeGateIndices": [
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": -1,
+          "taskSha256": "53508c11d72fbde42bfa8a34680a21c4f8710a5a14848d49a7a0bc4ecf04a9b3",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Crash",
+          "interrupted": false,
+          "physicsTicks": 128,
+          "simulatedSeconds": 2.5599989891052246,
+          "travelMetres": 33.868431091308594,
+          "spawnDistance": 4.0,
+          "spawnApproach": 0.0,
+          "estimatedSeconds": 2.6,
+          "taskDistance": 402.5727233886719,
+          "normalized_progress": 0.08412996987530534,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 4.0
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 0,
+          "taskSha256": "6aee273f668a85b78eecb81c0361675d4a6d07627d602d1bd8c7e31f086354c3",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "NoProgress",
+          "interrupted": false,
+          "physicsTicks": 1713,
+          "simulatedSeconds": 34.259986877441406,
+          "travelMetres": 189.981689453125,
+          "spawnDistance": 22.958465576171875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 34.300000000000004,
+          "taskDistance": 383.6142578125,
+          "normalized_progress": 0.4952414713062693,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 22.958465576171875
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 1,
+          "taskSha256": "ca930ae2ec889e0dd004b59066724f6ceed35dfcdd88ba3034ae367e1c3beb40",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "NoProgress",
+          "interrupted": false,
+          "physicsTicks": 1102,
+          "simulatedSeconds": 22.03999137878418,
+          "travelMetres": 90.31617736816406,
+          "spawnDistance": 121.95791625976562,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 22.1,
+          "taskDistance": 284.61480712890625,
+          "normalized_progress": 0.3173277535320168,
+          "actualSpawnPosition": {
+            "x": -61.264305114746094,
+            "y": 0.5550000071525574,
+            "z": 76.54898071289062
+          },
+          "spawnForward": {
+            "x": -0.9982845187187195,
+            "y": 0.0,
+            "z": -0.05854952707886696
+          },
+          "activeGateIndices": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 2,
+          "taskSha256": "0398e38deaa10c3ffe7ca1acdd063c2bc8ddbda76d4bd1804979163b778bba41",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 803,
+          "simulatedSeconds": 16.059993743896484,
+          "travelMetres": 232.52798461914062,
+          "spawnDistance": 171.5379638671875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 16.1,
+          "taskDistance": 235.03475952148438,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -108.41258239746094,
+            "y": 0.5550000071525574,
+            "z": 87.13069152832031
+          },
+          "spawnForward": {
+            "x": -0.9006639719009399,
+            "y": 0.0,
+            "z": 0.4345163404941559
+          },
+          "activeGateIndices": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 3,
+          "taskSha256": "2fef25350ce7177c4a31e7cce460539fac14b87e1969c0d9fe58667f9dd6f6d4",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "NoProgress",
+          "interrupted": false,
+          "physicsTicks": 1100,
+          "simulatedSeconds": 21.999990463256836,
+          "travelMetres": 108.7244873046875,
+          "spawnDistance": 268.42291259765625,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 22.0,
+          "taskDistance": 138.14981079101562,
+          "normalized_progress": 0.7870042433077168,
+          "actualSpawnPosition": {
+            "x": -167.4578399658203,
+            "y": 0.5550000071525574,
+            "z": 41.11288833618164
+          },
+          "spawnForward": {
+            "x": -0.2786746919155121,
+            "y": 0.0,
+            "z": -0.9603855609893799
+          },
+          "activeGateIndices": [
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 4,
+          "taskSha256": "848e5bfd4c9b08c69a328a55210566858d4775c5d5c9b61bcae22cb1fbd61dcf",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 226,
+          "simulatedSeconds": 4.519998073577881,
+          "travelMetres": 66.86605834960938,
+          "spawnDistance": 337.4209899902344,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 4.6000000000000005,
+          "taskDistance": 69.1517333984375,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -216.17698669433594,
+            "y": 0.5550000071525574,
+            "z": 6.135299205780029
+          },
+          "spawnForward": {
+            "x": -0.9998934864997864,
+            "y": 0.0,
+            "z": 0.014595059677958488
+          },
+          "activeGateIndices": [
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": -1,
+          "taskSha256": "1136eb603dbad48c778fe1138b11023ad4d75df03d886fa47da01206fed656b6",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "NoProgress",
+          "interrupted": false,
+          "physicsTicks": 1405,
+          "simulatedSeconds": 28.09998893737793,
+          "travelMetres": 218.21702575683594,
+          "spawnDistance": 4.0,
+          "spawnApproach": 0.0,
+          "estimatedSeconds": 28.1,
+          "taskDistance": 365.4491882324219,
+          "normalized_progress": 0.5971200177302136,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 4.0
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 0,
+          "taskSha256": "354447ae9bdae36da2e7705377e6688c9ad52f2658e857b518becf7bbbeb833f",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "NoProgress",
+          "interrupted": false,
+          "physicsTicks": 1265,
+          "simulatedSeconds": 25.299989700317383,
+          "travelMetres": 191.4637451171875,
+          "spawnDistance": 31.294116973876953,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 25.3,
+          "taskDistance": 338.1550598144531,
+          "normalized_progress": 0.5662010357681602,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 31.294116973876953
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 1,
+          "taskSha256": "222c4922cf6eb11d5dc7d9df55c156be3e1d76b5d2af430cb831346bdd9b36f8",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "NoProgress",
+          "interrupted": false,
+          "physicsTicks": 1085,
+          "simulatedSeconds": 21.69999122619629,
+          "travelMetres": 102.72689819335938,
+          "spawnDistance": 118.61456298828125,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 21.700000000000003,
+          "taskDistance": 250.83462524414062,
+          "normalized_progress": 0.4095403419419226,
+          "actualSpawnPosition": {
+            "x": -45.06914520263672,
+            "y": 0.5550000071525574,
+            "z": 98.60734558105469
+          },
+          "spawnForward": {
+            "x": -0.8084079623222351,
+            "y": 0.0,
+            "z": 0.5886226296424866
+          },
+          "activeGateIndices": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 2,
+          "taskSha256": "f4a339315d763046d348a6421f30576f3044f25f95e397004c1f720cdcb90c36",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 502,
+          "simulatedSeconds": 10.039996147155762,
+          "travelMetres": 183.00424194335938,
+          "spawnDistance": 183.7821044921875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 10.100000000000001,
+          "taskDistance": 185.66708374023438,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -63.734519958496094,
+            "y": 0.5550000071525574,
+            "z": 153.31272888183594
+          },
+          "spawnForward": {
+            "x": 0.24302954971790314,
+            "y": 0.0,
+            "z": 0.9700188636779785
+          },
+          "activeGateIndices": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 3,
+          "taskSha256": "6b9b46202c33a175a6fbda3da8ee2f0c816c9affd2b5ac9c99c4754f4cd13a22",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 345,
+          "simulatedSeconds": 6.899997234344482,
+          "travelMetres": 125.29629516601562,
+          "spawnDistance": 241.63284301757812,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 6.9,
+          "taskDistance": 127.81634521484375,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -78.30834197998047,
+            "y": 0.5550000071525574,
+            "z": 203.30215454101562
+          },
+          "spawnForward": {
+            "x": -0.7823671698570251,
+            "y": 0.0,
+            "z": 0.6228174567222595
+          },
+          "activeGateIndices": [
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 4,
+          "taskSha256": "7f8b1ba26ac3e77492c3ec31ff3ab573a71e0e18d8a39711e54faa727c6d35f5",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 170,
+          "simulatedSeconds": 3.399998664855957,
+          "travelMetres": 52.66864013671875,
+          "spawnDistance": 314.68133544921875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 3.4000000000000004,
+          "taskDistance": 54.767852783203125,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -88.40522003173828,
+            "y": 0.5550000071525574,
+            "z": 266.1412353515625
+          },
+          "spawnForward": {
+            "x": 0.33236029744148254,
+            "y": 0.0,
+            "z": 0.9431524872779846
+          },
+          "activeGateIndices": [
+            11,
+            0
+          ]
+        }
+      ]
+    },
+    "selected": {
+      "step": 12210,
+      "complete_tasks": 18,
+      "finishes": 18,
+      "original_tasks": 3,
+      "original_finishes": 3,
+      "mean_normalized_progress": 1.0,
+      "task_records": [
+        {
+          "seed": 1009,
+          "spawnTurnIndex": -1,
+          "taskSha256": "66acd712da661b3837f8eac90782d78140e527c951b8e48ce824464b901e0ee9",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 816,
+          "simulatedSeconds": 16.31999397277832,
+          "travelMetres": 372.97796630859375,
+          "spawnDistance": 4.0,
+          "spawnApproach": 0.0,
+          "estimatedSeconds": 16.400000000000002,
+          "taskDistance": 375.03021240234375,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 4.0
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 0,
+          "taskSha256": "46c84e1ba81e3238e6dbad729b6e5ac2c3702045a75665da7d316493ad9de9bf",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 751,
+          "simulatedSeconds": 15.019993782043457,
+          "travelMetres": 341.793701171875,
+          "spawnDistance": 35.25584411621094,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 15.100000000000001,
+          "taskDistance": 343.77435302734375,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 35.25584411621094
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 1,
+          "taskSha256": "6071c09a46fd491181216121ae125056ea21c2cdf75ca2c5225423840f033eba",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 631,
+          "simulatedSeconds": 12.6199951171875,
+          "travelMetres": 288.94720458984375,
+          "spawnDistance": 87.85011291503906,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 12.700000000000001,
+          "taskDistance": 291.18011474609375,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -18.61009979248047,
+            "y": 0.5550000071525574,
+            "z": 81.21456909179688
+          },
+          "spawnForward": {
+            "x": -0.7508320212364197,
+            "y": 0.0,
+            "z": 0.6604931950569153
+          },
+          "activeGateIndices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 2,
+          "taskSha256": "fe4592436c95fc8c92d28a3e0a96833a7860bf7e8a324b40279cb84e92dfe60e",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 532,
+          "simulatedSeconds": 10.639995574951172,
+          "travelMetres": 232.2896728515625,
+          "spawnDistance": 144.30291748046875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 10.700000000000001,
+          "taskDistance": 234.727294921875,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -43.62255859375,
+            "y": 0.5550000071525574,
+            "z": 129.33596801757812
+          },
+          "spawnForward": {
+            "x": -0.20251624286174774,
+            "y": 0.0,
+            "z": 0.9792789220809937
+          },
+          "activeGateIndices": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 3,
+          "taskSha256": "6176b8af6de8954ebdcfa17f02b4e1a43b04f8082febb00ab2cf9d6a1c59a061",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 364,
+          "simulatedSeconds": 7.2799973487854,
+          "travelMetres": 149.50369262695312,
+          "spawnDistance": 227.49664306640625,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 7.300000000000001,
+          "taskDistance": 151.5335693359375,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -105.3955307006836,
+            "y": 0.5550000071525574,
+            "z": 162.544677734375
+          },
+          "spawnForward": {
+            "x": -0.9996346831321716,
+            "y": 0.0,
+            "z": -0.027027945965528488
+          },
+          "activeGateIndices": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 4,
+          "taskSha256": "ceda06b10c912e907b5a7c0f523130c19ab10dbcf9ce83970f8e202da1cd9ea0",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 219,
+          "simulatedSeconds": 4.379998207092285,
+          "travelMetres": 75.60379028320312,
+          "spawnDistance": 301.3907165527344,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 4.4,
+          "taskDistance": 77.63949584960938,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -162.42877197265625,
+            "y": 0.5550000071525574,
+            "z": 197.1071319580078
+          },
+          "spawnForward": {
+            "x": -0.4250391721725464,
+            "y": 0.0,
+            "z": 0.905174970626831
+          },
+          "activeGateIndices": [
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": -1,
+          "taskSha256": "53508c11d72fbde42bfa8a34680a21c4f8710a5a14848d49a7a0bc4ecf04a9b3",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 845,
+          "simulatedSeconds": 16.899993896484375,
+          "travelMetres": 400.2253112792969,
+          "spawnDistance": 4.0,
+          "spawnApproach": 0.0,
+          "estimatedSeconds": 16.900000000000002,
+          "taskDistance": 402.5727233886719,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 4.0
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 0,
+          "taskSha256": "6aee273f668a85b78eecb81c0361675d4a6d07627d602d1bd8c7e31f086354c3",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 828,
+          "simulatedSeconds": 16.559993743896484,
+          "travelMetres": 381.3229675292969,
+          "spawnDistance": 22.958465576171875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 16.6,
+          "taskDistance": 383.6142578125,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 22.958465576171875
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 1,
+          "taskSha256": "ca930ae2ec889e0dd004b59066724f6ceed35dfcdd88ba3034ae367e1c3beb40",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 612,
+          "simulatedSeconds": 12.239995002746582,
+          "travelMetres": 282.3785095214844,
+          "spawnDistance": 121.95791625976562,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 12.3,
+          "taskDistance": 284.61480712890625,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -61.264305114746094,
+            "y": 0.5550000071525574,
+            "z": 76.54898071289062
+          },
+          "spawnForward": {
+            "x": -0.9982845187187195,
+            "y": 0.0,
+            "z": -0.05854952707886696
+          },
+          "activeGateIndices": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 2,
+          "taskSha256": "0398e38deaa10c3ffe7ca1acdd063c2bc8ddbda76d4bd1804979163b778bba41",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 523,
+          "simulatedSeconds": 10.459996223449707,
+          "travelMetres": 232.98263549804688,
+          "spawnDistance": 171.5379638671875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 10.5,
+          "taskDistance": 235.03475952148438,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -108.41258239746094,
+            "y": 0.5550000071525574,
+            "z": 87.13069152832031
+          },
+          "spawnForward": {
+            "x": -0.9006639719009399,
+            "y": 0.0,
+            "z": 0.4345163404941559
+          },
+          "activeGateIndices": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 3,
+          "taskSha256": "2fef25350ce7177c4a31e7cce460539fac14b87e1969c0d9fe58667f9dd6f6d4",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 334,
+          "simulatedSeconds": 6.679997444152832,
+          "travelMetres": 135.73452758789062,
+          "spawnDistance": 268.42291259765625,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 6.7,
+          "taskDistance": 138.14981079101562,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -167.4578399658203,
+            "y": 0.5550000071525574,
+            "z": 41.11288833618164
+          },
+          "spawnForward": {
+            "x": -0.2786746919155121,
+            "y": 0.0,
+            "z": -0.9603855609893799
+          },
+          "activeGateIndices": [
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 4,
+          "taskSha256": "848e5bfd4c9b08c69a328a55210566858d4775c5d5c9b61bcae22cb1fbd61dcf",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 204,
+          "simulatedSeconds": 4.07999849319458,
+          "travelMetres": 67.0511474609375,
+          "spawnDistance": 337.4209899902344,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 4.1000000000000005,
+          "taskDistance": 69.1517333984375,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -216.17698669433594,
+            "y": 0.5550000071525574,
+            "z": 6.135299205780029
+          },
+          "spawnForward": {
+            "x": -0.9998934864997864,
+            "y": 0.0,
+            "z": 0.014595059677958488
+          },
+          "activeGateIndices": [
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": -1,
+          "taskSha256": "1136eb603dbad48c778fe1138b11023ad4d75df03d886fa47da01206fed656b6",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 787,
+          "simulatedSeconds": 15.739994049072266,
+          "travelMetres": 363.1042785644531,
+          "spawnDistance": 4.0,
+          "spawnApproach": 0.0,
+          "estimatedSeconds": 15.8,
+          "taskDistance": 365.4491882324219,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 4.0
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 0,
+          "taskSha256": "354447ae9bdae36da2e7705377e6688c9ad52f2658e857b518becf7bbbeb833f",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 728,
+          "simulatedSeconds": 14.5599946975708,
+          "travelMetres": 335.8150329589844,
+          "spawnDistance": 31.294116973876953,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 14.600000000000001,
+          "taskDistance": 338.1550598144531,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 31.294116973876953
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 1,
+          "taskSha256": "222c4922cf6eb11d5dc7d9df55c156be3e1d76b5d2af430cb831346bdd9b36f8",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 553,
+          "simulatedSeconds": 11.059995651245117,
+          "travelMetres": 248.74795532226562,
+          "spawnDistance": 118.61456298828125,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 11.100000000000001,
+          "taskDistance": 250.83462524414062,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -45.06914520263672,
+            "y": 0.5550000071525574,
+            "z": 98.60734558105469
+          },
+          "spawnForward": {
+            "x": -0.8084079623222351,
+            "y": 0.0,
+            "z": 0.5886226296424866
+          },
+          "activeGateIndices": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 2,
+          "taskSha256": "f4a339315d763046d348a6421f30576f3044f25f95e397004c1f720cdcb90c36",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 429,
+          "simulatedSeconds": 8.579997062683105,
+          "travelMetres": 183.68359375,
+          "spawnDistance": 183.7821044921875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 8.6,
+          "taskDistance": 185.66708374023438,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -63.734519958496094,
+            "y": 0.5550000071525574,
+            "z": 153.31272888183594
+          },
+          "spawnForward": {
+            "x": 0.24302954971790314,
+            "y": 0.0,
+            "z": 0.9700188636779785
+          },
+          "activeGateIndices": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 3,
+          "taskSha256": "6b9b46202c33a175a6fbda3da8ee2f0c816c9affd2b5ac9c99c4754f4cd13a22",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 314,
+          "simulatedSeconds": 6.2799973487854,
+          "travelMetres": 125.550048828125,
+          "spawnDistance": 241.63284301757812,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 6.300000000000001,
+          "taskDistance": 127.81634521484375,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -78.30834197998047,
+            "y": 0.5550000071525574,
+            "z": 203.30215454101562
+          },
+          "spawnForward": {
+            "x": -0.7823671698570251,
+            "y": 0.0,
+            "z": 0.6228174567222595
+          },
+          "activeGateIndices": [
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 4,
+          "taskSha256": "7f8b1ba26ac3e77492c3ec31ff3ab573a71e0e18d8a39711e54faa727c6d35f5",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 179,
+          "simulatedSeconds": 3.57999849319458,
+          "travelMetres": 52.508270263671875,
+          "spawnDistance": 314.68133544921875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 3.6,
+          "taskDistance": 54.767852783203125,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -88.40522003173828,
+            "y": 0.5550000071525574,
+            "z": 266.1412353515625
+          },
+          "spawnForward": {
+            "x": 0.33236029744148254,
+            "y": 0.0,
+            "z": 0.9431524872779846
+          },
+          "activeGateIndices": [
+            11,
+            0
+          ]
+        }
+      ]
+    },
+    "final": {
+      "step": 20000,
+      "complete_tasks": 18,
+      "finishes": 18,
+      "original_tasks": 3,
+      "original_finishes": 3,
+      "mean_normalized_progress": 1.0,
+      "task_records": [
+        {
+          "seed": 1009,
+          "spawnTurnIndex": -1,
+          "taskSha256": "66acd712da661b3837f8eac90782d78140e527c951b8e48ce824464b901e0ee9",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 838,
+          "simulatedSeconds": 16.759992599487305,
+          "travelMetres": 372.5960388183594,
+          "spawnDistance": 4.0,
+          "spawnApproach": 0.0,
+          "estimatedSeconds": 16.8,
+          "taskDistance": 375.03021240234375,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 4.0
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 0,
+          "taskSha256": "46c84e1ba81e3238e6dbad729b6e5ac2c3702045a75665da7d316493ad9de9bf",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 779,
+          "simulatedSeconds": 15.579994201660156,
+          "travelMetres": 341.52398681640625,
+          "spawnDistance": 35.25584411621094,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 15.600000000000001,
+          "taskDistance": 343.77435302734375,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 35.25584411621094
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 1,
+          "taskSha256": "6071c09a46fd491181216121ae125056ea21c2cdf75ca2c5225423840f033eba",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 659,
+          "simulatedSeconds": 13.179994583129883,
+          "travelMetres": 289.0672607421875,
+          "spawnDistance": 87.85011291503906,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 13.200000000000001,
+          "taskDistance": 291.18011474609375,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -18.61009979248047,
+            "y": 0.5550000071525574,
+            "z": 81.21456909179688
+          },
+          "spawnForward": {
+            "x": -0.7508320212364197,
+            "y": 0.0,
+            "z": 0.6604931950569153
+          },
+          "activeGateIndices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 2,
+          "taskSha256": "fe4592436c95fc8c92d28a3e0a96833a7860bf7e8a324b40279cb84e92dfe60e",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 555,
+          "simulatedSeconds": 11.099995613098145,
+          "travelMetres": 232.6890869140625,
+          "spawnDistance": 144.30291748046875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 11.100000000000001,
+          "taskDistance": 234.727294921875,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -43.62255859375,
+            "y": 0.5550000071525574,
+            "z": 129.33596801757812
+          },
+          "spawnForward": {
+            "x": -0.20251624286174774,
+            "y": 0.0,
+            "z": 0.9792789220809937
+          },
+          "activeGateIndices": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 3,
+          "taskSha256": "6176b8af6de8954ebdcfa17f02b4e1a43b04f8082febb00ab2cf9d6a1c59a061",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 372,
+          "simulatedSeconds": 7.43999719619751,
+          "travelMetres": 149.1304931640625,
+          "spawnDistance": 227.49664306640625,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 7.5,
+          "taskDistance": 151.5335693359375,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -105.3955307006836,
+            "y": 0.5550000071525574,
+            "z": 162.544677734375
+          },
+          "spawnForward": {
+            "x": -0.9996346831321716,
+            "y": 0.0,
+            "z": -0.027027945965528488
+          },
+          "activeGateIndices": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 1009,
+          "spawnTurnIndex": 4,
+          "taskSha256": "ceda06b10c912e907b5a7c0f523130c19ab10dbcf9ce83970f8e202da1cd9ea0",
+          "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 230,
+          "simulatedSeconds": 4.5999979972839355,
+          "travelMetres": 75.678466796875,
+          "spawnDistance": 301.3907165527344,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 4.6000000000000005,
+          "taskDistance": 77.63949584960938,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -162.42877197265625,
+            "y": 0.5550000071525574,
+            "z": 197.1071319580078
+          },
+          "spawnForward": {
+            "x": -0.4250391721725464,
+            "y": 0.0,
+            "z": 0.905174970626831
+          },
+          "activeGateIndices": [
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": -1,
+          "taskSha256": "53508c11d72fbde42bfa8a34680a21c4f8710a5a14848d49a7a0bc4ecf04a9b3",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 898,
+          "simulatedSeconds": 17.959993362426758,
+          "travelMetres": 400.5750427246094,
+          "spawnDistance": 4.0,
+          "spawnApproach": 0.0,
+          "estimatedSeconds": 18.0,
+          "taskDistance": 402.5727233886719,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 4.0
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 0,
+          "taskSha256": "6aee273f668a85b78eecb81c0361675d4a6d07627d602d1bd8c7e31f086354c3",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 861,
+          "simulatedSeconds": 17.219993591308594,
+          "travelMetres": 381.42388916015625,
+          "spawnDistance": 22.958465576171875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 17.3,
+          "taskDistance": 383.6142578125,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 22.958465576171875
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 1,
+          "taskSha256": "ca930ae2ec889e0dd004b59066724f6ceed35dfcdd88ba3034ae367e1c3beb40",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 636,
+          "simulatedSeconds": 12.71999454498291,
+          "travelMetres": 282.252197265625,
+          "spawnDistance": 121.95791625976562,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 12.8,
+          "taskDistance": 284.61480712890625,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -61.264305114746094,
+            "y": 0.5550000071525574,
+            "z": 76.54898071289062
+          },
+          "spawnForward": {
+            "x": -0.9982845187187195,
+            "y": 0.0,
+            "z": -0.05854952707886696
+          },
+          "activeGateIndices": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 2,
+          "taskSha256": "0398e38deaa10c3ffe7ca1acdd063c2bc8ddbda76d4bd1804979163b778bba41",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 540,
+          "simulatedSeconds": 10.799995422363281,
+          "travelMetres": 232.84490966796875,
+          "spawnDistance": 171.5379638671875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 10.8,
+          "taskDistance": 235.03475952148438,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -108.41258239746094,
+            "y": 0.5550000071525574,
+            "z": 87.13069152832031
+          },
+          "spawnForward": {
+            "x": -0.9006639719009399,
+            "y": 0.0,
+            "z": 0.4345163404941559
+          },
+          "activeGateIndices": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 3,
+          "taskSha256": "2fef25350ce7177c4a31e7cce460539fac14b87e1969c0d9fe58667f9dd6f6d4",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 343,
+          "simulatedSeconds": 6.859997272491455,
+          "travelMetres": 135.97021484375,
+          "spawnDistance": 268.42291259765625,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 6.9,
+          "taskDistance": 138.14981079101562,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -167.4578399658203,
+            "y": 0.5550000071525574,
+            "z": 41.11288833618164
+          },
+          "spawnForward": {
+            "x": -0.2786746919155121,
+            "y": 0.0,
+            "z": -0.9603855609893799
+          },
+          "activeGateIndices": [
+            9,
+            10,
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 2003,
+          "spawnTurnIndex": 4,
+          "taskSha256": "848e5bfd4c9b08c69a328a55210566858d4775c5d5c9b61bcae22cb1fbd61dcf",
+          "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 210,
+          "simulatedSeconds": 4.199998378753662,
+          "travelMetres": 66.76766967773438,
+          "spawnDistance": 337.4209899902344,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 4.2,
+          "taskDistance": 69.1517333984375,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -216.17698669433594,
+            "y": 0.5550000071525574,
+            "z": 6.135299205780029
+          },
+          "spawnForward": {
+            "x": -0.9998934864997864,
+            "y": 0.0,
+            "z": 0.014595059677958488
+          },
+          "activeGateIndices": [
+            11,
+            12,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": -1,
+          "taskSha256": "1136eb603dbad48c778fe1138b11023ad4d75df03d886fa47da01206fed656b6",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 807,
+          "simulatedSeconds": 16.13999366760254,
+          "travelMetres": 363.34765625,
+          "spawnDistance": 4.0,
+          "spawnApproach": 0.0,
+          "estimatedSeconds": 16.2,
+          "taskDistance": 365.4491882324219,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 4.0
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 0,
+          "taskSha256": "354447ae9bdae36da2e7705377e6688c9ad52f2658e857b518becf7bbbeb833f",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 738,
+          "simulatedSeconds": 14.759994506835938,
+          "travelMetres": 335.8254699707031,
+          "spawnDistance": 31.294116973876953,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 14.8,
+          "taskDistance": 338.1550598144531,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": 0.0,
+            "y": 0.5550000071525574,
+            "z": 31.294116973876953
+          },
+          "spawnForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "activeGateIndices": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 1,
+          "taskSha256": "222c4922cf6eb11d5dc7d9df55c156be3e1d76b5d2af430cb831346bdd9b36f8",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 577,
+          "simulatedSeconds": 11.539995193481445,
+          "travelMetres": 248.62509155273438,
+          "spawnDistance": 118.61456298828125,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 11.600000000000001,
+          "taskDistance": 250.83462524414062,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -45.06914520263672,
+            "y": 0.5550000071525574,
+            "z": 98.60734558105469
+          },
+          "spawnForward": {
+            "x": -0.8084079623222351,
+            "y": 0.0,
+            "z": 0.5886226296424866
+          },
+          "activeGateIndices": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 2,
+          "taskSha256": "f4a339315d763046d348a6421f30576f3044f25f95e397004c1f720cdcb90c36",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 444,
+          "simulatedSeconds": 8.879996299743652,
+          "travelMetres": 183.61166381835938,
+          "spawnDistance": 183.7821044921875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 8.9,
+          "taskDistance": 185.66708374023438,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -63.734519958496094,
+            "y": 0.5550000071525574,
+            "z": 153.31272888183594
+          },
+          "spawnForward": {
+            "x": 0.24302954971790314,
+            "y": 0.0,
+            "z": 0.9700188636779785
+          },
+          "activeGateIndices": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 3,
+          "taskSha256": "6b9b46202c33a175a6fbda3da8ee2f0c816c9affd2b5ac9c99c4754f4cd13a22",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 314,
+          "simulatedSeconds": 6.2799973487854,
+          "travelMetres": 125.75177001953125,
+          "spawnDistance": 241.63284301757812,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 6.300000000000001,
+          "taskDistance": 127.81634521484375,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -78.30834197998047,
+            "y": 0.5550000071525574,
+            "z": 203.30215454101562
+          },
+          "spawnForward": {
+            "x": -0.7823671698570251,
+            "y": 0.0,
+            "z": 0.6228174567222595
+          },
+          "activeGateIndices": [
+            9,
+            10,
+            11,
+            0
+          ]
+        },
+        {
+          "seed": 3001,
+          "spawnTurnIndex": 4,
+          "taskSha256": "7f8b1ba26ac3e77492c3ec31ff3ab573a71e0e18d8a39711e54faa727c6d35f5",
+          "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+          "reason": "Finish",
+          "interrupted": false,
+          "physicsTicks": 182,
+          "simulatedSeconds": 3.6399986743927,
+          "travelMetres": 52.55181884765625,
+          "spawnDistance": 314.68133544921875,
+          "spawnApproach": 15.0,
+          "estimatedSeconds": 3.7,
+          "taskDistance": 54.767852783203125,
+          "normalized_progress": 1.0,
+          "actualSpawnPosition": {
+            "x": -88.40522003173828,
+            "y": 0.5550000071525574,
+            "z": 266.1412353515625
+          },
+          "spawnForward": {
+            "x": 0.33236029744148254,
+            "y": 0.0,
+            "z": 0.9431524872779846
+          },
+          "activeGateIndices": [
+            11,
+            0
+          ]
+        }
+      ]
+    }
+  },
+  "selection": "Completion fraction, normalized task progress; mean estimated time only when all identical tasks finish. Raw return unused for ranking.",
+  "limitations": "One training RNG seed, three training routes, three evaluation routes; evaluation tasks reused for selection, no untouched final track suite. Task suffix finishes distinguished from original-route completion."
+}

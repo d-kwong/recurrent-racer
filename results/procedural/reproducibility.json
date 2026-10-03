@@ -1,0 +1,212 @@
+{
+  "comparison": "Preserved selected actor vs fresh transferred mean deterministic initial smoke evaluation; same held-out seeds, params, starts",
+  "episodes": [
+    {
+      "reference": "runs/procedural-selected-baseline/eval-000049232-start0.npz",
+      "candidate": "runs/procedural-smoke/eval-000000000-start0.npz",
+      "fields": {
+        "observations": {
+          "reference_shape": [
+            261,
+            15
+          ],
+          "candidate_shape": [
+            261,
+            15
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "pre_tanh": {
+          "reference_shape": [
+            261,
+            2
+          ],
+          "candidate_shape": [
+            261,
+            2
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "actions": {
+          "reference_shape": [
+            261,
+            2
+          ],
+          "candidate_shape": [
+            261,
+            2
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "rewards": {
+          "reference_shape": [
+            261
+          ],
+          "candidate_shape": [
+            261
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "terminal_observation": {
+          "reference_shape": [
+            15
+          ],
+          "candidate_shape": [
+            15
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "interrupted": {
+          "exact_equal": true,
+          "reference": false,
+          "candidate": false
+        }
+      },
+      "exact_equal": true,
+      "note": "Agent IDs excluded: transport identifiers may differ across launches."
+    },
+    {
+      "reference": "runs/procedural-selected-baseline/eval-000049232-start0.npz",
+      "candidate": "runs/procedural-smoke/eval-000000000-start0.npz",
+      "fields": {
+        "observations": {
+          "reference_shape": [
+            26,
+            15
+          ],
+          "candidate_shape": [
+            26,
+            15
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "pre_tanh": {
+          "reference_shape": [
+            26,
+            2
+          ],
+          "candidate_shape": [
+            26,
+            2
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "actions": {
+          "reference_shape": [
+            26,
+            2
+          ],
+          "candidate_shape": [
+            26,
+            2
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "rewards": {
+          "reference_shape": [
+            26
+          ],
+          "candidate_shape": [
+            26
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "terminal_observation": {
+          "reference_shape": [
+            15
+          ],
+          "candidate_shape": [
+            15
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "interrupted": {
+          "exact_equal": true,
+          "reference": false,
+          "candidate": false
+        }
+      },
+      "exact_equal": true,
+      "note": "Agent IDs excluded: transport identifiers may differ across launches."
+    },
+    {
+      "reference": "runs/procedural-selected-baseline/eval-000049232-start0.npz",
+      "candidate": "runs/procedural-smoke/eval-000000000-start0.npz",
+      "fields": {
+        "observations": {
+          "reference_shape": [
+            281,
+            15
+          ],
+          "candidate_shape": [
+            281,
+            15
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "pre_tanh": {
+          "reference_shape": [
+            281,
+            2
+          ],
+          "candidate_shape": [
+            281,
+            2
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "actions": {
+          "reference_shape": [
+            281,
+            2
+          ],
+          "candidate_shape": [
+            281,
+            2
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "rewards": {
+          "reference_shape": [
+            281
+          ],
+          "candidate_shape": [
+            281
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "terminal_observation": {
+          "reference_shape": [
+            15
+          ],
+          "candidate_shape": [
+            15
+          ],
+          "exact_equal": true,
+          "maximum_absolute_difference": 0.0
+        },
+        "interrupted": {
+          "exact_equal": true,
+          "reference": false,
+          "candidate": false
+        }
+      },
+      "exact_equal": true,
+      "note": "Agent IDs excluded: transport identifiers may differ across launches."
+    }
+  ]
+}

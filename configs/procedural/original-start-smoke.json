@@ -1,0 +1,17 @@
+{
+  "seed": 7,
+  "track_mode": "procedural",
+  "track_train_seeds": [101, 211, 307],
+  "track_eval_seeds": [1009, 2003, 3001],
+  "spawn_curriculum": false,
+  "max_transitions": 128,
+  "max_seconds": 120,
+  "learning_starts": 32,
+  "batch_size": 32,
+  "replay_capacity": 256,
+  "eval_frequency": 64,
+  "eval_episodes": 1,
+  "checkpoint_frequency": 64,
+  "log_frequency": 64,
+  "evaluate_initial": true
+}

@@ -1,0 +1,8 @@
+{
+  "episodes": 18,
+  "all_arrays_exactly_equal": true,
+  "maximum_difference": 0,
+  "reference": "runs/curriculum-smoke/eval-000000000-start0.npz",
+  "candidate": "runs/curriculum-pilot/eval-000000000-start0.npz",
+  "note": "Independent selected-mean initial evaluations across fresh simulator launches; identical18explicit seeded spawn tasks. Observations,pre_tanh,actions,rewards,finalobservations and interruptionflags compared,transportIDs excluded."
+}

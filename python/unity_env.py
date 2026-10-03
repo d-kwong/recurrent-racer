@@ -1,5 +1,6 @@
 """Shared Unity transport, numerical checks and deterministic rollout storage."""
 import csv
+import json
 from dataclasses import dataclass
 from pathlib import Path
 import random
@@ -60,20 +61,82 @@ def connect(config, log_path, viewer=False):
         timeout_wait=config['timeout'], no_graphics=not rendered, side_channels=[engine, parameters],
         additional_args=None if config['editor'] else
             ([] if rendered else ['--racing-no-render']) + config.get('player_args',[]) + ['-logFile', str(log_path.resolve())])
+    env.racing_log_path = log_path
+    env.racing_sequence_id = 0
     env.racing_parameters = parameters
     return env
 
-def configure_spawn(env, config, evaluation=False):
+def configure_spawn(env, config, evaluation=False, track_evaluation=None):
     """Send before reset; never change episode pose during an active rollout.
 
     Training mixes uniform approach distances with original starts. Evaluation
     defaults to the original start, so best scores share the original task.
     """
-    near = config.get('spawn_curriculum', False) and not evaluation
+    configure_track(env, config, evaluation if track_evaluation is None else track_evaluation)
+    near = config.get('spawn_curriculum', False) and not evaluation and config.get('track_mode', 'fixed') == 'fixed'
     channel = env.racing_parameters
     channel.set_float_parameter('racing_spawn_min', config.get('spawn_min', 10) if near else 0)
     channel.set_float_parameter('racing_spawn_max', config.get('spawn_max', 20) if near else 0)
     channel.set_float_parameter('racing_original_fraction', config.get('original_fraction', .25) if near else 0)
+
+def procedural_tasks(config, evaluation=False):
+    """Exact environment schedule: seed × explicit evaluation spawn, or train seeds."""
+    seeds = config.get('track_eval_seeds' if evaluation else 'track_train_seeds') or [config.get('track_seed', 101)]
+    starts = config.get('track_eval_spawn_indices') if evaluation else [-1]
+    if starts is None:
+        starts = list(range(-1, config.get('track_segments', 5)))
+    if not starts or any(not isinstance(i, int) or not -1 <= i < config.get('track_segments', 5) for i in starts):
+        raise ValueError('Invalid explicit evaluation spawn indices')
+    tasks = [(seed, turn) for seed in seeds for turn in starts]
+    if not tasks or len(tasks) > 64:
+        raise ValueError('Track seed/spawn schedule must contain 1..64 tasks')
+    return tasks
+
+
+def configure_track(env, config, evaluation=False):
+    """Configure deterministic episode-boundary seed cycling; fixed remains default."""
+    mode = config.get('track_mode', 'fixed')
+    if mode not in ('fixed', 'procedural'):
+        raise ValueError('Unknown track_mode')
+    channel = env.racing_parameters
+    channel.set_float_parameter('racing_track_mode', int(mode == 'procedural'))
+    if mode == 'fixed':
+        return
+    if config.get('editor', False):
+        raise ValueError('Procedural telemetry requires a built player with an explicit log path')
+    tasks = procedural_tasks(config, evaluation)
+    seeds = [seed for seed, turn in tasks]
+    if len(seeds) > 64 or any(not isinstance(s, int) or not 0 <= s <= 16777215 for s in seeds):
+        raise ValueError('Track seeds must be 1..64 exact float-safe integers')
+    env.racing_sequence_id = (getattr(env, 'racing_sequence_id', 0) + 1) % 16777216
+    channel.set_float_parameter('racing_track_sequence_id', env.racing_sequence_id)
+    channel.set_float_parameter('racing_track_seed_count', len(seeds))
+    for i, (seed, turn) in enumerate(tasks):
+        channel.set_float_parameter(f'racing_track_seed_{i}', seed)
+        channel.set_float_parameter(f'racing_track_spawn_turn_{i}', turn)
+    channel.set_float_parameter('racing_track_spawn_mode', 2 if evaluation else int(config.get('track_train_spawn_mode', 'curriculum') == 'curriculum'))
+    channel.set_float_parameter('racing_track_spawn_seed', config.get('track_spawn_seed', 7))
+    channel.set_float_parameter('racing_track_spawn_min', config.get('spawn_min', 10))
+    channel.set_float_parameter('racing_track_spawn_max', config.get('spawn_max', 20))
+    channel.set_float_parameter('racing_track_original_fraction', config.get('original_fraction', .25))
+    channel.set_float_parameter('racing_track_spawn_approach', config.get('track_eval_spawn_approach', 15))
+    for key, default in [('segments', 5), ('straight_min', 25), ('straight_max', 55),
+                         ('radius_min', 22), ('radius_max', 42), ('angle_min', 25),
+                         ('angle_max', 100), ('spacing', 2)]:
+        channel.set_float_parameter('racing_track_' + key, config.get('track_' + key, default))
+
+
+def track_records(log_path):
+    """Read realized geometry/terminal telemetry, never infer track identity from config."""
+    records = {'tracks': [], 'episodes': []}
+    if not Path(log_path).exists():
+        return records
+    for line in Path(log_path).read_text(errors='replace').splitlines():
+        for marker, kind in [('RACING_TRACK: ', 'tracks'), ('RACING_EPISODE: ', 'episodes')]:
+            if marker in line:
+                records[kind].append(json.loads(line.split(marker, 1)[1]))
+    return records
+
 
 def runtime_behavior(env):
     specs = env.behavior_specs

@@ -1,0 +1,8 @@
+{
+  "started_utc": "2026-10-03T19:50:48.536037+00:00",
+  "wall_budget_seconds": 900.0,
+  "actual_wall_seconds": 168.01432850000128,
+  "watchdog_signaled": false,
+  "exit_code": 0,
+  "note": "Budget includes Python initialization, connection, training and evaluation. At ceiling SIGINT stops further collection/evaluation and permits up to30s orderly checkpoint/Unity cleanup."
+}

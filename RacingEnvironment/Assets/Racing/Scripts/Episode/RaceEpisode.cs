@@ -28,7 +28,7 @@ namespace Racing
         public void ResetRun()
         {
             vehicle.ResetVehicle(track.spawn.position, track.spawn.rotation);
-            CurrentLapTime = 0; LapTimes.Clear(); NextCheckpoint = 1;
+            CurrentLapTime = 0; LapTimes.Clear(); NextCheckpoint = track.firstCheckpoint;
             keyboard.SuppressUntilReleased(); chaseCamera.Snap();
         }
     }

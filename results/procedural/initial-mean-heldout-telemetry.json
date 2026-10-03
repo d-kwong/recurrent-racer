@@ -1,0 +1,183 @@
+{
+  "track_resets": 4,
+  "unique_tracks": [
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 1009,
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "acceptedAttempt": 0,
+      "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+      "length": 385.03021240234375,
+      "gateDistances": [
+        379.03021240234375,
+        29.156169891357422,
+        58.312339782714844,
+        87.46851348876953,
+        116.62467956542969,
+        145.78085327148438,
+        174.93702697753906,
+        204.0931854248047,
+        233.24935913085938,
+        262.405517578125,
+        291.56170654296875,
+        320.7178649902344,
+        349.8740539550781
+      ],
+      "spawnDistance": 4.0,
+      "finishDistance": 379.03021240234375,
+      "taskDistance": 375.03021240234375,
+      "spawnPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 4.0
+      },
+      "finishPosition": {
+        "x": -221.7762451171875,
+        "y": 0.0,
+        "z": 214.54379272460938
+      }
+    },
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 2003,
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "acceptedAttempt": 0,
+      "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+      "length": 412.5727233886719,
+      "gateDistances": [
+        406.5727233886719,
+        31.274824142456055,
+        62.54964828491211,
+        93.82447814941406,
+        125.09929656982422,
+        156.37413024902344,
+        187.64895629882812,
+        218.92376708984375,
+        250.19859313964844,
+        281.4734191894531,
+        312.7482604980469,
+        344.0230712890625,
+        375.29791259765625
+      ],
+      "spawnDistance": 4.0,
+      "finishDistance": 406.5727233886719,
+      "taskDistance": 402.5727233886719,
+      "spawnPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 4.0
+      },
+      "finishPosition": {
+        "x": -264.1932373046875,
+        "y": 0.0,
+        "z": -29.852012634277344
+      }
+    },
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 3001,
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "acceptedAttempt": 0,
+      "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+      "length": 375.4491882324219,
+      "gateDistances": [
+        369.4491882324219,
+        30.787431716918945,
+        61.57486343383789,
+        92.36229705810547,
+        123.14972686767578,
+        153.93716430664062,
+        184.72459411621094,
+        215.51202392578125,
+        246.29945373535156,
+        277.0868835449219,
+        307.87432861328125,
+        338.6617431640625
+      ],
+      "spawnDistance": 4.0,
+      "finishDistance": 369.4491882324219,
+      "taskDistance": 365.4491882324219,
+      "spawnPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 4.0
+      },
+      "finishPosition": {
+        "x": -89.9677505493164,
+        "y": 0.0,
+        "z": 318.2642822265625
+      }
+    }
+  ],
+  "episodes": [
+    {
+      "seed": 1009,
+      "physicsTicks": 372,
+      "sequenceIndex": 0,
+      "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+      "reason": "Crash",
+      "interrupted": false,
+      "simulatedSeconds": 7.43999719619751,
+      "travelMetres": 50.05934143066406,
+      "routeLength": 385.03021240234375,
+      "finishDistance": 375.03021240234375,
+      "normalized_progress": 0.1334808230782188
+    },
+    {
+      "seed": 2003,
+      "physicsTicks": 337,
+      "sequenceIndex": 1,
+      "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+      "reason": "Crash",
+      "interrupted": false,
+      "simulatedSeconds": 6.739997386932373,
+      "travelMetres": 41.911685943603516,
+      "routeLength": 412.5727233886719,
+      "finishDistance": 402.5727233886719,
+      "normalized_progress": 0.10410960183991165
+    },
+    {
+      "seed": 3001,
+      "physicsTicks": 362,
+      "sequenceIndex": 2,
+      "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+      "reason": "Crash",
+      "interrupted": false,
+      "simulatedSeconds": 7.239996910095215,
+      "travelMetres": 47.733341217041016,
+      "routeLength": 375.4491882324219,
+      "finishDistance": 365.4491882324219,
+      "normalized_progress": 0.13061553494731834
+    }
+  ],
+  "completion_count": 0,
+  "complete_episode_count": 3,
+  "note": "Structured terminal telemetry; excludes partial episodes at interruption. Geometry arrays retained in ignored Unity log."
+}

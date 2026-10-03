@@ -1,0 +1,400 @@
+{
+  "generated_seed_count": 1000,
+  "representative_tasks": [
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 101,
+      "acceptedAttempt": 0,
+      "geometrySha256": "30fb48cb43baae29615b74f399a06c6d10f10816f253a3cf7aba375b08c470d5",
+      "taskSha256": "db01016a256ce6c334954ada0e618aeeeea3fc0fcaa397f5a4da8cb072a029f0",
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "length": 433.34063720703125,
+      "spawnDistance": 346.736572265625,
+      "finishDistance": 427.34063720703125,
+      "taskDistance": 80.60406494140625,
+      "actualSpawnPosition": {
+        "x": -256.4456787109375,
+        "y": 0.0,
+        "z": 97.76929473876953
+      },
+      "spawnForward": {
+        "x": -0.7202121019363403,
+        "y": 0.0,
+        "z": 0.6937539577484131
+      },
+      "spawnTurnIndex": 4,
+      "spawnApproach": 16.0144100189209,
+      "activeGateIndices": [
+        12,
+        13,
+        0
+      ],
+      "skippedGateCount": 11,
+      "turnEntryDistances": [
+        43.16797637939453,
+        139.18612670898438,
+        204.70298767089844,
+        280.69854736328125,
+        362.7509765625
+      ],
+      "turnAngles": [
+        -89.48558807373047,
+        30.14562225341797,
+        -68.83355712890625,
+        82.10173797607422,
+        -69.33647918701172
+      ],
+      "turnRadii": [
+        35.55591583251953,
+        30.28026580810547,
+        32.879417419433594,
+        34.10957717895508,
+        41.80826950073242
+      ]
+    },
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 211,
+      "acceptedAttempt": 0,
+      "geometrySha256": "671982a07a2e659b0782625442c3f1e0dfe2d8b36b94c885c490f4f71408f8d2",
+      "taskSha256": "ea823b8a1dc4584cc12ed68657a9801a4e3167d4d4df5a750a5785111bba9b2b",
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "length": 462.2721862792969,
+      "spawnDistance": 18.328399658203125,
+      "finishDistance": 456.2721862792969,
+      "taskDistance": 437.94378662109375,
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 18.328399658203125
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "spawnTurnIndex": 0,
+      "spawnApproach": 16.81195068359375,
+      "activeGateIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        0
+      ],
+      "skippedGateCount": 0,
+      "turnEntryDistances": [
+        35.140350341796875,
+        126.50404357910156,
+        218.52984619140625,
+        319.5182800292969,
+        392.99432373046875
+      ],
+      "turnAngles": [
+        -82.87576293945312,
+        70.18190002441406,
+        -83.268310546875,
+        58.48580551147461,
+        -79.9465103149414
+      ],
+      "turnRadii": [
+        33.51289367675781,
+        41.7440185546875,
+        40.50697326660156,
+        38.449588775634766,
+        35.32094192504883
+      ]
+    },
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 307,
+      "acceptedAttempt": 0,
+      "geometrySha256": "c1899bd8cedad00838db005fc9a1fa28956777e188533ca7bd41ba15c03a48cf",
+      "taskSha256": "d671b2e654240b92f6d225a2e5ad42b9e9f9015a4354b00c15afedb6266e5be3",
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "length": 504.0003662109375,
+      "spawnDistance": 245.9632568359375,
+      "finishDistance": 498.0003662109375,
+      "taskDistance": 252.037109375,
+      "actualSpawnPosition": {
+        "x": -117.44432830810547,
+        "y": 0.0,
+        "z": 158.960693359375
+      },
+      "spawnForward": {
+        "x": -0.02270018681883812,
+        "y": 0.0,
+        "z": 0.999742329120636
+      },
+      "spawnTurnIndex": 2,
+      "spawnApproach": 13.762636184692383,
+      "activeGateIndices": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        0
+      ],
+      "skippedGateCount": 8,
+      "turnEntryDistances": [
+        50.49357604980469,
+        151.07794189453125,
+        259.72589111328125,
+        350.01800537109375,
+        420.6408996582031
+      ],
+      "turnAngles": [
+        -89.83679962158203,
+        88.53607940673828,
+        -53.31772994995117,
+        46.605323791503906,
+        -94.19979095458984
+      ],
+      "turnRadii": [
+        33.37786865234375,
+        35.090694427490234,
+        39.25132751464844,
+        32.8348503112793,
+        38.541831970214844
+      ]
+    },
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 1009,
+      "acceptedAttempt": 0,
+      "geometrySha256": "a5e49011505471a178ca6bf101acd37c4c4a2e2123d3621565ee8cad68d1e332",
+      "taskSha256": "65629f6c816a6ae0d51133b1d5aa01e8444ff492b024373a02397f62ae8c8cf7",
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "length": 385.03021240234375,
+      "spawnDistance": 297.39801025390625,
+      "finishDistance": 379.03021240234375,
+      "taskDistance": 81.6322021484375,
+      "actualSpawnPosition": {
+        "x": -160.7317352294922,
+        "y": 0.0,
+        "z": 193.4930419921875
+      },
+      "spawnForward": {
+        "x": -0.4250391721725464,
+        "y": 0.0,
+        "z": 0.905174970626831
+      },
+      "spawnTurnIndex": 4,
+      "spawnApproach": 18.99269676208496,
+      "activeGateIndices": [
+        11,
+        12,
+        0
+      ],
+      "skippedGateCount": 10,
+      "turnEntryDistances": [
+        50.25584411621094,
+        102.85011291503906,
+        159.30291748046875,
+        242.49664306640625,
+        316.3907165527344
+      ],
+      "turnAngles": [
+        -48.6624755859375,
+        36.97831344604492,
+        -79.86451721191406,
+        66.39569091796875,
+        -98.34957122802734
+      ],
+      "turnRadii": [
+        32.261375427246094,
+        28.468650817871094,
+        24.392736434936523,
+        38.67668151855469,
+        28.34153175354004
+      ]
+    },
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 2003,
+      "acceptedAttempt": 0,
+      "geometrySha256": "578e65ad99f55146077c80a4f22cfa75593e9c7a5f84ea78fb6cd4098b933cbc",
+      "taskSha256": "53508c11d72fbde42bfa8a34680a21c4f8710a5a14848d49a7a0bc4ecf04a9b3",
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "length": 412.5727233886719,
+      "spawnDistance": 4.0,
+      "finishDistance": 406.5727233886719,
+      "taskDistance": 402.5727233886719,
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "spawnTurnIndex": -1,
+      "spawnApproach": 0.0,
+      "activeGateIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        0
+      ],
+      "skippedGateCount": 0,
+      "turnEntryDistances": [
+        37.958465576171875,
+        136.95791625976562,
+        186.5379638671875,
+        283.42291259765625,
+        352.4209899902344
+      ],
+      "turnAngles": [
+        -93.35655212402344,
+        29.111173629760742,
+        -99.57353210449219,
+        74.65518951416016,
+        -76.55742645263672
+      ],
+      "turnRadii": [
+        39.78208541870117,
+        28.962581634521484,
+        24.94281005859375,
+        28.855663299560547,
+        30.05467414855957
+      ]
+    },
+    {
+      "generatorVersion": "open-arcs-v1",
+      "seed": 3001,
+      "acceptedAttempt": 0,
+      "geometrySha256": "1f831a1a761228ce100bc8dabd0debafee143e80116e378926e302a0de44cef9",
+      "taskSha256": "43d9e1d879ffd1a5d275c66830afee1625270608367b79eaf1a457f910a34e34",
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "length": 375.4491882324219,
+      "spawnDistance": 179.2871856689453,
+      "finishDistance": 369.4491882324219,
+      "taskDistance": 190.16200256347656,
+      "actualSpawnPosition": {
+        "x": -64.82691192626953,
+        "y": 0.0,
+        "z": 148.9525604248047
+      },
+      "spawnForward": {
+        "x": 0.24302776157855988,
+        "y": 0.0,
+        "z": 0.9700193405151367
+      },
+      "spawnTurnIndex": 2,
+      "spawnApproach": 19.494915008544922,
+      "activeGateIndices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0
+      ],
+      "skippedGateCount": 5,
+      "turnEntryDistances": [
+        46.29411697387695,
+        133.61456298828125,
+        198.7821044921875,
+        256.6328430175781,
+        329.68133544921875
+      ],
+      "turnAngles": [
+        -53.940673828125,
+        68.0060043334961,
+        -65.54325103759766,
+        70.89008331298828,
+        -43.06511306762695
+      ],
+      "turnRadii": [
+        38.31448745727539,
+        27.965835571289062,
+        27.951107025146484,
+        24.13667106628418,
+        34.28748321533203
+      ]
+    }
+  ],
+  "geometry_export_sha256": "233720f9f7b7ff97e545a664110d7e7b5380469e1fc7de1c69ee49385103c8cc",
+  "diagnostic_assertions_source": "RacingEnvironment/Assets/Racing/Editor/ProceduralTrackVerification.cs",
+  "diagnostic_assertions_sha256": "4896418071fea427e8a316aa16e55b5766b9e9aa0f35c565f7abc1ea5e82a605",
+  "note": "Includes every representative turn at10/15/20m approaches and deterministic sampled curriculum. Scripted geometry checks, not learned policy evidence."
+}

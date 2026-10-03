@@ -1,30 +1,65 @@
-"""Plot real deterministic evaluation data; no training returns or invented error bars."""
+"""Render preserved fixed-track evaluations; never substitute training returns."""
+import csv
+import json
 from pathlib import Path
-import csv,json
-import numpy as np
+
 import matplotlib
-matplotlib.use('Agg')
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-ROOT=Path(__file__).resolve().parents[1]
-plt.rcParams.update({'font.family':'DejaVu Sans','font.size':12,'svg.fonttype':'none','text.color':'#eef5fa','axes.labelcolor':'#a8bdcf','xtick.color':'#a8bdcf','ytick.color':'#a8bdcf','axes.edgecolor':'#31465c','axes.facecolor':'#17263a','figure.facecolor':'#0d1726','savefig.facecolor':'#0d1726'})
-rows=[]
-for run in ['lap-v1','lap-v2']:
- with (ROOT/f'results/selection/{run}-evaluations.csv').open() as f:rows.extend(csv.DictReader(f))
-steps=np.array([int(r['step']) for r in rows])/1000
-rate=np.array([float(r['reward_inferred_finish_fraction']) for r in rows])
-times=np.array([float(r['mean_finished_seconds']) if r['mean_finished_seconds'] else np.nan for r in rows])
-fig=plt.figure(figsize=(12,6.8));gs=fig.add_gridspec(2,2,width_ratios=[1.55,1],height_ratios=[1,1],hspace=.8,wspace=.3)
-a=fig.add_subplot(gs[:,0]);a.plot(steps,times,'o-',color='#46dfce',lw=2,ms=5,label='Finished original-start evaluations')
-a.scatter([49.232],[20],color='#ffbe65',s=110,zorder=4);a.annotate('Selected\n49,232 transitions / 20.0 s',(49.232,20),xytext=(47,21.65),color='#ffbe65',fontsize=11,arrowprops={'arrowstyle':'->','color':'#ffbe65'})
-a.set(xlabel='Cumulative SAC training transitions (thousands)',ylabel='Estimated finished-lap time (s)',ylim=(19.5,23),xlim=(-3,114));a.grid(alpha=.12);a.set_title('Checkpoint comparisons',loc='left',color='#eef5fa',fontweight='bold',pad=15)
-a.text(.03,.06,'No lap at 0 or 10,034 transitions.\nThree repeated starts per checkpoint;\nall finished times within each batch are identical.',transform=a.transAxes,color='#a8bdcf',fontsize=10)
-b=fig.add_subplot(gs[0,1]);b.step(steps,rate*100,where='post',color='#46dfce');b.scatter(steps,rate*100,color='#46dfce',s=24);b.set(ylim=(-8,108),yticks=[0,50,100],ylabel='Finish proxy (%)');b.grid(alpha=.12);b.set_title('Original-start completion',loc='left',color='#eef5fa',fontweight='bold');b.set_xticks([0,50,100]);b.set_xlabel('Training transitions (thousands)')
-c=fig.add_subplot(gs[1,1]);records=json.loads((ROOT/'results/verification/curated-headless-result.json').read_text());labels=['Original','10 m','15 m','20 m'];data=[records[k]['mean_finished_seconds'] for k in ['0','10','15','20']];c.bar(labels,data,color=['#ffbe65','#46dfce','#46dfce','#46dfce'],width=.6);c.set(ylim=(0,26),ylabel='Time to finish (s)');c.set_title('Selected actor · fresh evaluation',loc='left',color='#eef5fa',fontweight='bold')
-for i,t in enumerate(data):c.text(i,t+.4,f'{t:.1f} s\n3/3',ha='center',fontsize=10,color='#eef5fa')
-fig.suptitle('A selected policy that completes the fixed track',x=.06,y=.975,ha='left',fontsize=20,fontweight='bold')
-fig.text(.06,.907,'Deterministic tanh(mean) · Unity seed 7 · n=3 repeated episodes per start · 120 s cap',color='#a8bdcf',fontsize=11)
-fig.subplots_adjust(left=.075,right=.965,top=.8,bottom=.19)
-fig.text(.06,.075,'Time = decisions × 0.1 s (terminal interval can overestimate by ≈0.08 s). Finish is inferred from terminal reward.',color='#a8bdcf',fontsize=10)
-fig.text(.06,.04,'Approach starts shorten the route; they are not held-out tracks. No independent training-seed or generalization result.',color='#a8bdcf',fontsize=10)
-for ext in ['svg','png']:fig.savefig(ROOT/f'docs/media/performance.{ext}',dpi=150)
-print('Performance plot generated from preserved CSV/JSON evaluation records.')
+import numpy as np
+
+ROOT = Path(__file__).resolve().parents[1]
+BACKGROUND, TEXT, MUTED = "#101820", "#edf3f5", "#a7b6be"
+CYAN, GOLD = "#6ed4cc", "#f2bd71"
+
+
+def main():
+    rows = []
+    for run in ("lap-v1", "lap-v2"):
+        with (ROOT / f"results/selection/{run}-evaluations.csv").open() as source:
+            rows.extend(csv.DictReader(source))
+    rows.sort(key=lambda row: int(row["step"]))
+    steps = np.array([int(row["step"]) for row in rows])
+    finish = np.array([float(row["reward_inferred_finish_fraction"]) for row in rows])
+    times = np.array([float(row["mean_finished_seconds"]) if row["mean_finished_seconds"] else np.nan for row in rows])
+    provenance = json.loads((ROOT / "policies/provenance.json").read_text())
+    selected_step = provenance["state"]["transitions"]
+    selected_index = list(steps).index(selected_step)
+
+    plt.rcParams.update({
+        "font.family": "DejaVu Sans", "font.size": 11, "svg.fonttype": "none",
+        "text.color": TEXT, "axes.labelcolor": MUTED, "xtick.color": MUTED,
+        "ytick.color": MUTED, "axes.edgecolor": "#35434d", "axes.facecolor": BACKGROUND,
+        "figure.facecolor": BACKGROUND, "savefig.facecolor": BACKGROUND,
+    })
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.8))
+    x = steps / 1000
+    left, right = axes
+    left.plot(x, times, "o-", color=CYAN, linewidth=1.6, markersize=5)
+    left.scatter(x[selected_index], times[selected_index], color=GOLD, s=70, zorder=3)
+    left.annotate(f"Selected · {times[selected_index]:.1f} s", xy=(x[selected_index], times[selected_index]),
+                  xytext=(x[selected_index] + 8, times[selected_index] - 0.2), color=GOLD, fontsize=10)
+    left.set(title="Finished-lap time", ylabel="Estimated seconds", ylim=(19.3, 23.1), yticks=[20, 21, 22, 23])
+    right.scatter(x, finish * 100, color=CYAN, s=32)
+    right.scatter(x[selected_index], finish[selected_index] * 100, color=GOLD, s=70, zorder=3)
+    right.set(title="Finish proxy", ylabel="Repeated episodes finished (%)", ylim=(-12, 112), yticks=[0, 50, 100])
+    for axis in axes:
+        axis.set(xlabel="SAC training transitions (thousands)", xlim=(-4, 115), xticks=[0, 25, 50, 75, 100])
+        axis.grid(axis="y", color="#35434d", alpha=0.6, linewidth=0.6)
+        axis.set_axisbelow(True)
+        axis.spines[["top", "right"]].set_visible(False)
+        axis.set_title(axis.get_title(), loc="left", fontweight="bold", pad=14)
+        axis.set_title("")
+    fig.suptitle("Learning on one fixed track", x=0.065, y=0.97, ha="left", fontsize=19, fontweight="bold")
+    fig.text(0.065, 0.89, "Deterministic policy · Unity seed 7 · 3 repeated original starts per checkpoint", color=MUTED, fontsize=10)
+    fig.subplots_adjust(left=0.065, right=0.975, top=0.73, bottom=0.27, wspace=0.35)
+    fig.text(0.065, 0.12, "Time = decisions × 0.1 s; final interval may overestimate by ≈0.08 s. No time is plotted for failures.", color=MUTED, fontsize=9)
+    fig.text(0.065, 0.065, "Finish inferred from terminal reward · 120 s cap · repeated starts measure repeatability, not generalization.", color=MUTED, fontsize=9)
+    for extension in ("png", "svg"):
+        fig.savefig(ROOT / f"docs/media/performance.{extension}", dpi=160)
+    plt.close(fig)
+    print(f"Rendered {len(rows)} recorded checkpoint batches; selected step {selected_step}.")
+
+
+if __name__ == "__main__":
+    main()

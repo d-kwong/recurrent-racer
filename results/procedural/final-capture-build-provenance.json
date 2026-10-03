@@ -1,0 +1,29 @@
+{
+  "capture_build_sha256": "21d0e5991bf9750c09567dcf63dc4c6c9c96518e86b746dd2f2eb639426033e5",
+  "pilot_build_sha256": "127c413280637dc9e72058ba1331fa9c14087dd7c155038f762f27e1d00157dc",
+  "unity": "6000.6.3f1",
+  "production_changes_since_pilot": [
+    "RacingEnvironment/Assets/Racing/Scripts/Presentation/PortfolioPresentation.cs"
+  ],
+  "change": "Rendered-only collider-free procedural backdrop; fixed/headless bypass; no physics, route, timing, reward or numerical interface changes.",
+  "source_sha256": "79f9f611b00d2511336470f5e1a84780a7788311894b981342ff3b1271bbe3e7",
+  "training_run_unchanged": true,
+  "capture_protocol": {
+    "policy": "policies/procedural-selected.pt",
+    "selected_additional_training_transitions": 12210,
+    "unity_seed": 7,
+    "track_seed": 1009,
+    "spawn_index": -1,
+    "spawn": "original s=4m",
+    "time_scale": 1,
+    "camera": "same default chase as fixed comparison",
+    "window": [
+      1280,
+      720
+    ]
+  },
+  "capture_finish": true,
+  "estimated_seconds": 16.4,
+  "full_numerical_trace_exact_headless": true,
+  "visual_review": "Frame100: continuous dark background under entire visible road, clear car/curbs, no blue void or tile boundary."
+}

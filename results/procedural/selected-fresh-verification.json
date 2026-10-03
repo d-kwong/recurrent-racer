@@ -1,0 +1,32 @@
+{
+  "result": {
+    "0": {
+      "mean_return": 3.3187390261632066,
+      "reward_inferred_finish_fraction": 1.0,
+      "mean_finished_seconds": 10.761111111111113,
+      "best_finished_seconds": 3.6,
+      "mean_length": 107.61111111111111,
+      "approach_m": 0,
+      "transitions": 1937,
+      "wall_seconds": 9.721644833000028,
+      "normalized_progress": 1.0,
+      "track_mode": "procedural",
+      "evaluation_tasks": "1009:-1,1009:0,1009:1,1009:2,1009:3,1009:4,2003:-1,2003:0,2003:1,2003:2,2003:3,2003:4,3001:-1,3001:0,3001:1,3001:2,3001:3,3001:4"
+    }
+  },
+  "full_trace_comparison": {
+    "episodes": 18,
+    "exact_equal": true,
+    "maximum_difference": 0,
+    "fields": [
+      "observations",
+      "pre_tanh",
+      "actions",
+      "rewards",
+      "terminal_observation",
+      "interrupted"
+    ]
+  },
+  "policy_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
+  "note": "Fresh exported actor rollouts exactly match selected full checkpoint evaluation on identical18seed\u00d7spawn tasks; repeated deterministic validation, not independent training seeds."
+}
