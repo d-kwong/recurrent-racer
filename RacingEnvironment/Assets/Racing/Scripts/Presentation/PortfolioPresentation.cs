@@ -34,6 +34,16 @@ namespace Racing
             AddCarDetails(agent.transform);
             var backdrop=new GameObject("Procedural backdrop presentation").AddComponent<ProceduralBackdrop>();
             backdrop.track=agent.episode.track;
+            string cameraMode=Arg(args,"--portfolio-camera")??"chase";
+            if(cameraMode!="chase"&&cameraMode!="overview") throw new ArgumentException("Unknown portfolio camera: "+cameraMode);
+            if(cameraMode=="overview")
+            {
+                var overview=agent.episode.chaseCamera.gameObject.AddComponent<PortfolioOverview>();
+                overview.track=agent.episode.track;overview.output=Arg(args,"--portfolio-capture");
+                agent.episode.chaseCamera.enabled=false;
+            }
+            foreach(var light in FindObjectsByType<Light>(FindObjectsSortMode.None))
+                if(light.type==LightType.Directional) { light.shadows=LightShadows.Soft;light.shadowStrength=.7f; }
             bool rays=Array.IndexOf(args,"--portfolio-rays")>=0;
             string output=Arg(args,"--portfolio-capture"),label=Arg(args,"--portfolio-label");
             if(!rays&&output==null&&label==null) return;
@@ -42,7 +52,7 @@ namespace Racing
             var chase=agent.episode.chaseCamera;
             chase.downwardAngle=rays ? 65 : 35;chase.distance=rays ? 48 : 22;
             chase.fieldOfView=rays ? 65 : 48;chase.lookAhead=rays ? 10 : 4;
-            chase.speedFovBoost=0;chase.Snap();
+            chase.speedFovBoost=0;if(cameraMode=="chase") chase.Snap();
             // Replace the default game HUD only for captures, with a compact labelled presentation.
             agent.episode.GetComponent<RaceHud>().enabled=false;
             if(output!=null)
@@ -79,10 +89,13 @@ namespace Racing
         }
         IEnumerator Capture()
         {
-            while(output!=null&&frames<500)
+            // The capture runner owns duration: retain the complete route and terminal hold.
+            bool started=false;
+            while(output!=null)
             {
                 yield return new WaitForEndOfFrame();
-                if(agent.LastActions.y==0||agent.ElapsedSeconds<.1f||Time.realtimeSinceStartup<nextCapture) continue;
+                if(!started) started=agent.ElapsedSeconds>=.1f;
+                if(!started||Time.realtimeSinceStartup<nextCapture) continue;
                 nextCapture=Time.realtimeSinceStartup+.05f;
                 var image=ScreenCapture.CaptureScreenshotAsTexture();
                 File.WriteAllBytes(Path.Combine(output,$"frame-{frames:00000}.png"),image.EncodeToPNG());Destroy(image);
@@ -93,7 +106,7 @@ namespace Racing
         {
             if(titleStyle==null)
             {
-                titleStyle=new GUIStyle(GUI.skin.label) {fontSize=22,fontStyle=FontStyle.Bold,clipping=TextClipping.Clip};
+                titleStyle=new GUIStyle(GUI.skin.label) {fontSize=20,fontStyle=FontStyle.Bold,clipping=TextClipping.Clip};
                 titleStyle.normal.textColor=new Color(.94f,.97f,.98f);
                 detailStyle=new GUIStyle(GUI.skin.label) {fontSize=14};
                 detailStyle.normal.textColor=new Color(.66f,.78f,.84f);
@@ -101,17 +114,20 @@ namespace Racing
                 metricStyle.normal.textColor=new Color(.94f,.97f,.98f);
             }
             // A reference canvas keeps labels readable in both video and smaller previews.
-            float scale=Mathf.Min(Screen.width/960f,Screen.height/540f);
+            float scale=Screen.width/960f;
             float width=Screen.width/scale,height=Screen.height/scale;
             var previousMatrix=GUI.matrix;
             GUI.matrix=Matrix4x4.Scale(new Vector3(scale,scale,1));
-            DrawPanel(new Rect(18,18,width-36,78),PanelColor);
-            DrawPanel(new Rect(18,18,3,78),AccentColor);
-            GUI.Label(new Rect(36,27,width-72,30),"RECURRENT RACER  /  "+label,titleStyle);
-            GUI.Label(new Rect(36,61,width-72,24),rays ? "OBSERVED RAYS   /   cyan: hit   /   amber: no hit   /   11 rays, 40 m" : "POLICY   /   numerical perception   /   continuous control",detailStyle);
-            DrawPanel(new Rect(18,height-65,424,47),PanelColor);
-            DrawPanel(new Rect(18,height-65,3,47),AccentColor);
-            GUI.Label(new Rect(36,height-55,390,30),$"{agent.vehicle.SpeedKmh:0} km/h   |   {agent.ElapsedSeconds:0.0} s   |   {agent.LastActions.x:+0.00;-0.00;0.00} steer",metricStyle);
+            DrawPanel(new Rect(12,10,width-24,38),PanelColor);
+            DrawPanel(new Rect(12,10,3,38),AccentColor);
+            string heading="RECURRENT RACER  /  "+label;
+            titleStyle.fontSize=20;
+            while(titleStyle.fontSize>12&&titleStyle.CalcSize(new GUIContent(heading)).x>width-52) titleStyle.fontSize--;
+            GUI.Label(new Rect(26,14,width-52,28),heading,titleStyle);
+            DrawPanel(new Rect(12,height-46,424,36),PanelColor);
+            DrawPanel(new Rect(12,height-46,3,36),AccentColor);
+            GUI.Label(new Rect(26,height-42,390,28),$"{agent.vehicle.SpeedKmh:0} km/h   |   {agent.ElapsedSeconds:0.0} s   |   {agent.LastActions.x:+0.00;-0.00;0.00} steer",metricStyle);
+            if(rays) GUI.Label(new Rect(452,height-40,width-466,26),"11 rays / 40 m  |  cyan hit / amber clear",detailStyle);
             GUI.matrix=previousMatrix;
         }
         static void DrawPanel(Rect rect,Color color)
@@ -130,14 +146,45 @@ namespace Racing
             var red=body.GetComponent<MeshRenderer>().sharedMaterial;
             var white=stripe.GetComponent<MeshRenderer>().sharedMaterial;
             var root=new GameObject("Arcade aero details").transform;root.SetParent(visuals,false);
+            // Replace bulky visual lofts with a slender formula-car fuselage and stepped nose.
+            body.GetComponent<MeshRenderer>().enabled=false;stripe.GetComponent<MeshRenderer>().enabled=false;
+            var cockpit=visuals.Find("Cockpit bulge");
+            if(cockpit!=null) cockpit.GetComponent<MeshRenderer>().enabled=false;
+            var dark=cockpit==null ? red : cockpit.GetComponent<MeshRenderer>().sharedMaterial;
+            DetailMesh("Formula fuselage",root,Vector3.zero,new [] {
+                new Vector4(-l*.45f,w*.18f,-w*.16f,w*.08f),
+                new Vector4(-l*.20f,w*.27f,-w*.16f,w*.15f),
+                new Vector4(l*.12f,w*.20f,-w*.12f,w*.13f),
+                new Vector4(l*.37f,w*.10f,-w*.065f,w*.015f),
+                new Vector4(l*.48f,w*.085f,-w*.05f,-w*.01f)
+            },red);
+            DetailMesh("Ivory nose stripe",root,Vector3.zero,new [] {
+                new Vector4(l*.10f,w*.035f,w*.132f,w*.14f),
+                new Vector4(l*.37f,w*.03f,w*.018f,w*.026f),
+                new Vector4(l*.48f,w*.028f,-w*.006f,w*.002f)
+            },white);
+            DetailMesh("Faceted cockpit",root,Vector3.zero,new [] {
+                new Vector4(-l*.24f,w*.16f,w*.12f,w*.19f),
+                new Vector4(-l*.15f,w*.14f,w*.12f,w*.32f),
+                new Vector4(-l*.02f,w*.12f,w*.12f,w*.30f),
+                new Vector4(l*.09f,w*.10f,w*.12f,w*.15f)
+            },dark);
+            DetailMesh("Front wing",root,Vector3.zero,new [] {
+                new Vector4(l*.39f,w*.64f,-w*.19f,-w*.155f),
+                new Vector4(l*.48f,w*.60f,-w*.17f,-w*.135f)
+            },white);
             // Angular sidepods give the open-wheel racer a broader, stepped silhouette.
             for(int side=-1;side<=1;side+=2)
             {
-                DetailMesh("Faceted sidepod",root,new Vector3(side*w*.40f,0,0),new [] {
+                DetailMesh("Faceted sidepod",root,new Vector3(side*w*.35f,0,0),new [] {
                     new Vector4(-l*.24f,w*.07f,-w*.13f,w*.025f),
                     new Vector4(-l*.15f,w*.16f,-w*.13f,w*.055f),
                     new Vector4(l*.07f,w*.16f,-w*.11f,w*.055f),
                     new Vector4(l*.17f,w*.08f,-w*.09f,w*.005f)
+                },red);
+                DetailMesh("Front wing endplate",root,new Vector3(side*w*.61f,0,0),new [] {
+                    new Vector4(l*.38f,w*.025f,-w*.20f,-w*.06f),
+                    new Vector4(l*.49f,w*.025f,-w*.20f,-w*.06f)
                 },red);
                 DetailMesh("Rear wing endplate",root,new Vector3(side*w*.49f,0,0),new [] {
                     new Vector4(-l*.46f,w*.025f,w*.20f,w*.39f),
@@ -186,6 +233,76 @@ namespace Racing
         }
     }
     // Release transient visual meshes on scene teardown; no simulation callbacks.
+    public sealed class PortfolioOverview : MonoBehaviour
+    {
+        public RaceTrack track;
+        public string output;
+        Camera lens;
+        string geometry;
+        StreamWriter metadata;
+        Vector3 fixedPosition;
+        Quaternion fixedRotation;
+        float fixedFarClip;
+        // Pure perspective fit: all eight bounding-box corners have a 10% framing margin.
+        public static float FitDistance(Bounds bounds,Quaternion rotation,float verticalFov,float aspect)
+        {
+            float tanY=Mathf.Tan(verticalFov*Mathf.Deg2Rad*.5f),tanX=tanY*Mathf.Max(.01f,aspect);
+            float distance=1;
+            foreach(var corner in Corners(bounds))
+            {
+                var local=Quaternion.Inverse(rotation)*(corner-bounds.center);
+                distance=Mathf.Max(distance,1.1f*Mathf.Abs(local.x)/tanX-local.z,1.1f*Mathf.Abs(local.y)/tanY-local.z);
+            }
+            return distance;
+        }
+        public static IEnumerable<Vector3> Corners(Bounds bounds)
+        {
+            for(int x=-1;x<=1;x+=2) for(int y=-1;y<=1;y+=2) for(int z=-1;z<=1;z+=2)
+                yield return bounds.center+Vector3.Scale(bounds.extents,new Vector3(x,y,z));
+        }
+        void LateUpdate()
+        {
+            if(track==null||track.centerline==null||track.centerline.Length==0) return;
+            if(lens==null) lens=GetComponent<Camera>();
+            var generator=track.GetComponent<ProceduralTrack>();var record=generator==null ? null : generator.Record;
+            string key=record==null ? "fixed" : record.geometrySha256;
+            if(geometry==key)
+            {
+                // Episode reset may call ChaseCamera.Snap even while that component is disabled.
+                transform.SetPositionAndRotation(fixedPosition,fixedRotation);
+                lens.fieldOfView=48;lens.farClipPlane=fixedFarClip;
+                return;
+            }
+            var bounds=new Bounds(track.centerline[0],Vector3.zero);
+            foreach(var point in track.centerline) bounds.Encapsulate(point);
+            if(record!=null)
+            {
+                foreach(var point in record.leftBoundary) bounds.Encapsulate(point);
+                foreach(var point in record.rightBoundary) bounds.Encapsulate(point);
+            }
+            else bounds.Expand(new Vector3(track.roadWidth+track.curbWidth*2,0,track.roadWidth+track.curbWidth*2));
+            // Fixed elevated observer; no reads from the vehicle and no follow motion.
+            var rotation=Quaternion.Euler(62,0,0);lens.fieldOfView=48;
+            float distance=FitDistance(bounds,rotation,lens.fieldOfView,lens.aspect);
+            fixedPosition=bounds.center-rotation*Vector3.forward*distance;fixedRotation=rotation;
+            transform.SetPositionAndRotation(fixedPosition,fixedRotation);
+            lens.farClipPlane=Mathf.Max(1000,distance+bounds.size.magnitude+200);
+            fixedFarClip=lens.farClipPlane;
+            geometry=key;
+            if(output!=null)
+            {
+                if(metadata==null)
+                {
+                    Directory.CreateDirectory(output);metadata=new StreamWriter(Path.Combine(output,"camera.csv"));
+                    metadata.WriteLine("geometry,camera,x,y,z,pitch,yaw,vertical_fov,aspect,bounds_min_x,bounds_min_z,bounds_max_x,bounds_max_z,margin");
+                }
+                var p=transform.position;
+                metadata.WriteLine(FormattableString.Invariant($"{key},overview,{p.x:R},{p.y:R},{p.z:R},62,0,{lens.fieldOfView:R},{lens.aspect:R},{bounds.min.x:R},{bounds.min.z:R},{bounds.max.x:R},{bounds.max.z:R},1.1"));metadata.Flush();
+            }
+        }
+        void OnDestroy() { metadata?.Dispose(); }
+    }
+    // Release transient visual meshes on scene teardown; no simulation callbacks.
     sealed class PresentationMeshLifetime : MonoBehaviour
     {
         void OnDestroy() { Destroy(GetComponent<MeshFilter>().sharedMesh); }
@@ -219,7 +336,8 @@ namespace Racing
             var bounds=new Bounds(record.centerline[0],Vector3.zero);
             foreach(var point in record.leftBoundary) bounds.Encapsulate(point);
             foreach(var point in record.rightBoundary) bounds.Encapsulate(point);
-            const float margin=120;
+            // Scale visual grass with the whole-route observer's view on larger routes.
+            float margin=Mathf.Max(120,2*bounds.size.magnitude);
             float x0=bounds.min.x-margin,x1=bounds.max.x+margin,z0=bounds.min.z-margin,z1=bounds.max.z+margin;
             mesh.Clear();mesh.vertices=new [] {new Vector3(x0,0,z0),new Vector3(x0,0,z1),new Vector3(x1,0,z1),new Vector3(x1,0,z0)};
             mesh.triangles=new [] {0,1,2,0,2,3};mesh.RecalculateNormals();mesh.RecalculateBounds();

@@ -1,0 +1,12 @@
+{
+  "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe",
+  "gate_build_sha256": "0d191acfbf7d435279cf5baa796ed3ff40abb70965e9a0b1f6f2401100c85d72",
+  "development_routes": 8,
+  "development_exact_trace_parity": true,
+  "policy_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
+  "changes_from_gate": "Collider-free grass extent and native default/manual mode routing only; explicit Python track parameters remain authoritative.",
+  "historical_fixed_exact_trace_parity": true,
+  "historical_fixed_episodes": 3,
+  "historical_selected_sha256": "13363bc38c08bbaea94c0cfa3817f28cf35d00aa42a012e736cb9dc08d37ed04",
+  "passive_telemetry_on_off_exact_trace_parity": true
+}

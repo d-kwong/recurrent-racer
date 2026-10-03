@@ -1,0 +1,21 @@
+{
+  "checkpoint": "policies/procedural-selected.pt",
+  "checkpoint_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
+  "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe",
+  "seed": 1009,
+  "spawnTurnIndex": -1,
+  "finish": true,
+  "clean": true,
+  "quality_telemetry": true,
+  "reason": "Finish",
+  "physics_ticks": 816,
+  "simulated_seconds": 16.31999397277832,
+  "explicit_checkpoint_and_track_omitted": true,
+  "explicit_seed_override": {
+    "requested": 77,
+    "realized": 77,
+    "spawnTurnIndex": -1,
+    "reason": "Finish"
+  },
+  "final_trainer_sha256": "5cbcfc1320ed84c675eaee4eda7d56bd99e793fb60fa61c7f10e4e813b6d7399"
+}

@@ -1,0 +1,3960 @@
+{
+  "policy": "policies/procedural-selected.pt",
+  "policy_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
+  "build_sha256": "0d191acfbf7d435279cf5baa796ed3ff40abb70965e9a0b1f6f2401100c85d72",
+  "seeds": [
+    30000,
+    30001,
+    30002,
+    30003,
+    30004,
+    30005,
+    30006,
+    30007,
+    30008,
+    30009,
+    30010,
+    30011,
+    30012,
+    30013,
+    30014,
+    30015,
+    30016,
+    30017,
+    30018,
+    30019,
+    30020,
+    30021,
+    30022,
+    30023,
+    30024,
+    30025,
+    30026,
+    30027,
+    30028,
+    30029,
+    30030,
+    30031,
+    30032,
+    30033,
+    30034,
+    30035,
+    30036,
+    30037,
+    30038,
+    30039
+  ],
+  "route_count": 40,
+  "finish_count": 40,
+  "clean_count": 40,
+  "mean_finished_simulated_seconds": 16.033493685722352,
+  "routes": [
+    {
+      "seed": 30000,
+      "geometrySha256": "21baa9a7c17bc4c46174db36cfa1a3cc172ade3d9abd10b6cdb06c18189e576d",
+      "taskSha256": "3e23d44ad915ce9e80bc1c65305a2e202bc48040cf81d68c2e278fe3085752c1",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 819,
+      "simulatedSeconds": 16.379993438720703,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 819,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 33.73231887817383,
+        "firstCornerExitDistance": 69.33094787597656,
+        "failureDistanceToFirstCorner": -349.9879455566406
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 385.80242919921875,
+      "turnAngles": [
+        66.37230682373047,
+        -28.766014099121094,
+        67.8752670288086,
+        -63.57358932495117,
+        60.736995697021484
+      ],
+      "turnRadii": [
+        30.735759735107422,
+        39.52793884277344,
+        25.333446502685547,
+        37.971588134765625,
+        41.24594497680664
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 395.80242919921875,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 389.80242919921875,
+        "taskDistance": 385.80242919921875,
+        "turnEntryDistances": [
+          37.73231887817383,
+          124.87056732177734,
+          188.6454620361328,
+          250.15061950683594,
+          332.0834045410156
+        ],
+        "turnExitDistances": [
+          73.33094787597656,
+          144.7139434814453,
+          218.6497802734375,
+          292.27813720703125,
+          375.8023376464844
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30001,
+      "geometrySha256": "33e1154dd8120bcd826f79a8d639fbc26eaaf8f0fd2929970c5d9789f3d736ac",
+      "taskSha256": "02fe48ec41582815a279830863a3d4d2372b0f1dbe7e5ed6db7e02a11217dafc",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 837,
+      "simulatedSeconds": 16.739994049072266,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 837,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 32.32994842529297,
+        "firstCornerExitDistance": 50.097076416015625,
+        "failureDistanceToFirstCorner": -346.2739562988281
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 380.90679931640625,
+      "turnAngles": [
+        41.813499450683594,
+        -29.804100036621094,
+        75.78627014160156,
+        -36.08898162841797,
+        62.47661590576172
+      ],
+      "turnRadii": [
+        24.352436065673828,
+        25.58283805847168,
+        38.718318939208984,
+        29.963153839111328,
+        36.19002914428711
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 390.90679931640625,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 384.90679931640625,
+        "taskDistance": 380.90679931640625,
+        "turnEntryDistances": [
+          36.32994842529297,
+          95.87755584716797,
+          161.8360137939453,
+          264.31512451171875,
+          331.4493103027344
+        ],
+        "turnExitDistances": [
+          54.097076416015625,
+          109.18216705322266,
+          213.04397583007812,
+          283.1849670410156,
+          370.9067687988281
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30002,
+      "geometrySha256": "91c88f4dad0f1aa343ab42d699116bdcd0e48a71b46196e3239767147dc3ac01",
+      "taskSha256": "873824f9ae17f0708469d0125143f15750d41415b26c52a4225e33dca36f35df",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 822,
+      "simulatedSeconds": 16.439992904663086,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 822,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 32.79502487182617,
+        "firstCornerExitDistance": 62.138587951660156,
+        "failureDistanceToFirstCorner": -347.79339599609375
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 382.9079895019531,
+      "turnAngles": [
+        73.24766540527344,
+        -42.59039306640625,
+        89.12213897705078,
+        -61.553733825683594,
+        60.99538040161133
+      ],
+      "turnRadii": [
+        22.96006202697754,
+        22.658584594726562,
+        31.389253616333008,
+        38.354331970214844,
+        31.718463897705078
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 392.9079895019531,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 386.9079895019531,
+        "taskDistance": 382.9079895019531,
+        "turnEntryDistances": [
+          36.79502487182617,
+          91.34757995605469,
+          161.54698181152344,
+          250.16574096679688,
+          339.1469421386719
+        ],
+        "turnExitDistances": [
+          66.13858795166016,
+          108.18589782714844,
+          210.36436462402344,
+          291.3659362792969,
+          372.907958984375
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30003,
+      "geometrySha256": "a45a16aadd71008d435316e83fd167497939931b626ce60ab40525e12af3c0d5",
+      "taskSha256": "a9929d6bd18e8ee16f79810f46bedfa0416e93e55af05b02b65636fd070a375b",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 757,
+      "simulatedSeconds": 15.139993667602539,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 757,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 35.142696380615234,
+        "firstCornerExitDistance": 63.785743713378906,
+        "failureDistanceToFirstCorner": -317.41339111328125
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 355.08056640625,
+      "turnAngles": [
+        44.86088562011719,
+        -44.04978942871094,
+        63.893131256103516,
+        -51.25959014892578,
+        32.67792892456055
+      ],
+      "turnRadii": [
+        36.58671188354492,
+        22.54781723022461,
+        30.48680877685547,
+        36.75035095214844,
+        35.57997512817383
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 365.08056640625,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 359.08056640625,
+        "taskDistance": 355.08056640625,
+        "turnEntryDistances": [
+          39.142696380615234,
+          112.92826080322266,
+          181.197021484375,
+          258.3683776855469,
+          324.79022216796875
+        ],
+        "turnExitDistances": [
+          67.7857437133789,
+          130.258056640625,
+          215.18814086914062,
+          291.2431335449219,
+          345.08050537109375
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30004,
+      "geometrySha256": "4d054fe6e143231c541f54f7255a55558e3247f0dcf0364b2a4d49200ab6504a",
+      "taskSha256": "f8a7864c7ffada833606ba5fe108559124104e099b4911457f1f0d7f220d1169",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 789,
+      "simulatedSeconds": 15.779994010925293,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 789,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 35.6077880859375,
+        "firstCornerExitDistance": 90.91049194335938,
+        "failureDistanceToFirstCorner": -318.8582763671875
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 356.4891357421875,
+      "turnAngles": [
+        90.04605865478516,
+        -57.0556755065918,
+        96.27169036865234,
+        -25.21677589416504,
+        34.086299896240234
+      ],
+      "turnRadii": [
+        35.19340515136719,
+        24.710309982299805,
+        37.11282730102539,
+        22.660932540893555,
+        29.81930160522461
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 366.4891357421875,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 360.4891357421875,
+        "taskDistance": 356.4891357421875,
+        "turnEntryDistances": [
+          39.6077880859375,
+          124.25788116455078,
+          196.90122985839844,
+          284.8699951171875,
+          328.75225830078125
+        ],
+        "turnExitDistances": [
+          94.91049194335938,
+          148.85862731933594,
+          259.25323486328125,
+          294.8402404785156,
+          346.4891357421875
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30005,
+      "geometrySha256": "702e9d5a8351e143dedb4ebcdeb54af4519ba22c2043d02441cd8dc717ec75b9",
+      "taskSha256": "3ec3702933989f51826aebef04070e837768ad345d3d3f4a6d69bcdab1d33d7f",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 853,
+      "simulatedSeconds": 17.059993743896484,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 853,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 34.205448150634766,
+        "firstCornerExitDistance": 72.38858032226562,
+        "failureDistanceToFirstCorner": -368.2787170410156
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 404.95953369140625,
+      "turnAngles": [
+        56.149017333984375,
+        -58.349822998046875,
+        84.84732818603516,
+        -73.86942291259766,
+        32.346378326416016
+      ],
+      "turnRadii": [
+        38.96686553955078,
+        40.688533782958984,
+        26.854787826538086,
+        34.65370178222656,
+        25.11972427368164
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 414.95953369140625,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 408.95953369140625,
+        "taskDistance": 404.95953369140625,
+        "turnEntryDistances": [
+          38.205448150634766,
+          109.86351776123047,
+          193.03558349609375,
+          282.4133605957031,
+          380.7811584472656
+        ],
+        "turnExitDistances": [
+          76.38858032226562,
+          151.2965087890625,
+          232.79481506347656,
+          327.0852966308594,
+          394.9595642089844
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30006,
+      "geometrySha256": "3ff2b9bbcb54404bf4e84fcca9ac70e1d51d19dbd8e5e7db46c1838f0c8c658f",
+      "taskSha256": "f5e7ca7c7b1218fb7bd58ac10ef57311dc8b8d3a9b18558452947a92019100e5",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 947,
+      "simulatedSeconds": 18.939992904663086,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 947,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 34.67052459716797,
+        "firstCornerExitDistance": 99.18091583251953,
+        "failureDistanceToFirstCorner": -400.62945556640625
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 437.5995178222656,
+      "turnAngles": [
+        97.54497528076172,
+        -52.45994567871094,
+        80.00497436523438,
+        -99.94773864746094,
+        33.246551513671875
+      ],
+      "turnRadii": [
+        37.896183013916016,
+        37.82173156738281,
+        33.55884552001953,
+        23.665016174316406,
+        40.60660934448242
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 447.5995178222656,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 441.5995178222656,
+        "taskDistance": 437.5995178222656,
+        "turnEntryDistances": [
+          38.67052459716797,
+          151.4613800048828,
+          228.8035888671875,
+          309.61639404296875,
+          404.039306640625
+        ],
+        "turnExitDistances": [
+          103.18091583251953,
+          186.08717346191406,
+          275.6568908691406,
+          350.8863220214844,
+          427.5994873046875
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30007,
+      "geometrySha256": "fbc2128449ca0a0d69c0241995a227a95a3b1849d5918e233979c430ee19c985",
+      "taskSha256": "f522f9843b750ffc115d3908e2c827263bdf5716d148d3ff6fb7a84723b84614",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 885,
+      "simulatedSeconds": 17.699993133544922,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 885,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 29.516281127929688,
+        "firstCornerExitDistance": 85.70195007324219,
+        "failureDistanceToFirstCorner": -378.1534423828125
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 410.10333251953125,
+      "turnAngles": [
+        78.49472045898438,
+        -60.912017822265625,
+        35.63777160644531,
+        -84.41889953613281,
+        64.04029083251953
+      ],
+      "turnRadii": [
+        41.01551818847656,
+        26.766071319580078,
+        41.35936737060547,
+        35.39906311035156,
+        34.987186431884766
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 420.10333251953125,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 414.10333251953125,
+        "taskDistance": 410.10333251953125,
+        "turnEntryDistances": [
+          33.51628112792969,
+          126.8680191040039,
+          192.8593292236328,
+          264.7871398925781,
+          361.0026550292969
+        ],
+        "turnExitDistances": [
+          89.70195007324219,
+          155.31748962402344,
+          218.5822296142578,
+          316.9372863769531,
+          400.103271484375
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30008,
+      "geometrySha256": "610fcda36d0ec2b4a0d263e25860d362b6a916e9fc03e16b94db5cb42b3e5157",
+      "taskSha256": "7ed4dc657095659295144bfbec14c4ee43bff56171306f9994ad4266f2ba2aaf",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 743,
+      "simulatedSeconds": 14.859993934631348,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 743,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 29.981372833251953,
+        "firstCornerExitDistance": 56.02765655517578,
+        "failureDistanceToFirstCorner": -312.1544494628906
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 344.22662353515625,
+      "turnAngles": [
+        37.694705963134766,
+        -50.48283004760742,
+        49.545413970947266,
+        -68.3016586303711,
+        62.636478424072266
+      ],
+      "turnRadii": [
+        39.593868255615234,
+        23.92970848083496,
+        29.040075302124023,
+        24.43965721130371,
+        30.747859954833984
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 354.22662353515625,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 348.22662353515625,
+        "taskDistance": 344.22662353515625,
+        "turnEntryDistances": [
+          33.98137283325195,
+          112.3507080078125,
+          171.90443420410156,
+          227.0009002685547,
+          300.61846923828125
+        ],
+        "turnExitDistances": [
+          60.02765655517578,
+          133.4293212890625,
+          197.0116729736328,
+          256.12744140625,
+          334.22662353515625
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30009,
+      "geometrySha256": "2d6b14d9b9fe500b1f765c9c7a18a44195190277bf0c9a469a06424e16058ad5",
+      "taskSha256": "a3b68d4ce662c22c1077bb5bd81cce490b987ddde71747663ccb8f4b3c3079e2",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 773,
+      "simulatedSeconds": 15.459994316101074,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 773,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 28.579002380371094,
+        "firstCornerExitDistance": 70.21109008789062,
+        "failureDistanceToFirstCorner": -329.3451843261719
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 360.2245178222656,
+      "turnAngles": [
+        71.58287811279297,
+        -46.75760269165039,
+        56.871070861816406,
+        -40.74504852294922,
+        64.37641906738281
+      ],
+      "turnRadii": [
+        33.32773208618164,
+        38.65678787231445,
+        34.91304397583008,
+        36.2750129699707,
+        25.437501907348633
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 370.2245178222656,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 364.2245178222656,
+        "taskDistance": 360.2245178222656,
+        "turnEntryDistances": [
+          32.579002380371094,
+          114.72428131103516,
+          177.8935546875,
+          267.282470703125,
+          321.6501770019531
+        ],
+        "turnExitDistances": [
+          74.21109008789062,
+          146.26766967773438,
+          212.5434112548828,
+          293.0757141113281,
+          350.22454833984375
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30010,
+      "geometrySha256": "b95aec2b1f4d1fa63b4466714b9eb3f599bf41bc3fe47878707a62dff9f73645",
+      "taskSha256": "5a2c7098c8ad5f5375807d7caebd686280524bfa98debd4d762b79671f3b96cc",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 665,
+      "simulatedSeconds": 13.299994468688965,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 665,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 29.044082641601562,
+        "firstCornerExitDistance": 43.55644226074219,
+        "failureDistanceToFirstCorner": -264.49908447265625
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 295.8670349121094,
+      "turnAngles": [
+        25.819496154785156,
+        -54.932369232177734,
+        32.999629974365234,
+        -56.8267822265625,
+        63.47165298461914
+      ],
+      "turnRadii": [
+        32.20848846435547,
+        40.79113006591797,
+        22.671791076660156,
+        22.15627670288086,
+        39.950618743896484
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 305.8670349121094,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 299.8670349121094,
+        "taskDistance": 295.8670349121094,
+        "turnEntryDistances": [
+          33.04408264160156,
+          73.79792022705078,
+          141.8227996826172,
+          191.5545196533203,
+          241.6144256591797
+        ],
+        "turnExitDistances": [
+          47.55644226074219,
+          112.9027099609375,
+          154.87698364257812,
+          213.52197265625,
+          285.8670349121094
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30011,
+      "geometrySha256": "1e7fa243942a8e9b727268e6cfe508fdb72dba91ea99937d42e9a60abd91d88e",
+      "taskSha256": "66f52068454db7796de671755565657f177221aa07c3ae1498da554929801580",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 736,
+      "simulatedSeconds": 14.71999454498291,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 736,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 31.39169692993164,
+        "firstCornerExitDistance": 73.40321350097656,
+        "failureDistanceToFirstCorner": -317.044677734375
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 350.6996765136719,
+      "turnAngles": [
+        92.28421020507812,
+        -32.95135498046875,
+        45.30833053588867,
+        -46.61383056640625,
+        91.71576690673828
+      ],
+      "turnRadii": [
+        26.08919906616211,
+        41.99385452270508,
+        24.194353103637695,
+        30.718265533447266,
+        26.097667694091797
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 360.6996765136719,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 354.6996765136719,
+        "taskDistance": 350.6996765136719,
+        "turnEntryDistances": [
+          35.39169692993164,
+          121.23435974121094,
+          172.04246520996094,
+          231.96487426757812,
+          298.9341735839844
+        ],
+        "turnExitDistances": [
+          77.40321350097656,
+          145.38343811035156,
+          191.1698760986328,
+          256.9521179199219,
+          340.6996765136719
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30012,
+      "geometrySha256": "ab42216014bbf743e518bb4205a523638c35427a14edd1958ba21665663f9200",
+      "taskSha256": "99c8b03195078fb3de57d2c476fd509a4a2c265df15fe318a6ba579981e13975",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 751,
+      "simulatedSeconds": 15.019993782043457,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 751,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 31.856788635253906,
+        "firstCornerExitDistance": 58.11745834350586,
+        "failureDistanceToFirstCorner": -307.46002197265625
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 341.6240234375,
+      "turnAngles": [
+        60.272403717041016,
+        -41.199520111083984,
+        39.89419937133789,
+        -29.93799591064453,
+        92.5470962524414
+      ],
+      "turnRadii": [
+        24.969633102416992,
+        39.058692932128906,
+        35.88865280151367,
+        39.119224548339844,
+        41.82167053222656
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 351.6240234375,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 345.6240234375,
+        "taskDistance": 341.6240234375,
+        "turnEntryDistances": [
+          35.856788635253906,
+          92.5412826538086,
+          148.41549682617188,
+          201.29103088378906,
+          264.0778503417969
+        ],
+        "turnExitDistances": [
+          62.11745834350586,
+          120.62442779541016,
+          173.40126037597656,
+          221.72955322265625,
+          331.6240234375
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30013,
+      "geometrySha256": "b7884e06d0cabee5c281d410633f9e4f1d1c1fb1c6cb89894a6f6383981eee41",
+      "taskSha256": "f4f3a2213fcac57f68700d6a43a0a421ff7ddd484083e66204aa3448070c68ec",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 790,
+      "simulatedSeconds": 15.799993515014648,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 790,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 30.454448699951172,
+        "firstCornerExitDistance": 73.17169952392578,
+        "failureDistanceToFirstCorner": -333.7892150878906
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 366.5068359375,
+      "turnAngles": [
+        84.82176971435547,
+        -37.87740707397461,
+        29.05522346496582,
+        -78.51406860351562,
+        90.80742645263672
+      ],
+      "turnRadii": [
+        28.860280990600586,
+        23.864736557006836,
+        28.138851165771484,
+        30.95578384399414,
+        36.86796188354492
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 376.5068359375,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 370.5068359375,
+        "taskDistance": 366.5068359375,
+        "turnEntryDistances": [
+          34.45444869995117,
+          110.02385711669922,
+          161.77102661132812,
+          225.41305541992188,
+          298.0821533203125
+        ],
+        "turnExitDistances": [
+          77.17169952392578,
+          125.79601287841797,
+          176.03811645507812,
+          267.8258361816406,
+          356.5068359375
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30014,
+      "geometrySha256": "a9931eff311e856a60ec8b3475397aed6dedc31ee4bdfc6b0d67ce79d8104403",
+      "taskSha256": "c7a8b1877d51ec391e06eff794e8ab5710fedbab529fe26c8991ba53d94595bd",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 821,
+      "simulatedSeconds": 16.419994354248047,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 821,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 30.919525146484375,
+        "firstCornerExitDistance": 54.38955307006836,
+        "failureDistanceToFirstCorner": -348.93914794921875
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 382.0991516113281,
+      "turnAngles": [
+        49.020751953125,
+        -27.228343963623047,
+        60.8348274230957,
+        -95.2276382446289,
+        92.28414154052734
+      ],
+      "turnRadii": [
+        27.437732696533203,
+        25.93933868408203,
+        39.75510025024414,
+        37.476715087890625,
+        31.339527130126953
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 392.0991516113281,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 386.0991516113281,
+        "taskDistance": 382.0991516113281,
+        "turnEntryDistances": [
+          34.919525146484375,
+          107.52669525146484,
+          152.86329650878906,
+          229.63525390625,
+          321.62982177734375
+        ],
+        "turnExitDistances": [
+          58.38955307006836,
+          119.85133361816406,
+          195.06988525390625,
+          291.9159240722656,
+          372.0991516113281
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30015,
+      "geometrySha256": "422906e812c4bc490a4601548055c3a8d4db4edda12a59af7940fcf6af12365b",
+      "taskSha256": "9b4404a6ab1cd5e224aca9c1d531af5b72609d4aaadfe21ddb6f9d65a594de46",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 856,
+      "simulatedSeconds": 17.119993209838867,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 856,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 41.0552978515625,
+        "firstCornerExitDistance": 73.81136322021484,
+        "failureDistanceToFirstCorner": -355.51544189453125
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 398.7727966308594,
+      "turnAngles": [
+        62.36321258544922,
+        -27.89519500732422,
+        59.597042083740234,
+        -48.09942626953125,
+        97.43350219726562
+      ],
+      "turnRadii": [
+        30.09954833984375,
+        31.90753936767578,
+        26.008563995361328,
+        39.23122024536133,
+        37.96717834472656
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 408.7727966308594,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 402.7727966308594,
+        "taskDistance": 398.7727966308594,
+        "turnEntryDistances": [
+          45.0552978515625,
+          115.41432189941406,
+          173.85690307617188,
+          245.07688903808594,
+          324.21539306640625
+        ],
+        "turnExitDistances": [
+          77.81136322021484,
+          130.946533203125,
+          200.9038848876953,
+          278.0079345703125,
+          388.7727966308594
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30016,
+      "geometrySha256": "4bae00c1475a52a385e91aa4c760443a969bdb220dda4e17b639229c21457a0d",
+      "taskSha256": "b9d7c4c4732f9e87ad1917e2099819fd8920a950bf2fc42c50f73b0217e1d022",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 776,
+      "simulatedSeconds": 15.519993782043457,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 776,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 41.5276985168457,
+        "firstCornerExitDistance": 91.25689697265625,
+        "failureDistanceToFirstCorner": -319.18072509765625
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 363.1386413574219,
+      "turnAngles": [
+        91.28968811035156,
+        -36.002952575683594,
+        25.457950592041016,
+        -31.962589263916016,
+        95.912109375
+      ],
+      "turnRadii": [
+        31.216617584228516,
+        29.1396484375,
+        34.39239501953125,
+        30.141801834106445,
+        22.44123077392578
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 373.1386413574219,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 367.1386413574219,
+        "taskDistance": 363.1386413574219,
+        "turnEntryDistances": [
+          45.5276985168457,
+          147.14529418945312,
+          205.591552734375,
+          253.1346893310547,
+          315.5845642089844
+        ],
+        "turnExitDistances": [
+          95.25689697265625,
+          165.45278930664062,
+          220.8709716796875,
+          269.9467468261719,
+          353.138671875
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30017,
+      "geometrySha256": "157b9b8512c5b2ed5ac1d1dbd9eb59f6fb809824152c45c55a85932fb72420c1",
+      "taskSha256": "a81a7c6b61670c6876a14296f8dffa017d02d3dd3b233a08d9ab2dd8f3c787d4",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 796,
+      "simulatedSeconds": 15.91999340057373,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 796,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 40.11803436279297,
+        "firstCornerExitDistance": 59.68051528930664,
+        "failureDistanceToFirstCorner": -342.7023010253906
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 385.2886962890625,
+      "turnAngles": [
+        50.2143440246582,
+        -41.75607681274414,
+        43.330467224121094,
+        -77.06566619873047,
+        96.51536560058594
+      ],
+      "turnRadii": [
+        22.328411102294922,
+        33.78848648071289,
+        29.64006996154785,
+        37.13338851928711,
+        27.497180938720703
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 395.2886962890625,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 389.2886962890625,
+        "taskDistance": 385.2886962890625,
+        "turnEntryDistances": [
+          44.11803436279297,
+          104.64533996582031,
+          178.09646606445312,
+          253.0093994140625,
+          328.9789123535156
+        ],
+        "turnExitDistances": [
+          63.68051528930664,
+          129.2665252685547,
+          200.50833129882812,
+          302.9496765136719,
+          375.2886962890625
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30018,
+      "geometrySha256": "e51e8ab8ddb80a83ab087ece571c56caa340a9a69a3cba28f5c08d378fd352cd",
+      "taskSha256": "1ae7f0baebffd749a04d5e338cd6a0599dda7704234381c460f25981ec38fce9",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 825,
+      "simulatedSeconds": 16.4999942779541,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 825,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 40.590450286865234,
+        "firstCornerExitDistance": 75.6980972290039,
+        "failureDistanceToFirstCorner": -343.86834716796875
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 386.75244140625,
+      "turnAngles": [
+        84.7244644165039,
+        -31.261009216308594,
+        46.41200637817383,
+        -93.16471099853516,
+        95.65780639648438
+      ],
+      "turnRadii": [
+        23.748573303222656,
+        36.01083755493164,
+        37.94569396972656,
+        31.144702911376953,
+        33.21879577636719
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 396.75244140625,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 390.75244140625,
+        "taskDistance": 386.75244140625,
+        "turnEntryDistances": [
+          44.590450286865234,
+          105.49032592773438,
+          174.81849670410156,
+          244.24026489257812,
+          321.30029296875
+        ],
+        "turnExitDistances": [
+          79.6980972290039,
+          125.13567352294922,
+          205.55284118652344,
+          294.87420654296875,
+          376.7524719238281
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30019,
+      "geometrySha256": "30457473eec3881148110acf076b8db91ab19537b12bc00531a59f02859fa342",
+      "taskSha256": "15a63ddeca99eb795cce0531c119a0e15cde1fa090a7c1d5676f1d69b0fa1fa0",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 822,
+      "simulatedSeconds": 16.439992904663086,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 822,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 42.92982482910156,
+        "firstCornerExitDistance": 65.90235900878906,
+        "failureDistanceToFirstCorner": -345.17578125
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 390.216552734375,
+      "turnAngles": [
+        38.103233337402344,
+        -55.562278747558594,
+        31.749183654785156,
+        -85.2965087890625,
+        67.7065658569336
+      ],
+      "turnRadii": [
+        34.548187255859375,
+        36.705711364746094,
+        38.92076873779297,
+        23.92055892944336,
+        29.357812881469727
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 400.216552734375,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 394.216552734375,
+        "taskDistance": 390.216552734375,
+        "turnEntryDistances": [
+          46.92982482910156,
+          115.16649627685547,
+          205.5210723876953,
+          269.152099609375,
+          345.53045654296875
+        ],
+        "turnExitDistances": [
+          69.90235900878906,
+          150.75735473632812,
+          227.0858917236328,
+          304.752685546875,
+          380.2164611816406
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30020,
+      "geometrySha256": "f7442589fe273b74d736fa6ffbcc750998f2079f0639bc273a4d0478ba2d3174",
+      "taskSha256": "1130ab7c3e513a3c564a421a9f243f79ffdfc853f6e6a7f3db81494eeff83cc4",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 844,
+      "simulatedSeconds": 16.879993438720703,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 844,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 43.402225494384766,
+        "firstCornerExitDistance": 91.72674560546875,
+        "failureDistanceToFirstCorner": -346.67193603515625
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 392.2296447753906,
+      "turnAngles": [
+        76.98979187011719,
+        -44.99383544921875,
+        53.288604736328125,
+        -68.60135650634766,
+        68.63774108886719
+      ],
+      "turnRadii": [
+        35.9674186706543,
+        33.99512481689453,
+        31.161941528320312,
+        35.451236724853516,
+        33.868438720703125
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 402.2296447753906,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 396.2296447753906,
+        "taskDistance": 392.2296447753906,
+        "turnEntryDistances": [
+          47.402225494384766,
+          124.71977233886719,
+          203.13247680664062,
+          258.9568176269531,
+          341.66229248046875
+        ],
+        "turnExitDistances": [
+          95.72674560546875,
+          151.41236877441406,
+          232.1103515625,
+          301.39794921875,
+          382.2296447753906
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30021,
+      "geometrySha256": "e6e597501590cf5b3b34ad2c69b4a54c36ec3c8206bd14a2ac792c14c457aacd",
+      "taskSha256": "4b81000847b28133b6c229e620410b6a77b7bcbc7c609c1792c0d00efeb1fb03",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 758,
+      "simulatedSeconds": 15.159994125366211,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 758,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 41.992530822753906,
+        "firstCornerExitDistance": 59.2144889831543,
+        "failureDistanceToFirstCorner": -308.164306640625
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 352.3037414550781,
+      "turnAngles": [
+        26.502681732177734,
+        -50.929779052734375,
+        52.99648666381836,
+        -39.83253479003906,
+        68.03418731689453
+      ],
+      "turnRadii": [
+        37.23599624633789,
+        28.56682777404785,
+        32.786216735839844,
+        22.444061279296875,
+        38.56814193725586
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 362.3037414550781,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 356.3037414550781,
+        "taskDistance": 352.3037414550781,
+        "turnEntryDistances": [
+          45.992530822753906,
+          97.51437377929688,
+          168.34637451171875,
+          249.04981994628906,
+          296.5122375488281
+        ],
+        "turnExitDistances": [
+          63.2144889831543,
+          122.90225982666016,
+          198.668212890625,
+          264.648193359375,
+          342.3037414550781
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30022,
+      "geometrySha256": "654cae85f4fc287a34eecd4b0bc20bf1a5420be0cd91f342f5dc1e7c5c4c5af2",
+      "taskSha256": "ca6bcc1a4ec903a0a7ba58e2527d6e0a584c602b938d7474adb5dcd7e8f35766",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 805,
+      "simulatedSeconds": 16.099992752075195,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 805,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 42.46494674682617,
+        "firstCornerExitDistance": 89.18501281738281,
+        "failureDistanceToFirstCorner": -331.26312255859375
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 375.9194641113281,
+      "turnAngles": [
+        69.80329895019531,
+        -59.25739669799805,
+        36.72878646850586,
+        -56.563133239746094,
+        69.48257446289062
+      ],
+      "turnRadii": [
+        38.35277557373047,
+        30.88553237915039,
+        25.105588912963867,
+        35.83523941040039,
+        24.331212997436523
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 385.9194641113281,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 379.9194641113281,
+        "taskDistance": 375.9194641113281,
+        "turnEntryDistances": [
+          46.46494674682617,
+          140.8768310546875,
+          219.32437133789062,
+          268.7307434082031,
+          336.42095947265625
+        ],
+        "turnExitDistances": [
+          93.18501281738281,
+          172.8142547607422,
+          235.4146270751953,
+          304.1033935546875,
+          365.91943359375
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30023,
+      "geometrySha256": "2df0b2827400036bbcb988fb3e7d6786761d5416d6ba0bee846e272e74da0447",
+      "taskSha256": "47289e8267b59a28dcf205e33313b76b7d116e9ed8635a6b79ac1d7065790aa2",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 794,
+      "simulatedSeconds": 15.879993438720703,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 794,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 37.30429458618164,
+        "firstCornerExitDistance": 99.67453002929688,
+        "failureDistanceToFirstCorner": -331.0375671386719
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 370.6669921875,
+      "turnAngles": [
+        88.84327697753906,
+        -49.536319732666016,
+        78.76861572265625,
+        -52.757755279541016,
+        29.304588317871094
+      ],
+      "turnRadii": [
+        40.22703552246094,
+        32.48638916015625,
+        27.31025505065918,
+        23.238616943359375,
+        28.69940948486328
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 380.6669921875,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 374.6669921875,
+        "taskDistance": 370.6669921875,
+        "turnEntryDistances": [
+          41.30429458618164,
+          140.0248565673828,
+          201.972900390625,
+          286.82696533203125,
+          345.9909362792969
+        ],
+        "turnExitDistances": [
+          103.67453002929688,
+          168.1077423095703,
+          239.5100555419922,
+          308.2187194824219,
+          360.66705322265625
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30024,
+      "geometrySha256": "879b7bcfc2ebbb66274693229d1b5abad7830dfb3ae20e1c0ec936158b6075af",
+      "taskSha256": "ca0fd8c289e5ce7a9ede6c728d126d8c0893934c75574604ca0b764ea313ae6d",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 816,
+      "simulatedSeconds": 16.31999397277832,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 816,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 37.776695251464844,
+        "firstCornerExitDistance": 70.4366226196289,
+        "failureDistanceToFirstCorner": -327.7917785644531
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 367.7543640136719,
+      "turnAngles": [
+        44.967308044433594,
+        -62.407806396484375,
+        81.25091552734375,
+        -27.23795509338379,
+        28.378040313720703
+      ],
+      "turnRadii": [
+        41.61784744262695,
+        34.777099609375,
+        40.606117248535156,
+        36.63957977294922,
+        34.188785552978516
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 377.7543640136719,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 371.7543640136719,
+        "taskDistance": 367.7543640136719,
+        "turnEntryDistances": [
+          41.776695251464844,
+          127.34281158447266,
+          199.8705596923828,
+          286.20538330078125,
+          340.8230895996094
+        ],
+        "turnExitDistances": [
+          74.4366226196289,
+          165.21759033203125,
+          257.4481506347656,
+          303.6214904785156,
+          357.7543640136719
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30025,
+      "geometrySha256": "f1c0b47953fcf467628bcaf31eb4312faf9ce4fe0b3e8c7785c22d4c093396ea",
+      "taskSha256": "e97229e07791b2114acdbe5a0c5a0ab7d8f224261c7614f146e5a88cedfd069e",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 848,
+      "simulatedSeconds": 16.959993362426758,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 848,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 36.36703109741211,
+        "firstCornerExitDistance": 91.07616424560547,
+        "failureDistanceToFirstCorner": -357.2109680175781
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 395.8857727050781,
+      "turnAngles": [
+        95.44497680664062,
+        -54.022613525390625,
+        99.70881652832031,
+        -72.40616607666016,
+        28.98154640197754
+      ],
+      "turnRadii": [
+        32.84682846069336,
+        30.597505569458008,
+        23.366302490234375,
+        23.474876403808594,
+        39.499019622802734
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 405.8857727050781,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 399.8857727050781,
+        "taskDistance": 395.8857727050781,
+        "turnEntryDistances": [
+          40.36703109741211,
+          135.47682189941406,
+          192.1529998779297,
+          286.78228759765625,
+          365.9083251953125
+        ],
+        "turnExitDistances": [
+          95.07616424560547,
+          164.32164001464844,
+          232.8045196533203,
+          316.4393310546875,
+          385.8857421875
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30026,
+      "geometrySha256": "f7c75fa970410e0981e4dd8c512e670f25f87519241cca6f10680ebf1690e0e0",
+      "taskSha256": "e19fe45e4570116976156c0aab9d6fde34153836d9688d3ed05cdcb08ad0dec9",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 776,
+      "simulatedSeconds": 15.519993782043457,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 776,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 36.839447021484375,
+        "firstCornerExitDistance": 70.66499328613281,
+        "failureDistanceToFirstCorner": -320.7049865722656
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 360.0382080078125,
+      "turnAngles": [
+        57.152652740478516,
+        -48.289878845214844,
+        64.99823760986328,
+        -97.89051055908203,
+        27.528635025024414
+      ],
+      "turnRadii": [
+        33.915122985839844,
+        27.91750717163086,
+        36.74036407470703,
+        34.99580764770508,
+        23.735952377319336
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 370.0382080078125,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 364.0382080078125,
+        "taskDistance": 360.0382080078125,
+        "turnEntryDistances": [
+          40.839447021484375,
+          101.25533294677734,
+          149.99234008789062,
+          228.9893341064453,
+          338.6369934082031
+        ],
+        "turnExitDistances": [
+          74.66499328613281,
+          124.77985382080078,
+          191.66677856445312,
+          288.7720031738281,
+          350.03826904296875
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30027,
+      "geometrySha256": "6de1a9da4359b0e6a4255a1d9f1f24b801730853aed120f6dcc2e0788f3a4954",
+      "taskSha256": "cf12ee4d1f73299cb7347f8ac6e6624cfbb95b649f6495d3263075dd209f3daf",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 862,
+      "simulatedSeconds": 17.239994049072266,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 862,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 39.17888259887695,
+        "firstCornerExitDistance": 68.55512237548828,
+        "failureDistanceToFirstCorner": -362.3538513183594
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 404.0363464355469,
+      "turnAngles": [
+        65.679931640625,
+        -39.77695083618164,
+        87.87083435058594,
+        -89.93883514404297,
+        55.55302429199219
+      ],
+      "turnRadii": [
+        25.63255500793457,
+        27.37701416015625,
+        35.135406494140625,
+        37.91819381713867,
+        37.59080505371094
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 414.0363464355469,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 408.0363464355469,
+        "taskDistance": 404.0363464355469,
+        "turnEntryDistances": [
+          43.17888259887695,
+          117.21115112304688,
+          166.66810607910156,
+          261.9859924316406,
+          357.59283447265625
+        ],
+        "turnExitDistances": [
+          72.55512237548828,
+          136.21353149414062,
+          220.5457763671875,
+          321.50048828125,
+          394.03631591796875
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30028,
+      "geometrySha256": "4da7951744a771afa2bde05048f8a04b173b2e6df3392fa906726823d7661e39",
+      "taskSha256": "f1929af98e87e542f21b242899cbb096ff525683e4b74ccbf432e31396fae5ae",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 660,
+      "simulatedSeconds": 13.199995040893555,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 660,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 39.651283264160156,
+        "firstCornerExitDistance": 54.45048141479492,
+        "failureDistanceToFirstCorner": -255.23980712890625
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 296.91448974609375,
+      "turnAngles": [
+        31.76346778869629,
+        -33.824642181396484,
+        72.20237731933594,
+        -63.87899398803711,
+        57.078983306884766
+      ],
+      "turnRadii": [
+        26.700529098510742,
+        29.607826232910156,
+        22.464548110961914,
+        31.95878791809082,
+        23.11675453186035
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 306.91448974609375,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 300.91448974609375,
+        "taskDistance": 296.91448974609375,
+        "turnEntryDistances": [
+          43.651283264160156,
+          88.28555297851562,
+          137.2591552734375,
+          192.68856811523438,
+          263.8918762207031
+        ],
+        "turnExitDistances": [
+          58.45048141479492,
+          105.76142883300781,
+          165.5599365234375,
+          228.3136749267578,
+          286.91448974609375
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30029,
+      "geometrySha256": "11bbe6f0bb62472e2f58517fa4e90bfdc8a0632e043a7d7653a04db4c7691c9b",
+      "taskSha256": "75a2f72976e303ebbfc376d49d35234a6c89568d248f601e8d579c39b44bc071",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 814,
+      "simulatedSeconds": 16.279993057250977,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 814,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 38.2415885925293,
+        "firstCornerExitDistance": 73.93528747558594,
+        "failureDistanceToFirstCorner": -338.9222106933594
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 379.4716491699219,
+      "turnAngles": [
+        72.82994842529297,
+        -25.769325256347656,
+        71.32491302490234,
+        -35.18903732299805,
+        56.475746154785156
+      ],
+      "turnRadii": [
+        28.086294174194336,
+        35.50796127319336,
+        41.58241271972656,
+        38.795326232910156,
+        28.0704402923584
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 389.4716491699219,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 383.4716491699219,
+        "taskDistance": 379.4716491699219,
+        "turnEntryDistances": [
+          42.2415885925293,
+          110.90926361083984,
+          166.52796936035156,
+          266.43035888671875,
+          341.80865478515625
+        ],
+        "turnExitDistances": [
+          77.93528747558594,
+          126.87721252441406,
+          218.28707885742188,
+          290.2545471191406,
+          369.47161865234375
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30030,
+      "geometrySha256": "e4ebdc3771a4784ac3bd991b175a6326771cc058f5fac2550194d2d58ac71af7",
+      "taskSha256": "e5b8def5c076c7e55e3493f6b9b875e60ccab01133d9fc3092676415dd6053a1",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 817,
+      "simulatedSeconds": 16.339994430541992,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 817,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 38.71400451660156,
+        "firstCornerExitDistance": 61.000465393066406,
+        "failureDistanceToFirstCorner": -340.85595703125
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 381.525634765625,
+      "turnAngles": [
+        43.32754135131836,
+        -38.71390151977539,
+        93.43582153320312,
+        -61.28666687011719,
+        57.32870864868164
+      ],
+      "turnRadii": [
+        29.476205825805664,
+        32.7290153503418,
+        28.83334732055664,
+        29.676589965820312,
+        32.34882736206055
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 391.525634765625,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 385.525634765625,
+        "taskDistance": 381.525634765625,
+        "turnEntryDistances": [
+          42.71400451660156,
+          113.78336334228516,
+          172.73001098632812,
+          255.41873168945312,
+          339.1629333496094
+        ],
+        "turnExitDistances": [
+          65.0004653930664,
+          135.8949432373047,
+          219.74130249023438,
+          287.1565246582031,
+          371.525634765625
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30031,
+      "geometrySha256": "eb52fe80796dd221b5dad6eebf394ffe8995350e4e3288128ee7805402c77b14",
+      "taskSha256": "9ae5f7401540eec24a58bdd87ab907bf6ad7606c971daceaccd26e9f26d9a039",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 888,
+      "simulatedSeconds": 17.759992599487305,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 888,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 48.6156005859375,
+        "firstCornerExitDistance": 91.18865203857422,
+        "failureDistanceToFirstCorner": -364.1498107910156
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 414.9587097167969,
+      "turnAngles": [
+        78.40980529785156,
+        -53.204917907714844,
+        51.32282257080078,
+        -54.3409423828125,
+        66.68232727050781
+      ],
+      "turnRadii": [
+        31.114078521728516,
+        32.530494689941406,
+        36.171607971191406,
+        26.606643676757812,
+        39.06208419799805
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 424.9587097167969,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 418.9587097167969,
+        "taskDistance": 414.9587097167969,
+        "turnEntryDistances": [
+          52.6156005859375,
+          144.14076232910156,
+          210.4801025390625,
+          288.5242919921875,
+          359.50201416015625
+        ],
+        "turnExitDistances": [
+          95.18865203857422,
+          174.34437561035156,
+          242.87713623046875,
+          313.75311279296875,
+          404.95867919921875
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30032,
+      "geometrySha256": "be74e30c4f3befc08e728d2528e2f78ea8eb630e61e001ff7f79d40259c3525b",
+      "taskSha256": "9c87f4e93b60a4ee6ffedacd4e5bda67b32446ed03f7565441080f1186f2fc54",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 686,
+      "simulatedSeconds": 13.71999454498291,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 686,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 49.088016510009766,
+        "firstCornerExitDistance": 68.87896728515625,
+        "failureDistanceToFirstCorner": -271.10693359375
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 322.4292907714844,
+      "turnAngles": [
+        37.74712371826172,
+        -47.31432342529297,
+        38.58448028564453,
+        -42.937564849853516,
+        65.8510971069336
+      ],
+      "turnRadii": [
+        30.04583740234375,
+        34.77111053466797,
+        23.93043327331543,
+        33.117942810058594,
+        23.5336971282959
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 332.4292907714844,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 326.4292907714844,
+        "taskDistance": 322.4292907714844,
+        "turnEntryDistances": [
+          53.088016510009766,
+          105.68531036376953,
+          167.71546936035156,
+          214.2545166015625,
+          285.3891296386719
+        ],
+        "turnExitDistances": [
+          72.87896728515625,
+          134.39535522460938,
+          183.82708740234375,
+          239.06973266601562,
+          312.4292907714844
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30033,
+      "geometrySha256": "0e6e6ef41f84dc0182038a40a2bf3d000124bfb2216097c2719fe28ce609a6fb",
+      "taskSha256": "e678cd83375be5130cd81c3f3b7f20cb04924490fcfcdf82ae8b352c135258a5",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 733,
+      "simulatedSeconds": 14.659994125366211,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 733,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 47.67835235595703,
+        "firstCornerExitDistance": 77.52128601074219,
+        "failureDistanceToFirstCorner": -290.0698547363281
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 340.072509765625,
+      "turnAngles": [
+        71.82798767089844,
+        -48.608760833740234,
+        30.08925437927246,
+        -70.49452209472656,
+        66.41943359375
+      ],
+      "turnRadii": [
+        23.812049865722656,
+        30.67181968688965,
+        40.11530303955078,
+        25.109548568725586,
+        28.27727699279785
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 350.072509765625,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 344.072509765625,
+        "taskDistance": 340.072509765625,
+        "turnEntryDistances": [
+          51.67835235595703,
+          112.12614440917969,
+          164.61265563964844,
+          239.8605499267578,
+          297.298828125
+        ],
+        "turnExitDistances": [
+          81.52128601074219,
+          138.1436309814453,
+          185.67747497558594,
+          270.74676513671875,
+          330.0725402832031
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30034,
+      "geometrySha256": "8bccac13a76554be7e7ac6169a5e159baa13b2046e85f7b38e830598d4dcce73",
+      "taskSha256": "378aeeb0efd5ab888c5f6d3e404b82e2575a72ea3ac81a105e530cf13c29ddab",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 745,
+      "simulatedSeconds": 14.899993896484375,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 745,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 48.150753021240234,
+        "firstCornerExitDistance": 58.172569274902344,
+        "failureDistanceToFirstCorner": -299.3849792480469
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 350.0265808105469,
+      "turnAngles": [
+        25.615991592407227,
+        -61.6153564453125,
+        55.13056945800781,
+        -81.93342590332031,
+        64.94269561767578
+      ],
+      "turnRadii": [
+        22.421184539794922,
+        27.883142471313477,
+        27.795928955078125,
+        33.52010726928711,
+        34.00132751464844
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 360.0265808105469,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 354.0265808105469,
+        "taskDistance": 350.0265808105469,
+        "turnEntryDistances": [
+          52.150753021240234,
+          106.06039428710938,
+          163.55162048339844,
+          227.4095458984375,
+          301.4924011230469
+        ],
+        "turnExitDistances": [
+          62.172569274902344,
+          136.03924560546875,
+          190.29188537597656,
+          275.3363952636719,
+          340.0264892578125
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30035,
+      "geometrySha256": "6b5fd1f103a2fdc3123d9092937379085763fe4ddca79193fd84fcd86dbc0e8e",
+      "taskSha256": "455a7aef0172ca7ef4f5815d1b1e0c2f6d0c59d60cd18f60e2a9d83d41e2c0c9",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 873,
+      "simulatedSeconds": 17.459993362426758,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 873,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 50.49012756347656,
+        "firstCornerExitDistance": 108.48635864257812,
+        "failureDistanceToFirstCorner": -354.7308349609375
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 407.5546569824219,
+      "turnAngles": [
+        92.23576354980469,
+        -25.57415008544922,
+        41.634986877441406,
+        -92.7329330444336,
+        93.18661499023438
+      ],
+      "turnRadii": [
+        36.0308952331543,
+        27.32256317138672,
+        29.402109146118164,
+        41.91607666015625,
+        27.637929916381836
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 417.5546569824219,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 411.5546569824219,
+        "taskDistance": 407.5546569824219,
+        "turnEntryDistances": [
+          54.49012756347656,
+          138.77743530273438,
+          182.78770446777344,
+          244.3886260986328,
+          352.61328125
+        ],
+        "turnExitDistances": [
+          112.48635864257812,
+          150.9708709716797,
+          204.14938354492188,
+          312.22314453125,
+          397.5546875
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30036,
+      "geometrySha256": "6fc92ce1b82e7ddb981e314c135e2f43ee2d22443bab36d6f98b7f5ba1061635",
+      "taskSha256": "0510adb8e46b8341126557551c659c63c6781cdd3f8b022a44656110bf71a1cb",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 836,
+      "simulatedSeconds": 16.719993591308594,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 836,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 50.96254348754883,
+        "firstCornerExitDistance": 87.45223236083984,
+        "failureDistanceToFirstCorner": -334.14544677734375
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 387.16864013671875,
+      "turnAngles": [
+        60.36128616333008,
+        -38.360870361328125,
+        48.218421936035156,
+        -80.71601867675781,
+        94.5903091430664
+      ],
+      "turnRadii": [
+        34.640960693359375,
+        29.622920989990234,
+        41.018280029296875,
+        27.807279586791992,
+        32.150997161865234
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 397.16864013671875,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 391.16864013671875,
+        "taskDistance": 387.16864013671875,
+        "turnEntryDistances": [
+          54.96254348754883,
+          132.1541748046875,
+          181.18167114257812,
+          244.02821350097656,
+          324.09844970703125
+        ],
+        "turnExitDistances": [
+          91.45223236083984,
+          151.98373413085938,
+          215.6982879638672,
+          283.1938781738281,
+          377.16864013671875
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30037,
+      "geometrySha256": "0d11023574f33dc1750dc804249731bdb23d596b6e8100379cb1102bcd36cb93",
+      "taskSha256": "ad2023b75e043f54116950ecf368666acfe438e3395f47ff12daadaf5da15e12",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 908,
+      "simulatedSeconds": 18.159992218017578,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 908,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 49.55284881591797,
+        "firstCornerExitDistance": 106.31230926513672,
+        "failureDistanceToFirstCorner": -370.2607421875
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 422.06439208984375,
+      "turnAngles": [
+        85.03038787841797,
+        -39.3986701965332,
+        57.8878288269043,
+        -32.13972854614258,
+        94.0217056274414
+      ],
+      "turnRadii": [
+        38.25023651123047,
+        35.444053649902344,
+        22.95535659790039,
+        39.800086975097656,
+        37.163028717041016
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 432.06439208984375,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 426.06439208984375,
+        "taskDistance": 422.06439208984375,
+        "turnEntryDistances": [
+          53.55284881591797,
+          162.5823211669922,
+          224.33233642578125,
+          296.33526611328125,
+          351.08740234375
+        ],
+        "turnExitDistances": [
+          110.31230926513672,
+          186.95213317871094,
+          247.51805114746094,
+          318.6587829589844,
+          412.06439208984375
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30038,
+      "geometrySha256": "89b3500b4a01a788b0da0fa26a055c7faf5a8479739989108db19b1b7323f66a",
+      "taskSha256": "3486f62878a6e4f925c7bcf42b7ad7af9a8196098fbe8810b87bf906c7c19808",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 715,
+      "simulatedSeconds": 14.299994468688965,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 715,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 50.02524948120117,
+        "firstCornerExitDistance": 81.67796325683594,
+        "failureDistanceToFirstCorner": -281.3224792480469
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 333.6673278808594,
+      "turnAngles": [
+        48.78076171875,
+        -33.58147430419922,
+        27.278099060058594,
+        -44.11891555786133,
+        94.926513671875
+      ],
+      "turnRadii": [
+        37.18228530883789,
+        32.75417709350586,
+        34.64973449707031,
+        28.830778121948242,
+        22.92365264892578
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 343.6673278808594,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 337.6673278808594,
+        "taskDistance": 333.6673278808594,
+        "turnEntryDistances": [
+          54.02524948120117,
+          122.66644287109375,
+          180.02914428710938,
+          231.5272674560547,
+          285.6998291015625
+        ],
+        "turnExitDistances": [
+          85.67796325683594,
+          141.8611297607422,
+          196.52371215820312,
+          253.72373962402344,
+          323.6673278808594
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 30039,
+      "geometrySha256": "db91b43f3362b579c6cf7b919975f80e84ffba3520d23dc306eb2a3700e1eb48",
+      "taskSha256": "ab669b1ab8d0dbeb1df916866e2467bec5c27f12198f183603fada222d63d7fb",
+      "reason": "Finish",
+      "interrupted": false,
+      "physicsTicks": 826,
+      "simulatedSeconds": 16.51999282836914,
+      "spawnTurnIndex": -1,
+      "quality": {
+        "version": "physics-quality-v1",
+        "ticks": 826,
+        "offAsphaltTicks": 0,
+        "offAsphaltFraction": 0.0,
+        "maximumReverseSeconds": 0.0,
+        "maximumStallSeconds": 0.0,
+        "firstCornerPassed": true,
+        "cleanFinish": true,
+        "firstCornerEntryDistance": 44.86459732055664,
+        "firstCornerExitDistance": 66.43138122558594,
+        "failureDistanceToFirstCorner": -344.6817626953125
+      },
+      "actualSpawnPosition": {
+        "x": 0.0,
+        "y": 0.5550000071525574,
+        "z": 4.0
+      },
+      "spawnForward": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "taskDistance": 391.93902587890625,
+      "turnAngles": [
+        29.739360809326172,
+        -42.10678482055664,
+        69.61576843261719,
+        -59.05881881713867,
+        60.09519577026367
+      ],
+      "turnRadii": [
+        41.55437088012695,
+        31.85430908203125,
+        37.454833984375,
+        40.25286102294922,
+        27.294469833374023
+      ],
+      "generation": {
+        "generatorVersion": "open-arcs-v1",
+        "parameters": {
+          "segments": 5,
+          "straightMin": 25.0,
+          "straightMax": 55.0,
+          "radiusMin": 22.0,
+          "radiusMax": 42.0,
+          "angleMin": 25.0,
+          "angleMax": 100.0,
+          "spacing": 2.0
+        },
+        "acceptedAttempt": 0,
+        "roadWidth": 9.0,
+        "curbWidth": 1.0,
+        "length": 401.93902587890625,
+        "spawnSeed": 7,
+        "spawnDistance": 4.0,
+        "finishDistance": 395.93902587890625,
+        "taskDistance": 391.93902587890625,
+        "turnEntryDistances": [
+          48.86459732055664,
+          118.77580261230469,
+          183.64239501953125,
+          274.5195617675781,
+          353.3167724609375
+        ],
+        "turnExitDistances": [
+          70.43138122558594,
+          142.18194580078125,
+          229.14566040039062,
+          316.0068664550781,
+          381.9389953613281
+        ],
+        "activeGateIndices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          0
+        ]
+      }
+    }
+  ],
+  "thresholds": {
+    "reverse_seconds": 0.5,
+    "stall_seconds": 2,
+    "off_asphalt_fraction": 0.05,
+    "stall_launch_grace_seconds": 2
+  },
+  "protocol": "Original full routes only; actual physics telemetry, clean audit thresholds frozen before policy outcomes."
+}

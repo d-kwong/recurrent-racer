@@ -50,7 +50,7 @@ namespace Racing
             agent.enabled=false; keyboard.enabled=false;
             appliedMode=mode;
             if(mode==RacingDriverMode.Agent) agent.enabled=true;
-            else { episode.ResetRun(); keyboard.enabled=true; }
+            else { agent.ConfigureTrack(); episode.ResetRun(); keyboard.enabled=true; }
             var camera=episode.chaseCamera;
             camera.enabled=renderDiagnostics; camera.GetComponent<Camera>().enabled=renderDiagnostics;
             episode.GetComponent<RaceHud>().enabled=renderDiagnostics;

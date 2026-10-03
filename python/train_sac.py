@@ -256,7 +256,42 @@ def score_evaluation(episodes):
         mean_length=float(np.mean([len(e.rewards) for e in episodes])))
 
 
+def score_quality(endings, tasks):
+    """Require measured original-start task evidence; never derive clean driving from return."""
+    if not endings or not tasks or len(endings)%len(tasks):
+        raise RuntimeError('Incomplete quality evaluation task evidence')
+    if any(turn != -1 for seed, turn in tasks):
+        raise ValueError('Quality selection requires original full-route starts; suffix probes are separate')
+    required={'version','ticks','offAsphaltTicks','offAsphaltFraction','maximumReverseSeconds',
+              'maximumStallSeconds','firstCornerPassed','cleanFinish'}
+    finishes=[]; clean=[]; seconds=[]
+    for ending in endings:
+        q=ending.get('quality')
+        if ending.get('reason') not in ('Crash','OffTrack','InvalidProgress','Finish','NoProgress','Timeout'):
+            raise RuntimeError('Missing or invalid terminal reason')
+        if not isinstance(q,dict) or not required <= q.keys() or q['version']!='physics-quality-v1':
+            raise RuntimeError('Missing measured quality telemetry')
+        if q['ticks']!=ending['physicsTicks'] or q['ticks']<=0 or not np.isfinite(ending.get('simulatedSeconds',float('nan'))) or abs(ending['simulatedSeconds']-q['ticks']*.02)>.0001:
+            raise RuntimeError('Quality physics tick mismatch')
+        numeric=[q[k] for k in ('offAsphaltFraction','maximumReverseSeconds','maximumStallSeconds')]
+        if not np.isfinite(numeric).all() or not 0<=q['offAsphaltTicks']<=q['ticks'] or abs(q['offAsphaltFraction']-q['offAsphaltTicks']/q['ticks'])>1e-6 or min(numeric[1:])<0:
+            raise RuntimeError('Invalid quality measurements')
+        finish=ending['reason']=='Finish' and not ending['interrupted']
+        measured_clean=finish and q['maximumReverseSeconds']<=.5001 and q['maximumStallSeconds']<=2.0001 and q['offAsphaltFraction']<=.05
+        if bool(q['cleanFinish']) != measured_clean:
+            raise RuntimeError('Inconsistent clean-finish telemetry')
+        finishes.append(finish); clean.append(measured_clean)
+        if finish: seconds.append(ending['simulatedSeconds'])
+    return dict(quality_selection=True,measured_finish_fraction=float(np.mean(finishes)),
+                clean_finish_fraction=float(np.mean(clean)),
+                quality_mean_finished_seconds=float(np.mean(seconds)) if seconds else None)
+
+
 def rank(result):
+    # Time is comparable only when the complete identical original task set finished.
+    if result.get('quality_selection'):
+        return (result['measured_finish_fraction'], result['clean_finish_fraction'],
+                -result['quality_mean_finished_seconds'] if result['measured_finish_fraction']==1 else 0.)
     # Full laps outrank partial progress. Reliability precedes speed.
     if result.get('track_mode')=='procedural':
         return (result['reward_inferred_finish_fraction'], result['normalized_progress'],
@@ -288,6 +323,11 @@ def evaluate(env,actor,config,out,step,episodes,approaches=False,writer=None):
                 if [(e['seed'],e['spawnTurnIndex']) for e in endings]!=[expected[i % len(expected)] for i in range(len(rollouts))]:
                     raise RuntimeError('Realized evaluation seed sequence disagrees with requested seeds')
                 result['normalized_progress']=float(np.mean([1. if e['reason']=='Finish' else np.clip(e['travelMetres']/e['finishDistance'],0,1) for e in endings]))
+                if config.get('quality_selection',False):
+                    measured=score_quality(endings,expected)
+                    if measured['measured_finish_fraction']!=result['reward_inferred_finish_fraction']:
+                        raise RuntimeError('Finish telemetry disagrees with reward finish proxy')
+                    result.update(measured)
                 result['track_mode']='procedural'
                 result['evaluation_tasks']=','.join(f'{seed}:{turn}' for seed,turn in expected)
                 (out/f'track-eval-{step:09d}.json').write_text(json.dumps(telemetry,indent=2))
@@ -331,6 +371,11 @@ def build_manifest(path):
                 sha256=hashlib.sha256(json.dumps(immutable,sort_keys=True).encode()).hexdigest())
 
 
+def clean_development_stop(config, result):
+    return (config.get('stop_on_clean_development',False) and result.get('quality_selection') is True
+            and result.get('measured_finish_fraction')==1 and result.get('clean_finish_fraction')==1)
+
+
 def train(config,resume=None,warm_start=None):
     manifest=build_manifest(config['env']); config['build_sha256']=manifest['sha256']
     random.seed(config['seed']); np.random.seed(config['seed']); torch.manual_seed(config['seed'])
@@ -349,7 +394,7 @@ def train(config,resume=None,warm_start=None):
         for key in ('track_mode','track_seed','track_train_seeds','track_eval_seeds','track_segments',
                     'track_straight_min','track_straight_max','track_radius_min','track_radius_max',
                     'track_angle_min','track_angle_max','track_spacing','track_train_spawn_mode','track_spawn_seed',
-                    'track_eval_spawn_indices','track_eval_spawn_approach'):
+                    'track_eval_spawn_indices','track_eval_spawn_approach','quality_selection','quality_telemetry'):
             # Older fixed checkpoints have no procedural fields; defaults retain fixed compatibility.
             old=restored['config'].get(key, 'fixed' if key=='track_mode' else config.get(key))
             if config.get(key)!=old: raise ValueError(f'Resume must preserve {key}')
@@ -386,9 +431,12 @@ def train(config,resume=None,warm_start=None):
             state['last_evaluation_step']=state['transitions']
             if state['best_evaluation'] is None or rank(result['0'])>rank(state['best_evaluation']):
                 state['best_evaluation']=result['0']; save(out/'best.pt',learner,replay,state,config,False)
-            unity.configure_spawn(env,config); stream.reset()
+            if clean_development_stop(config,result['0']):
+                outcome='development_gate_met'; state['outcome']=outcome
+                save(out/'development-gate.pt',learner,replay,state,config,False)
+            else: unity.configure_spawn(env,config); stream.reset()
         else: unity.configure_spawn(env,config); stream.reset()
-        while state['transitions']<config['max_transitions']:
+        while outcome!='development_gate_met' and state['transitions']<config['max_transitions']:
             if unity.STOP: outcome='interrupted'; break
             if config['max_seconds'] and time.monotonic()-started>=config['max_seconds']:
                 outcome='wall_time_limit'; break
@@ -426,6 +474,10 @@ def train(config,resume=None,warm_start=None):
                 if state['best_evaluation'] is None or rank(result['0'])>rank(state['best_evaluation']):
                     state['best_evaluation']=result['0']; save(out/'best.pt',learner,replay,state,config,False)
                 save(out/f'policy-{state["transitions"]:09d}.pt',learner,replay,state,config,False)
+                if clean_development_stop(config,result['0']):
+                    outcome='development_gate_met'; state['outcome']=outcome
+                    save(out/'development-gate.pt',learner,replay,state,config,False)
+                    break
                 next_eval=state['transitions']+config['eval_frequency']
                 unity.configure_spawn(env,config); stream.reset(); stream.read()
             if state['transitions']-last_save>=config['checkpoint_frequency']:
@@ -436,6 +488,9 @@ def train(config,resume=None,warm_start=None):
             state['eval_transitions']+=result['0']['transitions']; state['last_evaluation_step']=state['transitions']
             if state['best_evaluation'] is None or rank(result['0'])>rank(state['best_evaluation']):
                 state['best_evaluation']=result['0']; save(out/'best.pt',learner,replay,state,config,False)
+            if clean_development_stop(config,result['0']):
+                outcome='development_gate_met'; state['outcome']=outcome
+                save(out/'development-gate.pt',learner,replay,state,config,False)
     except (unity.StopRequested,unity.UnityCommunicationException,unity.UnityTimeOutException):
         if not unity.STOP: outcome='communication_failure'; raise
         outcome='interrupted'
@@ -448,6 +503,31 @@ def train(config,resume=None,warm_start=None):
         if env is not None: env.close()
         writer.close()
         print(f'Saved {out/"latest.pt"}. Outcome={outcome}; steps={state["transitions"]:,}.',flush=True)
+
+
+def accepted_view_defaults(arguments, root=ROOT):
+    """Bare view resolves only a committed, accepted and hash-verified policy manifest."""
+    if not arguments or arguments[0]!='view' or any(
+            flag in ('--checkpoint','--track-mode','--config') or flag.startswith(('--checkpoint=','--track-mode=','--config='))
+            for flag in arguments[1:]):
+        return {}
+    manifest=root/'configs/quality/accepted-view.json'
+    if not manifest.exists():
+        return {}
+    accepted=json.loads(manifest.read_text())
+    if accepted.get('gate_passed') is not True:
+        return {}
+    checkpoint=(root/accepted['checkpoint']).resolve()
+    if not checkpoint.is_relative_to(root.resolve()) or file_sha(checkpoint)!=accepted['checkpoint_sha256']:
+        raise ValueError('Accepted view checkpoint provenance mismatch')
+    if accepted.get('track_mode')!='procedural' or accepted.get('track_seed')!=1009:
+        raise ValueError('Invalid accepted procedural view defaults')
+    defaults=dict(checkpoint=checkpoint,track_mode='procedural',track_seed=1009,
+                  track_eval_spawn_indices=[-1],
+                  quality_telemetry=accepted.get('quality_telemetry') is True)
+    if not any(flag=='--track-seed' or flag.startswith('--track-seed=') for flag in arguments[1:]):
+        defaults['track_eval_seeds']=[1009]
+    return defaults
 
 
 def main():
@@ -499,7 +579,13 @@ def main():
     parser.add_argument('--approaches',action='store_true',help='Evaluate original plus fixed10/15/20m approaches')
     parser.add_argument('--config',type=Path,help='JSON training defaults; explicit CLI flags take precedence')
     parser.add_argument('--capture-dir',type=Path,help='Optional rendered PNG sequence; view mode only')
+    parser.add_argument('--camera',choices=['chase','overview'],default='chase')
+    parser.add_argument('--stop-on-clean-development',action='store_true',help='Orderly training stop after a complete clean original-route quality evaluation')
+    parser.add_argument('--quality-selection',action='store_true',help='Select full original routes by measured completion and clean driving')
+    parser.add_argument('--quality-telemetry',action=argparse.BooleanOptionalAction,default=False,help='Record passive physics-tick driving metrics')
     parser.add_argument('--sensor-overlay',action='store_true',help='Display actual decision ray samples; view mode only')
+    try: parser.set_defaults(**accepted_view_defaults(sys.argv[1:]))
+    except (ValueError,KeyError,OSError) as error: parser.error(str(error))
     pre,_=parser.parse_known_args()
     if pre.config:
         values=json.loads(pre.config.read_text())
@@ -530,6 +616,11 @@ def main():
         try: unity.procedural_tasks(vars(args),evaluation=True)
         except ValueError as error: parser.error(str(error))
         args.spawn_curriculum=False
+    if args.stop_on_clean_development and not args.quality_selection:
+        parser.error('stop-on-clean-development requires quality-selection')
+    if args.quality_selection:
+        if args.track_mode!='procedural' or args.track_eval_spawn_indices!=[-1]:
+            parser.error('Quality selection requires explicit procedural original-start evaluation indices [-1]')
     if args.mode!='train' and args.checkpoint is None: parser.error('evaluate/view requires --checkpoint')
     config=vars(args).copy()
     for key in ('resume','checkpoint','warm_start','from_scratch','approaches','config','capture_dir','sensor_overlay'): config.pop(key)
@@ -540,7 +631,7 @@ def main():
         args.capture_dir.mkdir(parents=True,exist_ok=False)
         config['player_args']+=['--portfolio-capture',str(args.capture_dir.resolve())]
     if args.sensor_overlay: config['player_args']+=['--portfolio-rays']
-    if args.mode=='view': config['player_args']+=['--portfolio-label','SAC / '+str(args.checkpoint.stem if args.checkpoint else 'policy'),'-screen-width','1280','-screen-height','720','-screen-fullscreen','0']
+    if args.mode=='view': config['player_args']+=['--portfolio-camera',args.camera,'--portfolio-label','SAC / '+str(args.checkpoint.stem if args.checkpoint else 'policy'),'-screen-width','1280','-screen-height','720','-screen-fullscreen','0']
     def stop(signum,frame): unity.STOP=True
     signal.signal(signal.SIGINT,stop); signal.signal(signal.SIGTERM,stop)
     if args.mode=='train': train(config,args.resume,None if args.from_scratch else args.warm_start)

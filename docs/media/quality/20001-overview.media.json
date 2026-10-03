@@ -1,0 +1,34 @@
+{
+  "source_frames": "frames-20001-overview",
+  "frame_count": 323,
+  "policy_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
+  "build_sha256": "559b3cc5f34710ce67ab7a393a69e54b9ed230c71026e7099adec1fb49126fbe",
+  "seed": 20001,
+  "camera": "overview",
+  "spawn_turn_index": -1,
+  "full_recorded_interval_seconds": [
+    0.119999953,
+    19.4399929
+  ],
+  "initial_visual_acquisition_seconds": 0.119999953,
+  "terminal_hold_frames": 0,
+  "terminal_hold_playback_seconds": 0.0,
+  "discarded_post_reset_frames": 1,
+  "gif_episode_interval_seconds": [
+    1.0,
+    9.0
+  ],
+  "timing": "episode_seconds from physics-tick capture telemetry",
+  "full_mp4": "20001-overview.mp4",
+  "excerpt_gif": "20001-overview.gif",
+  "asset_sha256": {
+    "20001-overview.mp4": "3316119f08cd4fe40380f773d883adcb814d65e94b8cf06922ff7ea4e8c670be",
+    "20001-overview.gif": "82b3321623bf3b7cc6ba4ef1ca6343db67128b7e1c02cdb76ee384bab06ddd88",
+    "20001-overview.frames.csv": "d5965e6cd7675158b6c0b951c6e13bb123e55482dd950f7e8d78d4c0925ef772"
+  },
+  "note": "Run outcome, checkpoint/build identity and camera parity belong to the capture manifest.",
+  "measured_finish_fraction": 1.0,
+  "clean_finish_fraction": 1.0,
+  "terminal_simulated_seconds": 19.459991455078125,
+  "final_visual_to_terminal_seconds": 0.01999855507812498
+}

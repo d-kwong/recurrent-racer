@@ -10,10 +10,10 @@ After setup/build, choose new output directories:
 
 ```sh
 .venv/bin/python python/train_sac.py view \
-  --checkpoint policies/selected.pt --eval-episodes 1 \
+  --checkpoint policies/selected.pt --track-mode fixed --eval-episodes 1 \
   --output runs/hero-playback --capture-dir runs/hero-frames
 .venv/bin/python python/train_sac.py view \
-  --checkpoint policies/selected.pt --eval-episodes 1 \
+  --checkpoint policies/selected.pt --track-mode fixed --eval-episodes 1 \
   --output runs/ray-playback --capture-dir runs/ray-frames \
   --sensor-overlay
 ```

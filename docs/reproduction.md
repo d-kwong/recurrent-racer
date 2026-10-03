@@ -39,9 +39,9 @@ Create `runs/` first if using that log location. The output is `RacingEnvironmen
 
 ```sh
 .venv/bin/python python/train_sac.py view \
-  --checkpoint policies/selected.pt --eval-episodes 1
+  --checkpoint policies/selected.pt --track-mode fixed --eval-episodes 1
 .venv/bin/python python/train_sac.py evaluate \
-  --checkpoint policies/selected.pt --approaches --eval-episodes 3 \
+  --checkpoint policies/selected.pt --track-mode fixed --approaches --eval-episodes 3 \
   --seed 7 --output runs/selected-evaluation
 ```
 
@@ -51,7 +51,7 @@ Default paths derive from the repository location. Run from its root for the rel
 
 ```sh
 .venv/bin/python python/train_sac.py train \
-  --config configs/train.json --output runs/my-sac
+  --config configs/train.json --track-mode fixed --output runs/my-sac
 ```
 
 See [training](training.md) for warm-start, from-scratch, resume and TensorBoard details. The training JSON is a defaults file; explicit flags override it. Simulator time scale is 20 during headless training/evaluation and 1 during viewing. Initialization is included, but the historical full replay/resume state is excluded, so exact mid-run continuation of the historical training trajectory is not available publicly.
