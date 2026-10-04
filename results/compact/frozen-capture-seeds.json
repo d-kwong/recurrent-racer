@@ -1,0 +1,137 @@
+{
+  "selected_seeds": [
+    50007,
+    50001,
+    50000,
+    50002,
+    50005
+  ],
+  "feature_names": [
+    "length",
+    "left_turn_count",
+    "right_turn_count",
+    "total_absolute_angle",
+    "minimum_radius"
+  ],
+  "candidates": [
+    {
+      "seed": 50000,
+      "geometrySha256": "67f6a309f5d5cd9948eafd3ecec8d9ca4d9f4c27abca84b85d709f90ab044ada",
+      "features": [
+        365.5455322265625,
+        1.0,
+        4.0,
+        334.30213928222656,
+        23.31538200378418
+      ]
+    },
+    {
+      "seed": 50001,
+      "geometrySha256": "8b749978c89ace2f1cefe9a463a935f6eb4a858f17201da72f98e8d045a58ada",
+      "features": [
+        395.6044921875,
+        1.0,
+        4.0,
+        330.57768630981445,
+        30.506511688232422
+      ]
+    },
+    {
+      "seed": 50002,
+      "geometrySha256": "b214034c1aeccb0629938656650a56301a8792629fe5ae8fd9073b4dc9a7dbdb",
+      "features": [
+        416.99139404296875,
+        4.0,
+        1.0,
+        336.27732849121094,
+        25.02490234375
+      ]
+    },
+    {
+      "seed": 50003,
+      "geometrySha256": "332a8bfa58a0f107328dc97287753828f4fe10fe4113ed68c935d34e1a517c36",
+      "features": [
+        336.23504638671875,
+        4.0,
+        1.0,
+        325.27003479003906,
+        23.697242736816406
+      ]
+    },
+    {
+      "seed": 50004,
+      "geometrySha256": "fef8b19b08df75b475025072473aeca78c926e803b39d7fba199aa0c5b8f13da",
+      "features": [
+        404.75909423828125,
+        4.0,
+        1.0,
+        336.54940032958984,
+        24.538333892822266
+      ]
+    },
+    {
+      "seed": 50005,
+      "geometrySha256": "d11aed654ed35ebeb81187d5e4a5cb15d514126aa2580c7f1199051b9cd8bbdc",
+      "features": [
+        399.4952087402344,
+        1.0,
+        4.0,
+        323.0561103820801,
+        22.61219024658203
+      ]
+    },
+    {
+      "seed": 50006,
+      "geometrySha256": "820accf4bb13e0f5d807de9088f65364f2591205dac7f98d29064007b0283526",
+      "features": [
+        370.0107727050781,
+        4.0,
+        1.0,
+        331.22753143310547,
+        23.580862045288086
+      ]
+    },
+    {
+      "seed": 50007,
+      "geometrySha256": "fb50ef622289cb5cfd7d9839225dc1d8060f0cf53b7577888d6a1ab577bdae02",
+      "features": [
+        345.6733703613281,
+        4.0,
+        1.0,
+        321.8748970031738,
+        22.604873657226562
+      ]
+    }
+  ],
+  "selection_steps": [
+    {
+      "seed": 50007,
+      "new_feature_bins": 5,
+      "diversity": 1.0708806979609145
+    },
+    {
+      "seed": 50001,
+      "new_feature_bins": 5,
+      "diversity": 1.9323563800119876
+    },
+    {
+      "seed": 50000,
+      "new_feature_bins": 2,
+      "diversity": 1.015485126889556
+    },
+    {
+      "seed": 50002,
+      "new_feature_bins": 0,
+      "diversity": 1.3553505420159064
+    },
+    {
+      "seed": 50005,
+      "new_feature_bins": 0,
+      "diversity": 0.8786174056398129
+    }
+  ],
+  "algorithm": "Normalize each feature over the eight routes; greedily maximize previously uncovered low/mid/high feature bins, then minimum Euclidean distance from selected routes (first: distance from centre); ties choose lower seed.",
+  "note": "Geometry only. Frozen before policy results. No replacement after capture failure.",
+  "geometry_export_sha256": "bb5f82ec2dd25e1132d29c58a62a3067b7fa6126a1cdb268466013e41aa50bb5",
+  "comparison_seed": 50007
+}

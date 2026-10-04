@@ -101,6 +101,9 @@ def configure_track(env, config, evaluation=False):
         raise ValueError('Unknown track_mode')
     channel = env.racing_parameters
     channel.set_float_parameter('racing_track_mode', int(mode == 'procedural'))
+    layout=config.get('track_layout','open')
+    if layout not in ('open','compact'): raise ValueError('Unknown track_layout')
+    channel.set_float_parameter('racing_track_layout',int(layout=='compact'))
     if mode == 'fixed':
         return
     if config.get('editor', False):

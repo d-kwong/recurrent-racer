@@ -45,3 +45,7 @@ The hero is a contiguous approximately 20-second lap capture. The perception loo
 ## Diagrams and charts
 
 SVG sources plus rendered PNGs live in `docs/media/`. `tools/render_diagrams.py` generates the architecture, sensor/interface and actual SAC update diagrams. Optional PNG export needs CairoSVG and its native Cairo library. `tools/plot_performance.py` uses preserved evaluation CSV/JSON data and Matplotlib 3.7.5. These tools are for documentation and are not required to run the policy. No font files are bundled.
+
+## Current compact showcase
+
+Bare `python/train_sac.py view` uses the accepted compact actor and seed 1009. Historical fixed examples above retain explicit `--track-mode fixed`; historical procedural pilot examples use `--track-layout open` to reproduce original geometry. Explicit `--track-layout compact` selects the new circuit layout. [Current showcase](compact-showcase.md) · [Layout interface](procedural-tracks.md)

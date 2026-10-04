@@ -391,13 +391,14 @@ def train(config,resume=None,warm_start=None):
             raise ValueError('Unity build changed; use a new experiment rather than resume')
         for key in ('spawn_curriculum','spawn_min','spawn_max','original_fraction','env','learning_starts'):
             if config[key]!=restored['config'][key]: raise ValueError(f'Resume must preserve {key}')
-        for key in ('track_mode','track_seed','track_train_seeds','track_eval_seeds','track_segments',
+        for key in ('track_mode','track_layout','track_seed','track_train_seeds','track_eval_seeds','track_segments',
                     'track_straight_min','track_straight_max','track_radius_min','track_radius_max',
                     'track_angle_min','track_angle_max','track_spacing','track_train_spawn_mode','track_spawn_seed',
                     'track_eval_spawn_indices','track_eval_spawn_approach','quality_selection','quality_telemetry'):
             # Older fixed checkpoints have no procedural fields; defaults retain fixed compatibility.
-            old=restored['config'].get(key, 'fixed' if key=='track_mode' else config.get(key))
-            if config.get(key)!=old: raise ValueError(f'Resume must preserve {key}')
+            old=restored['config'].get(key, 'fixed' if key=='track_mode' else 'open' if key=='track_layout' else config.get(key))
+            current=config.get(key, 'fixed' if key=='track_mode' else 'open' if key=='track_layout' else None)
+            if current!=old: raise ValueError(f'Resume must preserve {key}')
         config['resume']=dict(path=str(resume.resolve()),sha256=file_sha(resume))
         candidate=resume.parent/'best.pt'
         if candidate.exists():
@@ -508,7 +509,7 @@ def train(config,resume=None,warm_start=None):
 def accepted_view_defaults(arguments, root=ROOT):
     """Bare view resolves only a committed, accepted and hash-verified policy manifest."""
     if not arguments or arguments[0]!='view' or any(
-            flag in ('--checkpoint','--track-mode','--config') or flag.startswith(('--checkpoint=','--track-mode=','--config='))
+            flag in ('--checkpoint','--track-mode','--track-layout','--config') or flag.startswith(('--checkpoint=','--track-mode=','--track-layout=','--config='))
             for flag in arguments[1:]):
         return {}
     manifest=root/'configs/quality/accepted-view.json'
@@ -520,11 +521,14 @@ def accepted_view_defaults(arguments, root=ROOT):
     checkpoint=(root/accepted['checkpoint']).resolve()
     if not checkpoint.is_relative_to(root.resolve()) or file_sha(checkpoint)!=accepted['checkpoint_sha256']:
         raise ValueError('Accepted view checkpoint provenance mismatch')
-    if accepted.get('track_mode')!='procedural' or accepted.get('track_seed')!=1009:
+    if accepted.get('track_mode')!='procedural' or accepted.get('track_layout')!='compact' or accepted.get('track_seed')!=1009:
         raise ValueError('Invalid accepted procedural view defaults')
-    defaults=dict(checkpoint=checkpoint,track_mode='procedural',track_seed=1009,
+    geometry_keys=('track_segments','track_straight_min','track_straight_max','track_radius_min',
+                   'track_radius_max','track_angle_min','track_angle_max','track_spacing')
+    defaults=dict(checkpoint=checkpoint,track_mode='procedural',track_layout='compact',track_seed=1009,
                   track_eval_spawn_indices=[-1],
                   quality_telemetry=accepted.get('quality_telemetry') is True)
+    defaults.update({key: accepted[key] for key in geometry_keys})
     if not any(flag=='--track-seed' or flag.startswith('--track-seed=') for flag in arguments[1:]):
         defaults['track_eval_seeds']=[1009]
     return defaults
@@ -558,6 +562,7 @@ def main():
     parser.add_argument('--evaluate-initial',action=argparse.BooleanOptionalAction,default=True)
     parser.add_argument('--spawn-curriculum',action=argparse.BooleanOptionalAction,default=True)
     parser.add_argument('--track-mode',choices=['fixed','procedural'],default='fixed')
+    parser.add_argument('--track-layout',choices=['open','compact'],default='open')
     parser.add_argument('--track-seed',type=int,default=101)
     parser.add_argument('--track-train-seeds',type=int,nargs='+')
     parser.add_argument('--track-eval-seeds',type=int,nargs='+')
@@ -601,6 +606,8 @@ def main():
     if not 0<=args.gamma<=1 or not 0<args.tau<=1 or args.max_seconds<0: parser.error('Invalid discount/tau/wall cap')
     if args.learning_starts>args.replay_capacity: parser.error('learning-starts exceeds replay capacity')
     if not 5<=args.spawn_min<=args.spawn_max<=50 or not 0<=args.original_fraction<=1: parser.error('Invalid curriculum')
+    if args.track_layout=='compact' and (args.track_mode!='procedural' or args.track_segments!=5 or args.track_radius_min<22 or args.track_angle_min>35 or args.track_angle_max<100):
+        parser.error('Compact layout requires procedural mode, five turns, radius-min >=22 and angle range covering 35..100')
     if args.track_mode=='procedural':
         train_seeds=args.track_train_seeds or [args.track_seed]
         eval_seeds=args.track_eval_seeds or [args.track_seed]

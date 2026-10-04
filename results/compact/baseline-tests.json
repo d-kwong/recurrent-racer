@@ -1,0 +1,6 @@
+{
+  "python_tests": 24,
+  "status": "passed",
+  "runtime": "Python 3.10 preserved runtime",
+  "note": "Existing suite before compact edits; no Unity execution yet."
+}

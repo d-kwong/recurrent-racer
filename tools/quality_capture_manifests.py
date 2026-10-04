@@ -5,8 +5,8 @@ from quality_report import report
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('captures',type=Path);p.add_argument('--output',type=Path,required=True);a=p.parse_args();rows=[]
-    for seed in [20001,20003,20007,20002,20005]:
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('captures',type=Path);p.add_argument('--output',type=Path,required=True);p.add_argument('--seeds',type=int,nargs='+',default=[20001,20003,20007,20002,20005]);a=p.parse_args();rows=[]
+    for seed in a.seeds:
         for mode in ['chase','overview']:
             run=a.captures/f'capture-{seed}-{mode}';frames=a.captures/f'frames-{seed}-{mode}'
             evidence=report(run,[seed]);config=json.loads((run/'config.json').read_text());episode=evidence['routes'][0]

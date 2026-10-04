@@ -1,0 +1,62 @@
+{
+  "seed": 50007,
+  "geometrySha256": "fb50ef622289cb5cfd7d9839225dc1d8060f0cf53b7577888d6a1ab577bdae02",
+  "parameters": {
+    "segments": 5,
+    "straightMin": 25.0,
+    "straightMax": 55.0,
+    "radiusMin": 22.0,
+    "radiusMax": 42.0,
+    "angleMin": 25.0,
+    "angleMax": 100.0,
+    "spacing": 2.0
+  },
+  "originalSpawn": true,
+  "durationSeconds": 15.179993629455566,
+  "terminalHoldSeconds": 2,
+  "runs": [
+    {
+      "steps": 4006,
+      "policy_sha256": "27a140c263a42780be3cd65c18056082e36b67b15d3df311e761ffb13aa1a28d",
+      "initialization": "Preserved fixed-policy trunk/mean; fresh procedural SAC training lineage",
+      "terminalReason": "Crash",
+      "interrupted": false,
+      "terminalSeconds": 6.539997577667236,
+      "cleanFinish": false,
+      "actionsChecked": 66
+    },
+    {
+      "steps": 8018,
+      "policy_sha256": "dccac4e0aeb1e3ed9547b5ea2672a9e58c15e3ddc4e65b2d7478dd71e44f16bd",
+      "initialization": "Preserved fixed-policy trunk/mean; fresh procedural SAC training lineage",
+      "terminalReason": "Crash",
+      "interrupted": false,
+      "terminalSeconds": 5.559998035430908,
+      "cleanFinish": false,
+      "actionsChecked": 56
+    },
+    {
+      "steps": 12210,
+      "policy_sha256": "8c933bfaf5356a2ff8fc5d882a1f510f86cd0d83640517c30563f103a324076a",
+      "initialization": "Preserved fixed-policy trunk/mean; fresh procedural SAC training lineage",
+      "terminalReason": "Finish",
+      "interrupted": false,
+      "terminalSeconds": 13.859994888305664,
+      "cleanFinish": true,
+      "actionsChecked": 139
+    },
+    {
+      "steps": 16248,
+      "policy_sha256": "d1af8778becef89137ddc97ea5005605a17d6e54c4e60714e82239804527cb80",
+      "initialization": "Preserved fixed-policy trunk/mean; fresh procedural SAC training lineage",
+      "terminalReason": "Finish",
+      "interrupted": false,
+      "terminalSeconds": 15.179993629455566,
+      "cleanFinish": true,
+      "actionsChecked": 152
+    }
+  ],
+  "identicalOriginalPose": true,
+  "selection": "First geometry-only preselected route, frozen before driving outcomes",
+  "noRouteSubstitution": true
+}

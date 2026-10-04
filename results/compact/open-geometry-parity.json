@@ -1,0 +1,14 @@
+{
+  "seeds": [
+    20000,
+    20001,
+    20002,
+    20003,
+    20004,
+    20005,
+    20006,
+    20007
+  ],
+  "geometry_hashes_unchanged": true,
+  "comparison": "Historical frozen quality geometry candidates; explicit open layout"
+}

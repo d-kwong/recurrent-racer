@@ -1,0 +1,22 @@
+{
+  "checks": [
+    {
+      "mode": "default",
+      "passed": true,
+      "generator": "compact-circuit-v1",
+      "manual_startup_only": true
+    },
+    {
+      "mode": "open",
+      "passed": true,
+      "generator": "open-arcs-v1",
+      "manual_startup_only": true
+    },
+    {
+      "mode": "fixed",
+      "passed": true,
+      "generator": null,
+      "manual_startup_only": true
+    }
+  ]
+}
