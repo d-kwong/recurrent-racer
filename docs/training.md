@@ -51,3 +51,7 @@ Evaluation runs between training episodes, approximately every 10,000 transition
 ## References
 
 SAC's replay, entropy objective and twin-Q approach are described in [Soft Actor-Critic Algorithms and Applications](https://arxiv.org/abs/1812.05905) and [Spinning Up's SAC explanation](https://spinningup.openai.com/en/latest/algorithms/sac.html). This project implements the update directly; network sizes, curriculum, reward scale and safeguards are project choices, not demonstrated optimal hyperparameters.
+
+## Current compact showcase
+
+Bare `python/train_sac.py view` uses the accepted compact actor and seed 1009. Historical fixed examples above retain explicit `--track-mode fixed`; historical procedural pilot examples use `--track-layout open` to reproduce original geometry. Explicit `--track-layout compact` selects the new circuit layout. [Current showcase](compact-showcase.md) · [Layout interface](procedural-tracks.md)

@@ -71,7 +71,7 @@ namespace Racing
                 throw new ArgumentException("Invalid track " + name);
             return (int)value;
         }
-        public void Configure(RaceTrack target, RaceEpisode episode, int mode, int seed, TrackParameters parameters, int sequenceIndex = 0)
+        public void Configure(RaceTrack target, RaceEpisode episode, int mode, int seed, TrackParameters parameters, int sequenceIndex = 0, int layout = 0)
         {
             if (track == null)
             {
@@ -89,17 +89,20 @@ namespace Racing
             }
             if (mode != 1) throw new ArgumentException("Unknown track mode");
             parameters.Validate();
-            string key = seed + ":" + JsonUtility.ToJson(parameters);
+            Integer(layout,0,1,"layout");
+            string key = layout + ":" + seed + ":" + JsonUtility.ToJson(parameters);
             if (activeKey != key || generated == null)
             {
                 // Validate before replacing the active track. Failure cannot leave a partial route.
-                TrackRecord record = Generate(seed, parameters, track.roadWidth, track.curbWidth);
+                TrackRecord record = Generate(seed, parameters, track.roadWidth, track.curbWidth, layout);
                 Material road = null, curb = null;
-                foreach (var renderer in track.GetComponentsInChildren<MeshRenderer>(true))
-                {
-                    if (renderer.name == "Road") road = renderer.sharedMaterial;
-                    if (renderer.name.Contains("curb")) curb = renderer.sharedMaterial;
-                }
+                // Source materials belong to preserved fixed geometry. Never inherit a generated white tile.
+                foreach (var fixedObject in fixedObjects)
+                    foreach (var renderer in fixedObject.GetComponentsInChildren<MeshRenderer>(true))
+                    {
+                        if (renderer.name == "Road") road = renderer.sharedMaterial;
+                        if (renderer.name.Contains("curb")) curb = renderer.sharedMaterial;
+                    }
                 if (generated != null) { generated.SetActive(false); ReleaseMeshes(generated); ReleaseObject(generated); }
                 foreach (var obj in fixedObjects) obj.SetActive(false);
                 Record = record; generated = BuildGeometry(track, episode, record, road, curb, fixedSpawn.position.y);
@@ -166,8 +169,10 @@ namespace Racing
             public float Next() { state ^= state << 13; state ^= state >> 17; state ^= state << 5; return (state >> 8) / 16777216f; }
             public float Between(float a, float b) => a + (b - a) * Next();
         }
-        public static TrackRecord Generate(int seed, TrackParameters parameters, float roadWidth = 9, float curbWidth = 1)
+        public static TrackRecord Generate(int seed, TrackParameters parameters, float roadWidth = 9, float curbWidth = 1, int layout = 0)
         {
+            Integer(layout,0,1,"layout");
+            if(layout==1) return GenerateCompact(seed,parameters,roadWidth,curbWidth);
             Integer(seed, 0, 16777215, "seed"); parameters.Validate();
             if (roadWidth != 9 || curbWidth != 1) throw new ArgumentException("Generator v1 requires the baseline 9m road/1m curbs");
             var rng = new StableRandom(seed);
@@ -218,6 +223,66 @@ namespace Racing
                 record.geometrySha256 = Digest(record); return record;
             }
             throw new InvalidOperationException("No valid procedural track after 64 deterministic attempts, seed=" + seed);
+        }
+        // Five turns: a real counterbend pair, then three corners around an open circuit.
+        public static TrackRecord GenerateCompact(int seed, TrackParameters parameters, float roadWidth=9, float curbWidth=1)
+        {
+            Integer(seed,0,16777215,"seed"); parameters.Validate();
+            if(parameters.segments!=5 || parameters.radiusMin<22 || roadWidth!=9 || curbWidth!=1 ||
+                parameters.angleMin>35 || parameters.angleMax<100)
+                throw new ArgumentException("compact-circuit-v1 requires five turns, radiusMin>=22 and angle range covering 35..100");
+            // Avalanche adjacent compact seeds before the first draw; original generator RNG is untouched.
+            uint mixed=unchecked((uint)seed+0x9e3779b9u);
+            mixed=unchecked((mixed^(mixed>>16))*0x85ebca6bu);
+            mixed=unchecked((mixed^(mixed>>13))*0xc2b2ae35u); mixed^=mixed>>16;
+            var rng=new StableRandom(unchecked((int)mixed));
+            for(int attempt=0;attempt<256;attempt++)
+            {
+                var points=new List<Vector3>{Vector3.zero}; var entries=new List<int>(); var exits=new List<int>();
+                var angles=new List<float>(); var radii=new List<float>(); Vector3 position=Vector3.zero; float heading=0;
+                float sign=rng.Next()<.5f ? -1 : 1;
+                float counter=rng.Between(Mathf.Max(25,parameters.angleMin),35);
+                float firstCorner=rng.Between(85,95), secondCorner=rng.Between(85,95);
+                float[] turns={-counter,counter,firstCorner,secondCorner,270-firstCorner-secondCorner};
+                for(int section=0;section<5;section++)
+                {
+                    float straight=rng.Between(parameters.straightMin,parameters.straightMax);
+                    Vector3 start=position, forward=Quaternion.Euler(0,heading,0)*Vector3.forward;
+                    int steps=Mathf.CeilToInt(straight/parameters.spacing);
+                    for(int i=1;i<=steps;i++) points.Add(start+forward*(straight*i/steps));
+                    position=points[points.Count-1]; entries.Add(points.Count-1);
+                    float angle=turns[section]*sign, radius=rng.Between(parameters.radiusMin,parameters.radiusMax);
+                    angles.Add(angle); radii.Add(radius);
+                    steps=Mathf.CeilToInt(Mathf.Abs(angle)*Mathf.Deg2Rad*radius/parameters.spacing);
+                    Vector3 center=position+Quaternion.Euler(0,heading,0)*Vector3.right*(Mathf.Sign(angle)*radius);
+                    Vector3 radial=position-center;
+                    for(int i=1;i<=steps;i++) points.Add(center+Quaternion.Euler(0,angle*i/steps,0)*radial);
+                    position=points[points.Count-1]; heading+=angle; exits.Add(points.Count-1);
+                }
+                Vector3 last=position, direction=Quaternion.Euler(0,heading,0)*Vector3.forward;
+                int tail=Mathf.CeilToInt(20/parameters.spacing);
+                for(int i=1;i<=tail;i++) points.Add(last+direction*(20f*i/tail));
+                var route=points.ToArray(); var cumulative=new float[route.Length];
+                for(int i=1;i<route.Length;i++) cumulative[i]=cumulative[i-1]+Vector3.Distance(route[i-1],route[i]);
+                var record=new TrackRecord{generatorVersion="compact-circuit-v1",seed=seed,acceptedAttempt=attempt,parameters=parameters,
+                    roadWidth=roadWidth,curbWidth=curbWidth,centerline=route,cumulativeMetres=cumulative,length=cumulative[cumulative.Length-1]};
+                record.leftEdge=Offset(route,-roadWidth/2); record.rightEdge=Offset(route,roadWidth/2);
+                record.leftBoundary=Offset(route,-roadWidth/2-curbWidth); record.rightBoundary=Offset(route,roadWidth/2+curbWidth);
+                var bounds=new Bounds(record.leftBoundary[0],Vector3.zero);
+                foreach(var point in record.leftBoundary) bounds.Encapsulate(point);
+                foreach(var point in record.rightBoundary) bounds.Encapsulate(point);
+                float small=Mathf.Min(bounds.size.x,bounds.size.z), large=Mathf.Max(bounds.size.x,bounds.size.z);
+                if(small<=0 || large/small>1.6f || large/record.length>.40f) continue;
+                // Cheap rejection first; accepted geometry and RNG consumption are identical.
+                if(!IsValid(route,cumulative,15) || !IsValid(record.leftBoundary,cumulative,4) || !IsValid(record.rightBoundary,cumulative,4)) continue;
+                record.finishDistance=record.length-6; record.taskDistance=record.finishDistance-record.spawnDistance;
+                record.spawnPosition=At(record,record.spawnDistance,out _); record.finishPosition=At(record,record.finishDistance,out _);
+                int gates=Mathf.CeilToInt(record.length/35)+1; record.gateDistances=new float[gates]; record.gateDistances[0]=record.finishDistance;
+                for(int i=1;i<gates;i++) record.gateDistances[i]=record.finishDistance*i/gates;
+                record.turnEntryDistances=entries.ConvertAll(i=>cumulative[i]).ToArray(); record.turnExitDistances=exits.ConvertAll(i=>cumulative[i]).ToArray();
+                record.turnAngles=angles.ToArray(); record.turnRadii=radii.ToArray(); record.geometrySha256=Digest(record); return record;
+            }
+            throw new InvalidOperationException("No valid compact track after 256 deterministic attempts, seed="+seed);
         }
         public static bool IsValid(Vector3[] route, float[] cumulative, float separation)
         {
@@ -276,8 +341,8 @@ namespace Racing
         {
             var root = new GameObject("Procedural geometry"); root.transform.SetParent(track.transform, false);
             Strip(root.transform, "Road", record.leftEdge, record.rightEdge, road);
-            Strip(root.transform, "Left curb", record.leftBoundary, record.leftEdge, curb);
-            Strip(root.transform, "Right curb", record.rightEdge, record.rightBoundary, curb);
+            Curb(root.transform, "Left curb", record.leftBoundary, record.leftEdge, record.cumulativeMetres, curb);
+            Curb(root.transform, "Right curb", record.rightEdge, record.rightBoundary, record.cumulativeMetres, curb);
             Ribbon(root.transform, "Left sensor edge", record.leftEdge, true);
             Ribbon(root.transform, "Right sensor edge", record.rightEdge, true);
             Ribbon(root.transform, "Left crash boundary", record.leftBoundary, false);
@@ -298,6 +363,26 @@ namespace Racing
                 var checkpoint = gate.AddComponent<CheckpointGate>(); checkpoint.index = i; checkpoint.episode = episode;
             }
             return root;
+        }
+        // Independent render strips: exact 4m red/white intervals, no colliders or sensor changes.
+        static void Curb(Transform root,string name,Vector3[] a,Vector3[] b,float[] cumulative,Material red)
+        {
+            var white=new Material(red); white.name="Generated curb white"; white.color=new Color(.94f,.94f,.94f,1);
+            var left=new List<Vector3>{a[0]}; var right=new List<Vector3>{b[0]};
+            float next=4; int tile=0;
+            for(int i=1;i<a.Length;i++)
+            {
+                while(next<=cumulative[i])
+                {
+                    float t=(next-cumulative[i-1])/(cumulative[i]-cumulative[i-1]);
+                    Vector3 x=Vector3.Lerp(a[i-1],a[i],t), y=Vector3.Lerp(b[i-1],b[i],t);
+                    left.Add(x);right.Add(y);Strip(root,name+" "+tile,left.ToArray(),right.ToArray(),tile%2==0 ? red : white);
+                    tile++;left.Clear();right.Clear();left.Add(x);right.Add(y);next+=4;
+                }
+                if(cumulative[i]<next-4+.0001f) continue;
+                left.Add(a[i]);right.Add(b[i]);
+            }
+            if(left.Count>1) Strip(root,name+" "+tile,left.ToArray(),right.ToArray(),tile%2==0 ? red : white);
         }
         static void Strip(Transform root, string name, Vector3[] a, Vector3[] b, Material material)
         {
@@ -325,6 +410,10 @@ namespace Racing
         void OnDestroy() { if(generated != null) ReleaseMeshes(generated); }
         static void ReleaseMeshes(GameObject geometry)
         {
+            var materials=new HashSet<Material>();
+            foreach(var renderer in geometry.GetComponentsInChildren<MeshRenderer>())
+                if(renderer.sharedMaterial!=null && renderer.sharedMaterial.name=="Generated curb white") materials.Add(renderer.sharedMaterial);
+            foreach(var material in materials) ReleaseObject(material);
             foreach (var filter in geometry.GetComponentsInChildren<MeshFilter>()) ReleaseObject(filter.sharedMesh);
             foreach (var collider in geometry.GetComponentsInChildren<MeshCollider>()) ReleaseObject(collider.sharedMesh);
         }

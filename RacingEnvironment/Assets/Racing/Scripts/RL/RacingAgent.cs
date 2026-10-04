@@ -14,8 +14,21 @@ namespace Racing
         public DrivingQualityRecord quality;
         public float simulatedSeconds, travelMetres, routeLength, finishDistance, spawnDistance, spawnApproach;
     }
+    [System.Serializable]
+    public sealed class RacingPoseSample
+    {
+        public int tick, seed, sequenceIndex;
+        public float simulatedSeconds, steeringDegrees, speedMetresPerSecond;
+        public Vector3 position;
+        public Quaternion rotation;
+        public string geometrySha256, taskSha256, terminalReason;
+        public bool interrupted;
+    }
     public sealed class RacingAgent : Agent
     {
+        public event System.Action<RacingPoseSample> PoseSampled;
+        // Subscribers must copy this reused buffer synchronously; includes terminal observation delivery.
+        public event System.Action<int,float,float[]> ObservationSampled;
         public const int ObservationCount = RoadDistanceSensor.RayCount+4;
         public ArcadeVehicle vehicle;
         public RaceEpisode episode;
@@ -77,6 +90,7 @@ namespace Racing
                 }
                 quality=new DrivingQuality(entry,exit);
             }
+            EmitPose(RacingEndReason.None,false);
         }
         public void ConfigureTrack()
         {
@@ -94,7 +108,9 @@ namespace Racing
             float requested=seedCount==0 ? parameters.GetWithDefault("racing_track_seed",1009) :
                 parameters.GetWithDefault("racing_track_seed_"+(index%seedCount),101);
             int seed=ProceduralTrack.Integer(requested,0,16777215,"seed");
-            generator.Configure(episode.track,episode,mode,seed,ProceduralTrack.ReadParameters(),index);
+            int fallbackLayout=TrainingMode.NativeTrackLayoutDefault;
+            int layout=ProceduralTrack.Integer(parameters.GetWithDefault("racing_track_layout",fallbackLayout),0,1,"layout");
+            generator.Configure(episode.track,episode,mode,seed,ProceduralTrack.ReadParameters(),index,layout);
             if(mode==1)
             {
                 int spawnMode=ProceduralTrack.Integer(parameters.GetWithDefault("racing_track_spawn_mode",0),0,2,"spawn mode");
@@ -160,9 +176,21 @@ namespace Racing
             else if(finishPending) Complete(RacingEndReason.Finish,false,finishReward);
             else if(stagnantTicks*dt+0.0001f>=noProgressSeconds) Complete(RacingEndReason.NoProgress,false,failureReward);
             else if(ElapsedSeconds+0.0001f>=maximumEpisodeSeconds) Complete(RacingEndReason.Timeout,true,0);
+            else EmitPose(RacingEndReason.None,false);
+        }
+        void EmitPose(RacingEndReason reason,bool interrupted)
+        {
+            if(PoseSampled==null) return;
+            var generator=episode.track.GetComponent<ProceduralTrack>(); var record=generator==null ? null : generator.Record;
+            PoseSampled(new RacingPoseSample{tick=PhysicsTicks,simulatedSeconds=ElapsedSeconds,
+                position=vehicle.Body.position,rotation=vehicle.Body.rotation,steeringDegrees=vehicle.SteeringAngle,
+                speedMetresPerSecond=vehicle.Body.linearVelocity.magnitude,seed=record==null ? -1 : record.seed,
+                sequenceIndex=Mathf.Max(0,trackSequenceIndex-1),geometrySha256=record==null ? "" : record.geometrySha256,
+                taskSha256=record==null ? "" : record.taskSha256,terminalReason=reason.ToString(),interrupted=interrupted});
         }
         void Complete(RacingEndReason reason,bool interrupted,float bonus)
         {
+            EmitPose(reason,interrupted);
             var generated=episode.track.GetComponent<ProceduralTrack>();
             if(generated!=null && generated.Record!=null)
                 Debug.Log("RACING_EPISODE: " + JsonUtility.ToJson(new ProceduralEpisodeRecord {
@@ -195,6 +223,7 @@ namespace Racing
             if(sensor==null || vehicle==null || vehicle.Body==null) return;
             FillObservations(observationBuffer);
             for(int i=0;i<observationBuffer.Length;i++) sensor.AddObservation(observationBuffer[i]);
+            ObservationSampled?.Invoke(PhysicsTicks,ElapsedSeconds,observationBuffer);
         }
         public override void OnActionReceived(ActionBuffers actions)
         {

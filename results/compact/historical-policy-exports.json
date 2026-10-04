@@ -1,0 +1,53 @@
+{
+  "checkpoints": [
+    {
+      "source_sha256": "1b28d4d0db9f48ace185e7829665ac14f7df9346ffcd3b232ec8315017846bbc",
+      "export_sha256": "27a140c263a42780be3cd65c18056082e36b67b15d3df311e761ffb13aa1a28d",
+      "bytes": 25244,
+      "synthetic_observations": 1000,
+      "maximum_action_difference": 0,
+      "steps": 4006,
+      "policy": "policies/compact-demo/checkpoint-000004006.pt",
+      "initialization": "Preserved fixed-policy trunk and mean; fresh procedural SAC critics/replay/optimizers.",
+      "source_checkpoint": "policy-000004006.pt",
+      "lineage": "preserved procedural curriculum pilot"
+    },
+    {
+      "source_sha256": "2500cf10fba176aa8b9e06c3c53b052d05bd9690ed55bbc7c3db44d8bfa91f0b",
+      "export_sha256": "dccac4e0aeb1e3ed9547b5ea2672a9e58c15e3ddc4e65b2d7478dd71e44f16bd",
+      "bytes": 25244,
+      "synthetic_observations": 1000,
+      "maximum_action_difference": 0,
+      "steps": 8018,
+      "policy": "policies/compact-demo/checkpoint-000008018.pt",
+      "initialization": "Preserved fixed-policy trunk and mean; fresh procedural SAC critics/replay/optimizers.",
+      "source_checkpoint": "policy-000008018.pt",
+      "lineage": "preserved procedural curriculum pilot"
+    },
+    {
+      "source_sha256": "212000346744f016d6485c13d93c5c9c3ae9289da15912ebe6a2262e9133aa04",
+      "export_sha256": "8c933bfaf5356a2ff8fc5d882a1f510f86cd0d83640517c30563f103a324076a",
+      "bytes": 25244,
+      "synthetic_observations": 1000,
+      "maximum_action_difference": 0,
+      "steps": 12210,
+      "policy": "policies/compact-demo/checkpoint-000012210.pt",
+      "initialization": "Preserved fixed-policy trunk and mean; fresh procedural SAC critics/replay/optimizers.",
+      "source_checkpoint": "policy-000012210.pt",
+      "lineage": "preserved procedural curriculum pilot"
+    },
+    {
+      "source_sha256": "b619fea5f425844849a1d199fe340138a84a9a0dbf5dba9d0e6b7a4a4c9cdf7f",
+      "export_sha256": "d1af8778becef89137ddc97ea5005605a17d6e54c4e60714e82239804527cb80",
+      "bytes": 25244,
+      "synthetic_observations": 1000,
+      "maximum_action_difference": 0,
+      "steps": 16248,
+      "policy": "policies/compact-demo/checkpoint-000016248.pt",
+      "initialization": "Preserved fixed-policy trunk and mean; fresh procedural SAC critics/replay/optimizers.",
+      "source_checkpoint": "policy-000016248.pt",
+      "lineage": "preserved procedural curriculum pilot"
+    }
+  ],
+  "note": "Actor-only exports; full source checkpoints preserved in local archive."
+}

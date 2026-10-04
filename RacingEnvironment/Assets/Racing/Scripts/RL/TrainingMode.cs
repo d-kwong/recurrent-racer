@@ -10,6 +10,15 @@ namespace Racing
         public KeyboardDriver keyboard;
         public RaceEpisode episode;
         public bool renderDiagnostics = true;
+        // Native accepted showcase; Python environment parameters remain authoritative.
+        public static int NativeTrackLayoutDefault
+        {
+            get
+            {
+                var arguments=System.Environment.GetCommandLineArgs();
+                return System.Array.IndexOf(arguments,"--racing-open")>=0 ? 0 : 1;
+            }
+        }
         RacingDriverMode appliedMode;
         void Awake()
         {

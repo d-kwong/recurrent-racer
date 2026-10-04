@@ -53,13 +53,14 @@ class QualityChecks(unittest.TestCase):
             self.assertEqual(train_sac.accepted_view_defaults(['view'],root),{})
             policy=root/'policy.pt';policy.write_bytes(b'test-policy')
             path=root/'configs/quality/accepted-view.json'
-            data=dict(gate_passed=True,checkpoint='policy.pt',checkpoint_sha256=hashlib.sha256(policy.read_bytes()).hexdigest(),track_mode='procedural',track_seed=1009)
+            data=dict(gate_passed=True,checkpoint='policy.pt',checkpoint_sha256=hashlib.sha256(policy.read_bytes()).hexdigest(),track_mode='procedural',track_layout='compact',track_seed=1009,track_segments=5,track_straight_min=25,track_straight_max=55,track_radius_min=22,track_radius_max=42,track_angle_min=25,track_angle_max=100,track_spacing=2)
             path.write_text(json.dumps(data))
             self.assertEqual(train_sac.accepted_view_defaults(['view','--camera','overview'],root)['checkpoint'],policy.resolve())
             self.assertFalse(train_sac.accepted_view_defaults(['view'],root)['quality_telemetry'])
             data['quality_telemetry']=True;path.write_text(json.dumps(data))
             defaults=train_sac.accepted_view_defaults(['view'],root)
             self.assertTrue(defaults['quality_telemetry'])
+            self.assertEqual(defaults['track_layout'],'compact')
             # The same argparse action used by main must preserve explicit CLI precedence.
             import argparse
             parser=argparse.ArgumentParser()
@@ -78,8 +79,9 @@ class QualityChecks(unittest.TestCase):
                 seed_parser.set_defaults(**defaults)
                 config=vars(seed_parser.parse_args(seed_args))
                 self.assertEqual(unity_env.procedural_tasks(config,evaluation=True),[(77,-1)])
-            for flag in ['--checkpoint=x','--track-mode=fixed','--config=x']:
+            for flag in ['--checkpoint=x','--track-mode=fixed','--track-layout=open','--config=x']:
                 self.assertEqual(train_sac.accepted_view_defaults(['view',flag],root),{})
+            self.assertEqual(train_sac.accepted_view_defaults(['view','--track-layout','open'],root),{})
             path.write_text(json.dumps(dict(data,gate_passed=False)))
             self.assertEqual(train_sac.accepted_view_defaults(['view'],root),{})
             path.write_text(json.dumps(data));policy.write_bytes(b'changed')

@@ -1,0 +1,176 @@
+{
+  "kind": "driving",
+  "evidence": {
+    "seed": 50000,
+    "checkpoint": "policies/procedural-selected.pt",
+    "checkpoint_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
+    "build_sha256": "440f7ab674c5e9ca503f0b6bb6cbdebe923a251317090a9c59b7ef79fcb1ce41",
+    "generation_parameters": {
+      "generatorVersion": "compact-circuit-v1",
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "acceptedAttempt": 108,
+      "roadWidth": 9.0,
+      "curbWidth": 1.0,
+      "length": 365.5455322265625,
+      "spawnSeed": 7,
+      "spawnDistance": 4.0,
+      "finishDistance": 359.5455322265625,
+      "taskDistance": 355.5455322265625,
+      "turnEntryDistances": [
+        28.228816986083984,
+        72.3935317993164,
+        117.8072509765625,
+        187.6377410888672,
+        294.9150390625
+      ],
+      "turnExitDistances": [
+        41.30855178833008,
+        90.93926239013672,
+        162.1300811767578,
+        249.96932983398438,
+        345.5455322265625
+      ],
+      "activeGateIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0
+      ]
+    },
+    "requested_track_configuration": {
+      "track_mode": "procedural",
+      "track_train_seeds": [
+        40000,
+        40001,
+        40002,
+        40003,
+        40004,
+        40005,
+        40006,
+        40007,
+        40008,
+        40009,
+        40010,
+        40011,
+        40012,
+        40013,
+        40014,
+        40015,
+        40016,
+        40017,
+        40018,
+        40019,
+        40020,
+        40021,
+        40022,
+        40023,
+        40024,
+        40025,
+        40026,
+        40027,
+        40028,
+        40029,
+        40030,
+        40031
+      ],
+      "track_eval_seeds": [
+        50000
+      ],
+      "track_train_spawn_mode": "curriculum",
+      "track_spawn_seed": 7,
+      "track_eval_spawn_indices": [
+        -1
+      ],
+      "track_eval_spawn_approach": 15,
+      "track_layout": "compact"
+    },
+    "spawn_index": -1,
+    "actual_spawn_position": {
+      "x": 0.0,
+      "y": 0.5550000071525574,
+      "z": 4.0
+    },
+    "spawn_forward": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 1.0
+    },
+    "geometry_sha256": "67f6a309f5d5cd9948eafd3ecec8d9ca4d9f4c27abca84b85d709f90ab044ada",
+    "task_sha256": "312443884c10c859282f857780968922813fb76df791b37037e7b77665d92f92",
+    "outcome": "Finish",
+    "quality": {
+      "version": "physics-quality-v1",
+      "ticks": 778,
+      "offAsphaltTicks": 0,
+      "offAsphaltFraction": 0.0,
+      "maximumReverseSeconds": 0.0,
+      "maximumStallSeconds": 0.0,
+      "firstCornerPassed": true,
+      "cleanFinish": true,
+      "firstCornerEntryDistance": 24.228816986083984,
+      "firstCornerExitDistance": 37.30855178833008,
+      "failureDistanceToFirstCorner": -329.17633056640625
+    },
+    "physics_ticks": 778,
+    "simulated_seconds": 15.559993743896484,
+    "camera": {
+      "mode": "chase",
+      "vertical_fov": 48,
+      "downward_angle": 35,
+      "distance": 22,
+      "look_ahead": 4,
+      "speed_fov_boost": 0
+    },
+    "captured_frames": 251,
+    "contiguous_first_episode_frames": 250,
+    "reset_frames_excluded": 1,
+    "first_visual_episode_seconds": 0.119999953,
+    "last_visual_episode_seconds": 15.5199938,
+    "timing": "Actual physics ticks at .02s; rendered PNG acquisition cadence .05 wall seconds with simulated-time timestamps. Encoded media sidecars define excerpt/hold/playback.",
+    "visual_acquisition_note": "Capture begins at or just after .1 simulated seconds; terminal reset frames are excluded, not failures or stalls."
+  },
+  "source_manifest_sha256": "3860f3ae81746155caa513b487c93e6ea1ca88c33acefccd7c6f0b3830a50f75",
+  "recorded_interval_seconds": [
+    0.119999953,
+    15.5199938
+  ],
+  "excerpt_interval_seconds": [
+    1.0,
+    9.0
+  ],
+  "initial_visual_acquisition_seconds": 0.119999953,
+  "excluded_reset_frames": 1,
+  "playback_speed": "1x recorded simulated/replay time",
+  "median_advancing_frame_gap_seconds": 0.05999999999999961,
+  "maximum_advancing_frame_gap_seconds": 0.0800010000000011,
+  "advancing_gaps_over_twice_median_count": 0,
+  "frozen_timestamp_frames": 0,
+  "extra_encoded_frozen_hold_seconds": 0.0,
+  "timing_column": "episode_seconds",
+  "frame_count": 250,
+  "terminal_hold_frame_count": 0,
+  "asset_sha256": {
+    "50000-chase.mp4": "383c2719c5f548d68cbebb1393c6a1d3cfaf644766e146aff50549e139108ab9",
+    "50000-chase.gif": "e77ebe5faa8096c56c97873875e91bf2384233c3f25a743925a9327cb8fc27ed"
+  },
+  "note": "Contiguous recorded first episode; gaps and reset trimming are explicit.",
+  "decode_check": "full MP4 and GIF decode passed",
+  "final_visual_to_terminal_seconds": 0.039999943896484424
+}

@@ -34,6 +34,12 @@ namespace Racing
             AddCarDetails(agent.transform);
             var backdrop=new GameObject("Procedural backdrop presentation").AddComponent<ProceduralBackdrop>();
             backdrop.track=agent.episode.track;
+            if(Array.IndexOf(args,"--portfolio-replay")>=0)
+            {
+                foreach(var light in FindObjectsByType<Light>(FindObjectsSortMode.None))
+                    if(light.type==LightType.Directional) { light.shadows=LightShadows.Soft;light.shadowStrength=.7f; }
+                return;
+            }
             string cameraMode=Arg(args,"--portfolio-camera")??"chase";
             if(cameraMode!="chase"&&cameraMode!="overview") throw new ArgumentException("Unknown portfolio camera: "+cameraMode);
             if(cameraMode=="overview")

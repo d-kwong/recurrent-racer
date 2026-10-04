@@ -4,8 +4,19 @@
   "checkpoint_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
   "track_mode": "procedural",
   "track_seed": 1009,
-  "track_eval_spawn_indices": [-1],
+  "track_eval_spawn_indices": [
+    -1
+  ],
   "quality_telemetry": true,
-  "quality_gate_evidence": "results/quality/capture-gate.json",
-  "untouched_test_evidence": "results/quality/held-out.json"
+  "quality_gate_evidence": "results/compact/capture-gate.json",
+  "untouched_test_evidence": "results/compact/held-out.json",
+  "track_layout": "compact",
+  "track_segments": 5,
+  "track_straight_min": 25,
+  "track_straight_max": 55,
+  "track_radius_min": 22,
+  "track_radius_max": 42,
+  "track_angle_min": 25,
+  "track_angle_max": 100,
+  "track_spacing": 2
 }

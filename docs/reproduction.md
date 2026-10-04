@@ -61,3 +61,7 @@ See [training](training.md) for warm-start, from-scratch, resume and TensorBoard
 The checked build entrypoint targets macOS. Linux/Windows players may be built from the same scene using Unity's build settings and passed with `--env`, but those platforms, package installs and numerical results have not been tested here. Unity licensing, required platform modules, registry/network access and Python build tools are external setup prerequisites. No precompiled demo build is committed.
 
 Validation rebuilt the source copy and ran it with the existing verified Python environment, then checked local imports, commands, actor parity, evaluation, rendered playback and a small training/resume smoke. It did not install all dependencies on a fresh machine or reproduce sustained training from scratch.
+
+## Current compact showcase
+
+Bare `python/train_sac.py view` uses the accepted compact actor and seed 1009. Historical fixed examples above retain explicit `--track-mode fixed`; historical procedural pilot examples use `--track-layout open` to reproduce original geometry. Explicit `--track-layout compact` selects the new circuit layout. [Current showcase](compact-showcase.md) · [Layout interface](procedural-tracks.md)

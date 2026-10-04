@@ -17,6 +17,8 @@ def main():
     p.add_argument('--seed',type=int,required=True);p.add_argument('--camera',choices=['chase','overview'],required=True)
     p.add_argument('--output',type=Path,required=True);p.add_argument('--frames',type=Path,required=True)
     p.add_argument('--episodes',type=int,default=1)
+    p.add_argument('--sensor-overlay',action='store_true')
+    p.add_argument('--poses',type=Path)
     a=p.parse_args();a.output.mkdir(parents=True,exist_ok=False);a.frames.mkdir(parents=True,exist_ok=False)
     config=json.loads(a.config.read_text())
     config.update(env=str(a.env.resolve()),output=str(a.output.resolve()),mode='view',render=True,time_scale=1,
@@ -26,6 +28,8 @@ def main():
                   player_args=['--portfolio-camera',a.camera,'--portfolio-capture',str(a.frames.resolve()),
                                '--portfolio-label',f'POLICY / seed {a.seed} / original',
                                '-screen-width','1280','-screen-height','720','-screen-fullscreen','0'])
+    if a.sensor_overlay: config['player_args']+=['--portfolio-rays']
+    if a.poses: config['player_args']+=['--portfolio-poses',str(a.poses.resolve())]
     (a.output/'config.json').write_text(json.dumps(config,indent=2)+'\n')
     torch.set_num_threads(1);learner=trainer.SAC(dict(config,initial_alpha=.02,learning_rate=.0003,target_entropy=-2,tau=.005))
     data=trainer.load(a.checkpoint,learner)

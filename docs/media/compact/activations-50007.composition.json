@@ -1,0 +1,1331 @@
+{
+  "policy_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
+  "activations_sha256": "aa3c71f3ea7661f2b4a35d8964eb90ada42825fca26c9ba32c7161646d50a9fe",
+  "ray_samples_sha256": "c4c0e5599d6d5c030fade20dad30876a7a81cd0dcd8f58aed1e4828baa991cf0",
+  "frame_decision_mapping": [
+    {
+      "frame": 0,
+      "physics_ticks": 16,
+      "decision_index": 3,
+      "decision_physics_ticks": 16
+    },
+    {
+      "frame": 1,
+      "physics_ticks": 20,
+      "decision_index": 3,
+      "decision_physics_ticks": 16
+    },
+    {
+      "frame": 2,
+      "physics_ticks": 23,
+      "decision_index": 4,
+      "decision_physics_ticks": 21
+    },
+    {
+      "frame": 3,
+      "physics_ticks": 26,
+      "decision_index": 5,
+      "decision_physics_ticks": 26
+    },
+    {
+      "frame": 4,
+      "physics_ticks": 29,
+      "decision_index": 5,
+      "decision_physics_ticks": 26
+    },
+    {
+      "frame": 5,
+      "physics_ticks": 32,
+      "decision_index": 6,
+      "decision_physics_ticks": 31
+    },
+    {
+      "frame": 6,
+      "physics_ticks": 36,
+      "decision_index": 7,
+      "decision_physics_ticks": 36
+    },
+    {
+      "frame": 7,
+      "physics_ticks": 39,
+      "decision_index": 7,
+      "decision_physics_ticks": 36
+    },
+    {
+      "frame": 8,
+      "physics_ticks": 42,
+      "decision_index": 8,
+      "decision_physics_ticks": 41
+    },
+    {
+      "frame": 9,
+      "physics_ticks": 46,
+      "decision_index": 9,
+      "decision_physics_ticks": 46
+    },
+    {
+      "frame": 10,
+      "physics_ticks": 49,
+      "decision_index": 9,
+      "decision_physics_ticks": 46
+    },
+    {
+      "frame": 11,
+      "physics_ticks": 52,
+      "decision_index": 10,
+      "decision_physics_ticks": 51
+    },
+    {
+      "frame": 12,
+      "physics_ticks": 55,
+      "decision_index": 10,
+      "decision_physics_ticks": 51
+    },
+    {
+      "frame": 13,
+      "physics_ticks": 58,
+      "decision_index": 11,
+      "decision_physics_ticks": 56
+    },
+    {
+      "frame": 14,
+      "physics_ticks": 61,
+      "decision_index": 12,
+      "decision_physics_ticks": 61
+    },
+    {
+      "frame": 15,
+      "physics_ticks": 64,
+      "decision_index": 12,
+      "decision_physics_ticks": 61
+    },
+    {
+      "frame": 16,
+      "physics_ticks": 67,
+      "decision_index": 13,
+      "decision_physics_ticks": 66
+    },
+    {
+      "frame": 17,
+      "physics_ticks": 71,
+      "decision_index": 14,
+      "decision_physics_ticks": 71
+    },
+    {
+      "frame": 18,
+      "physics_ticks": 74,
+      "decision_index": 14,
+      "decision_physics_ticks": 71
+    },
+    {
+      "frame": 19,
+      "physics_ticks": 77,
+      "decision_index": 15,
+      "decision_physics_ticks": 76
+    },
+    {
+      "frame": 20,
+      "physics_ticks": 80,
+      "decision_index": 15,
+      "decision_physics_ticks": 76
+    },
+    {
+      "frame": 21,
+      "physics_ticks": 83,
+      "decision_index": 16,
+      "decision_physics_ticks": 81
+    },
+    {
+      "frame": 22,
+      "physics_ticks": 86,
+      "decision_index": 17,
+      "decision_physics_ticks": 86
+    },
+    {
+      "frame": 23,
+      "physics_ticks": 89,
+      "decision_index": 17,
+      "decision_physics_ticks": 86
+    },
+    {
+      "frame": 24,
+      "physics_ticks": 92,
+      "decision_index": 18,
+      "decision_physics_ticks": 91
+    },
+    {
+      "frame": 25,
+      "physics_ticks": 95,
+      "decision_index": 18,
+      "decision_physics_ticks": 91
+    },
+    {
+      "frame": 26,
+      "physics_ticks": 98,
+      "decision_index": 19,
+      "decision_physics_ticks": 96
+    },
+    {
+      "frame": 27,
+      "physics_ticks": 101,
+      "decision_index": 20,
+      "decision_physics_ticks": 101
+    },
+    {
+      "frame": 28,
+      "physics_ticks": 104,
+      "decision_index": 20,
+      "decision_physics_ticks": 101
+    },
+    {
+      "frame": 29,
+      "physics_ticks": 107,
+      "decision_index": 21,
+      "decision_physics_ticks": 106
+    },
+    {
+      "frame": 30,
+      "physics_ticks": 110,
+      "decision_index": 21,
+      "decision_physics_ticks": 106
+    },
+    {
+      "frame": 31,
+      "physics_ticks": 113,
+      "decision_index": 22,
+      "decision_physics_ticks": 111
+    },
+    {
+      "frame": 32,
+      "physics_ticks": 116,
+      "decision_index": 23,
+      "decision_physics_ticks": 116
+    },
+    {
+      "frame": 33,
+      "physics_ticks": 119,
+      "decision_index": 23,
+      "decision_physics_ticks": 116
+    },
+    {
+      "frame": 34,
+      "physics_ticks": 122,
+      "decision_index": 24,
+      "decision_physics_ticks": 121
+    },
+    {
+      "frame": 35,
+      "physics_ticks": 125,
+      "decision_index": 24,
+      "decision_physics_ticks": 121
+    },
+    {
+      "frame": 36,
+      "physics_ticks": 127,
+      "decision_index": 25,
+      "decision_physics_ticks": 126
+    },
+    {
+      "frame": 37,
+      "physics_ticks": 130,
+      "decision_index": 25,
+      "decision_physics_ticks": 126
+    },
+    {
+      "frame": 38,
+      "physics_ticks": 133,
+      "decision_index": 26,
+      "decision_physics_ticks": 131
+    },
+    {
+      "frame": 39,
+      "physics_ticks": 136,
+      "decision_index": 27,
+      "decision_physics_ticks": 136
+    },
+    {
+      "frame": 40,
+      "physics_ticks": 139,
+      "decision_index": 27,
+      "decision_physics_ticks": 136
+    },
+    {
+      "frame": 41,
+      "physics_ticks": 142,
+      "decision_index": 28,
+      "decision_physics_ticks": 141
+    },
+    {
+      "frame": 42,
+      "physics_ticks": 146,
+      "decision_index": 29,
+      "decision_physics_ticks": 146
+    },
+    {
+      "frame": 43,
+      "physics_ticks": 149,
+      "decision_index": 29,
+      "decision_physics_ticks": 146
+    },
+    {
+      "frame": 44,
+      "physics_ticks": 152,
+      "decision_index": 30,
+      "decision_physics_ticks": 151
+    },
+    {
+      "frame": 45,
+      "physics_ticks": 155,
+      "decision_index": 30,
+      "decision_physics_ticks": 151
+    },
+    {
+      "frame": 46,
+      "physics_ticks": 158,
+      "decision_index": 31,
+      "decision_physics_ticks": 156
+    },
+    {
+      "frame": 47,
+      "physics_ticks": 161,
+      "decision_index": 32,
+      "decision_physics_ticks": 161
+    },
+    {
+      "frame": 48,
+      "physics_ticks": 164,
+      "decision_index": 32,
+      "decision_physics_ticks": 161
+    },
+    {
+      "frame": 49,
+      "physics_ticks": 167,
+      "decision_index": 33,
+      "decision_physics_ticks": 166
+    },
+    {
+      "frame": 50,
+      "physics_ticks": 170,
+      "decision_index": 33,
+      "decision_physics_ticks": 166
+    },
+    {
+      "frame": 51,
+      "physics_ticks": 173,
+      "decision_index": 34,
+      "decision_physics_ticks": 171
+    },
+    {
+      "frame": 52,
+      "physics_ticks": 176,
+      "decision_index": 35,
+      "decision_physics_ticks": 176
+    },
+    {
+      "frame": 53,
+      "physics_ticks": 179,
+      "decision_index": 35,
+      "decision_physics_ticks": 176
+    },
+    {
+      "frame": 54,
+      "physics_ticks": 182,
+      "decision_index": 36,
+      "decision_physics_ticks": 181
+    },
+    {
+      "frame": 55,
+      "physics_ticks": 185,
+      "decision_index": 36,
+      "decision_physics_ticks": 181
+    },
+    {
+      "frame": 56,
+      "physics_ticks": 188,
+      "decision_index": 37,
+      "decision_physics_ticks": 186
+    },
+    {
+      "frame": 57,
+      "physics_ticks": 191,
+      "decision_index": 38,
+      "decision_physics_ticks": 191
+    },
+    {
+      "frame": 58,
+      "physics_ticks": 194,
+      "decision_index": 38,
+      "decision_physics_ticks": 191
+    },
+    {
+      "frame": 59,
+      "physics_ticks": 197,
+      "decision_index": 39,
+      "decision_physics_ticks": 196
+    },
+    {
+      "frame": 60,
+      "physics_ticks": 201,
+      "decision_index": 40,
+      "decision_physics_ticks": 201
+    },
+    {
+      "frame": 61,
+      "physics_ticks": 204,
+      "decision_index": 40,
+      "decision_physics_ticks": 201
+    },
+    {
+      "frame": 62,
+      "physics_ticks": 207,
+      "decision_index": 41,
+      "decision_physics_ticks": 206
+    },
+    {
+      "frame": 63,
+      "physics_ticks": 210,
+      "decision_index": 41,
+      "decision_physics_ticks": 206
+    },
+    {
+      "frame": 64,
+      "physics_ticks": 213,
+      "decision_index": 42,
+      "decision_physics_ticks": 211
+    },
+    {
+      "frame": 65,
+      "physics_ticks": 216,
+      "decision_index": 43,
+      "decision_physics_ticks": 216
+    },
+    {
+      "frame": 66,
+      "physics_ticks": 219,
+      "decision_index": 43,
+      "decision_physics_ticks": 216
+    },
+    {
+      "frame": 67,
+      "physics_ticks": 222,
+      "decision_index": 44,
+      "decision_physics_ticks": 221
+    },
+    {
+      "frame": 68,
+      "physics_ticks": 226,
+      "decision_index": 45,
+      "decision_physics_ticks": 226
+    },
+    {
+      "frame": 69,
+      "physics_ticks": 229,
+      "decision_index": 45,
+      "decision_physics_ticks": 226
+    },
+    {
+      "frame": 70,
+      "physics_ticks": 232,
+      "decision_index": 46,
+      "decision_physics_ticks": 231
+    },
+    {
+      "frame": 71,
+      "physics_ticks": 235,
+      "decision_index": 46,
+      "decision_physics_ticks": 231
+    },
+    {
+      "frame": 72,
+      "physics_ticks": 237,
+      "decision_index": 47,
+      "decision_physics_ticks": 236
+    },
+    {
+      "frame": 73,
+      "physics_ticks": 241,
+      "decision_index": 48,
+      "decision_physics_ticks": 241
+    },
+    {
+      "frame": 74,
+      "physics_ticks": 244,
+      "decision_index": 48,
+      "decision_physics_ticks": 241
+    },
+    {
+      "frame": 75,
+      "physics_ticks": 247,
+      "decision_index": 49,
+      "decision_physics_ticks": 246
+    },
+    {
+      "frame": 76,
+      "physics_ticks": 250,
+      "decision_index": 49,
+      "decision_physics_ticks": 246
+    },
+    {
+      "frame": 77,
+      "physics_ticks": 253,
+      "decision_index": 50,
+      "decision_physics_ticks": 251
+    },
+    {
+      "frame": 78,
+      "physics_ticks": 256,
+      "decision_index": 51,
+      "decision_physics_ticks": 256
+    },
+    {
+      "frame": 79,
+      "physics_ticks": 259,
+      "decision_index": 51,
+      "decision_physics_ticks": 256
+    },
+    {
+      "frame": 80,
+      "physics_ticks": 262,
+      "decision_index": 52,
+      "decision_physics_ticks": 261
+    },
+    {
+      "frame": 81,
+      "physics_ticks": 265,
+      "decision_index": 52,
+      "decision_physics_ticks": 261
+    },
+    {
+      "frame": 82,
+      "physics_ticks": 267,
+      "decision_index": 53,
+      "decision_physics_ticks": 266
+    },
+    {
+      "frame": 83,
+      "physics_ticks": 271,
+      "decision_index": 54,
+      "decision_physics_ticks": 271
+    },
+    {
+      "frame": 84,
+      "physics_ticks": 274,
+      "decision_index": 54,
+      "decision_physics_ticks": 271
+    },
+    {
+      "frame": 85,
+      "physics_ticks": 277,
+      "decision_index": 55,
+      "decision_physics_ticks": 276
+    },
+    {
+      "frame": 86,
+      "physics_ticks": 281,
+      "decision_index": 56,
+      "decision_physics_ticks": 281
+    },
+    {
+      "frame": 87,
+      "physics_ticks": 284,
+      "decision_index": 56,
+      "decision_physics_ticks": 281
+    },
+    {
+      "frame": 88,
+      "physics_ticks": 287,
+      "decision_index": 57,
+      "decision_physics_ticks": 286
+    },
+    {
+      "frame": 89,
+      "physics_ticks": 290,
+      "decision_index": 57,
+      "decision_physics_ticks": 286
+    },
+    {
+      "frame": 90,
+      "physics_ticks": 293,
+      "decision_index": 58,
+      "decision_physics_ticks": 291
+    },
+    {
+      "frame": 91,
+      "physics_ticks": 296,
+      "decision_index": 59,
+      "decision_physics_ticks": 296
+    },
+    {
+      "frame": 92,
+      "physics_ticks": 299,
+      "decision_index": 59,
+      "decision_physics_ticks": 296
+    },
+    {
+      "frame": 93,
+      "physics_ticks": 302,
+      "decision_index": 60,
+      "decision_physics_ticks": 301
+    },
+    {
+      "frame": 94,
+      "physics_ticks": 305,
+      "decision_index": 60,
+      "decision_physics_ticks": 301
+    },
+    {
+      "frame": 95,
+      "physics_ticks": 307,
+      "decision_index": 61,
+      "decision_physics_ticks": 306
+    },
+    {
+      "frame": 96,
+      "physics_ticks": 311,
+      "decision_index": 62,
+      "decision_physics_ticks": 311
+    },
+    {
+      "frame": 97,
+      "physics_ticks": 314,
+      "decision_index": 62,
+      "decision_physics_ticks": 311
+    },
+    {
+      "frame": 98,
+      "physics_ticks": 317,
+      "decision_index": 63,
+      "decision_physics_ticks": 316
+    },
+    {
+      "frame": 99,
+      "physics_ticks": 321,
+      "decision_index": 64,
+      "decision_physics_ticks": 321
+    },
+    {
+      "frame": 100,
+      "physics_ticks": 324,
+      "decision_index": 64,
+      "decision_physics_ticks": 321
+    },
+    {
+      "frame": 101,
+      "physics_ticks": 327,
+      "decision_index": 65,
+      "decision_physics_ticks": 326
+    },
+    {
+      "frame": 102,
+      "physics_ticks": 330,
+      "decision_index": 65,
+      "decision_physics_ticks": 326
+    },
+    {
+      "frame": 103,
+      "physics_ticks": 333,
+      "decision_index": 66,
+      "decision_physics_ticks": 331
+    },
+    {
+      "frame": 104,
+      "physics_ticks": 336,
+      "decision_index": 67,
+      "decision_physics_ticks": 336
+    },
+    {
+      "frame": 105,
+      "physics_ticks": 339,
+      "decision_index": 67,
+      "decision_physics_ticks": 336
+    },
+    {
+      "frame": 106,
+      "physics_ticks": 342,
+      "decision_index": 68,
+      "decision_physics_ticks": 341
+    },
+    {
+      "frame": 107,
+      "physics_ticks": 346,
+      "decision_index": 69,
+      "decision_physics_ticks": 346
+    },
+    {
+      "frame": 108,
+      "physics_ticks": 349,
+      "decision_index": 69,
+      "decision_physics_ticks": 346
+    },
+    {
+      "frame": 109,
+      "physics_ticks": 352,
+      "decision_index": 70,
+      "decision_physics_ticks": 351
+    },
+    {
+      "frame": 110,
+      "physics_ticks": 356,
+      "decision_index": 71,
+      "decision_physics_ticks": 356
+    },
+    {
+      "frame": 111,
+      "physics_ticks": 359,
+      "decision_index": 71,
+      "decision_physics_ticks": 356
+    },
+    {
+      "frame": 112,
+      "physics_ticks": 362,
+      "decision_index": 72,
+      "decision_physics_ticks": 361
+    },
+    {
+      "frame": 113,
+      "physics_ticks": 366,
+      "decision_index": 73,
+      "decision_physics_ticks": 366
+    },
+    {
+      "frame": 114,
+      "physics_ticks": 369,
+      "decision_index": 73,
+      "decision_physics_ticks": 366
+    },
+    {
+      "frame": 115,
+      "physics_ticks": 372,
+      "decision_index": 74,
+      "decision_physics_ticks": 371
+    },
+    {
+      "frame": 116,
+      "physics_ticks": 376,
+      "decision_index": 75,
+      "decision_physics_ticks": 376
+    },
+    {
+      "frame": 117,
+      "physics_ticks": 379,
+      "decision_index": 75,
+      "decision_physics_ticks": 376
+    },
+    {
+      "frame": 118,
+      "physics_ticks": 382,
+      "decision_index": 76,
+      "decision_physics_ticks": 381
+    },
+    {
+      "frame": 119,
+      "physics_ticks": 386,
+      "decision_index": 77,
+      "decision_physics_ticks": 386
+    },
+    {
+      "frame": 120,
+      "physics_ticks": 389,
+      "decision_index": 77,
+      "decision_physics_ticks": 386
+    },
+    {
+      "frame": 121,
+      "physics_ticks": 392,
+      "decision_index": 78,
+      "decision_physics_ticks": 391
+    },
+    {
+      "frame": 122,
+      "physics_ticks": 395,
+      "decision_index": 78,
+      "decision_physics_ticks": 391
+    },
+    {
+      "frame": 123,
+      "physics_ticks": 398,
+      "decision_index": 79,
+      "decision_physics_ticks": 396
+    },
+    {
+      "frame": 124,
+      "physics_ticks": 401,
+      "decision_index": 80,
+      "decision_physics_ticks": 401
+    },
+    {
+      "frame": 125,
+      "physics_ticks": 404,
+      "decision_index": 80,
+      "decision_physics_ticks": 401
+    },
+    {
+      "frame": 126,
+      "physics_ticks": 407,
+      "decision_index": 81,
+      "decision_physics_ticks": 406
+    },
+    {
+      "frame": 127,
+      "physics_ticks": 411,
+      "decision_index": 82,
+      "decision_physics_ticks": 411
+    },
+    {
+      "frame": 128,
+      "physics_ticks": 414,
+      "decision_index": 82,
+      "decision_physics_ticks": 411
+    },
+    {
+      "frame": 129,
+      "physics_ticks": 417,
+      "decision_index": 83,
+      "decision_physics_ticks": 416
+    },
+    {
+      "frame": 130,
+      "physics_ticks": 421,
+      "decision_index": 84,
+      "decision_physics_ticks": 421
+    },
+    {
+      "frame": 131,
+      "physics_ticks": 424,
+      "decision_index": 84,
+      "decision_physics_ticks": 421
+    },
+    {
+      "frame": 132,
+      "physics_ticks": 427,
+      "decision_index": 85,
+      "decision_physics_ticks": 426
+    },
+    {
+      "frame": 133,
+      "physics_ticks": 430,
+      "decision_index": 85,
+      "decision_physics_ticks": 426
+    },
+    {
+      "frame": 134,
+      "physics_ticks": 433,
+      "decision_index": 86,
+      "decision_physics_ticks": 431
+    },
+    {
+      "frame": 135,
+      "physics_ticks": 436,
+      "decision_index": 87,
+      "decision_physics_ticks": 436
+    },
+    {
+      "frame": 136,
+      "physics_ticks": 439,
+      "decision_index": 87,
+      "decision_physics_ticks": 436
+    },
+    {
+      "frame": 137,
+      "physics_ticks": 442,
+      "decision_index": 88,
+      "decision_physics_ticks": 441
+    },
+    {
+      "frame": 138,
+      "physics_ticks": 445,
+      "decision_index": 88,
+      "decision_physics_ticks": 441
+    },
+    {
+      "frame": 139,
+      "physics_ticks": 448,
+      "decision_index": 89,
+      "decision_physics_ticks": 446
+    },
+    {
+      "frame": 140,
+      "physics_ticks": 451,
+      "decision_index": 90,
+      "decision_physics_ticks": 451
+    },
+    {
+      "frame": 141,
+      "physics_ticks": 454,
+      "decision_index": 90,
+      "decision_physics_ticks": 451
+    },
+    {
+      "frame": 142,
+      "physics_ticks": 457,
+      "decision_index": 91,
+      "decision_physics_ticks": 456
+    },
+    {
+      "frame": 143,
+      "physics_ticks": 460,
+      "decision_index": 91,
+      "decision_physics_ticks": 456
+    },
+    {
+      "frame": 144,
+      "physics_ticks": 462,
+      "decision_index": 92,
+      "decision_physics_ticks": 461
+    },
+    {
+      "frame": 145,
+      "physics_ticks": 466,
+      "decision_index": 93,
+      "decision_physics_ticks": 466
+    },
+    {
+      "frame": 146,
+      "physics_ticks": 469,
+      "decision_index": 93,
+      "decision_physics_ticks": 466
+    },
+    {
+      "frame": 147,
+      "physics_ticks": 472,
+      "decision_index": 94,
+      "decision_physics_ticks": 471
+    },
+    {
+      "frame": 148,
+      "physics_ticks": 476,
+      "decision_index": 95,
+      "decision_physics_ticks": 476
+    },
+    {
+      "frame": 149,
+      "physics_ticks": 479,
+      "decision_index": 95,
+      "decision_physics_ticks": 476
+    },
+    {
+      "frame": 150,
+      "physics_ticks": 481,
+      "decision_index": 96,
+      "decision_physics_ticks": 481
+    },
+    {
+      "frame": 151,
+      "physics_ticks": 484,
+      "decision_index": 96,
+      "decision_physics_ticks": 481
+    },
+    {
+      "frame": 152,
+      "physics_ticks": 487,
+      "decision_index": 97,
+      "decision_physics_ticks": 486
+    },
+    {
+      "frame": 153,
+      "physics_ticks": 491,
+      "decision_index": 98,
+      "decision_physics_ticks": 491
+    },
+    {
+      "frame": 154,
+      "physics_ticks": 494,
+      "decision_index": 98,
+      "decision_physics_ticks": 491
+    },
+    {
+      "frame": 155,
+      "physics_ticks": 497,
+      "decision_index": 99,
+      "decision_physics_ticks": 496
+    },
+    {
+      "frame": 156,
+      "physics_ticks": 501,
+      "decision_index": 100,
+      "decision_physics_ticks": 501
+    },
+    {
+      "frame": 157,
+      "physics_ticks": 504,
+      "decision_index": 100,
+      "decision_physics_ticks": 501
+    },
+    {
+      "frame": 158,
+      "physics_ticks": 507,
+      "decision_index": 101,
+      "decision_physics_ticks": 506
+    },
+    {
+      "frame": 159,
+      "physics_ticks": 510,
+      "decision_index": 101,
+      "decision_physics_ticks": 506
+    },
+    {
+      "frame": 160,
+      "physics_ticks": 513,
+      "decision_index": 102,
+      "decision_physics_ticks": 511
+    },
+    {
+      "frame": 161,
+      "physics_ticks": 516,
+      "decision_index": 103,
+      "decision_physics_ticks": 516
+    },
+    {
+      "frame": 162,
+      "physics_ticks": 519,
+      "decision_index": 103,
+      "decision_physics_ticks": 516
+    },
+    {
+      "frame": 163,
+      "physics_ticks": 522,
+      "decision_index": 104,
+      "decision_physics_ticks": 521
+    },
+    {
+      "frame": 164,
+      "physics_ticks": 525,
+      "decision_index": 104,
+      "decision_physics_ticks": 521
+    },
+    {
+      "frame": 165,
+      "physics_ticks": 528,
+      "decision_index": 105,
+      "decision_physics_ticks": 526
+    },
+    {
+      "frame": 166,
+      "physics_ticks": 531,
+      "decision_index": 106,
+      "decision_physics_ticks": 531
+    },
+    {
+      "frame": 167,
+      "physics_ticks": 534,
+      "decision_index": 106,
+      "decision_physics_ticks": 531
+    },
+    {
+      "frame": 168,
+      "physics_ticks": 537,
+      "decision_index": 107,
+      "decision_physics_ticks": 536
+    },
+    {
+      "frame": 169,
+      "physics_ticks": 540,
+      "decision_index": 107,
+      "decision_physics_ticks": 536
+    },
+    {
+      "frame": 170,
+      "physics_ticks": 542,
+      "decision_index": 108,
+      "decision_physics_ticks": 541
+    },
+    {
+      "frame": 171,
+      "physics_ticks": 546,
+      "decision_index": 109,
+      "decision_physics_ticks": 546
+    },
+    {
+      "frame": 172,
+      "physics_ticks": 549,
+      "decision_index": 109,
+      "decision_physics_ticks": 546
+    },
+    {
+      "frame": 173,
+      "physics_ticks": 552,
+      "decision_index": 110,
+      "decision_physics_ticks": 551
+    },
+    {
+      "frame": 174,
+      "physics_ticks": 556,
+      "decision_index": 111,
+      "decision_physics_ticks": 556
+    },
+    {
+      "frame": 175,
+      "physics_ticks": 559,
+      "decision_index": 111,
+      "decision_physics_ticks": 556
+    },
+    {
+      "frame": 176,
+      "physics_ticks": 562,
+      "decision_index": 112,
+      "decision_physics_ticks": 561
+    },
+    {
+      "frame": 177,
+      "physics_ticks": 565,
+      "decision_index": 112,
+      "decision_physics_ticks": 561
+    },
+    {
+      "frame": 178,
+      "physics_ticks": 568,
+      "decision_index": 113,
+      "decision_physics_ticks": 566
+    },
+    {
+      "frame": 179,
+      "physics_ticks": 571,
+      "decision_index": 114,
+      "decision_physics_ticks": 571
+    },
+    {
+      "frame": 180,
+      "physics_ticks": 574,
+      "decision_index": 114,
+      "decision_physics_ticks": 571
+    },
+    {
+      "frame": 181,
+      "physics_ticks": 576,
+      "decision_index": 115,
+      "decision_physics_ticks": 576
+    },
+    {
+      "frame": 182,
+      "physics_ticks": 580,
+      "decision_index": 115,
+      "decision_physics_ticks": 576
+    },
+    {
+      "frame": 183,
+      "physics_ticks": 582,
+      "decision_index": 116,
+      "decision_physics_ticks": 581
+    },
+    {
+      "frame": 184,
+      "physics_ticks": 585,
+      "decision_index": 116,
+      "decision_physics_ticks": 581
+    },
+    {
+      "frame": 185,
+      "physics_ticks": 588,
+      "decision_index": 117,
+      "decision_physics_ticks": 586
+    },
+    {
+      "frame": 186,
+      "physics_ticks": 591,
+      "decision_index": 118,
+      "decision_physics_ticks": 591
+    },
+    {
+      "frame": 187,
+      "physics_ticks": 594,
+      "decision_index": 118,
+      "decision_physics_ticks": 591
+    },
+    {
+      "frame": 188,
+      "physics_ticks": 597,
+      "decision_index": 119,
+      "decision_physics_ticks": 596
+    },
+    {
+      "frame": 189,
+      "physics_ticks": 600,
+      "decision_index": 119,
+      "decision_physics_ticks": 596
+    },
+    {
+      "frame": 190,
+      "physics_ticks": 603,
+      "decision_index": 120,
+      "decision_physics_ticks": 601
+    },
+    {
+      "frame": 191,
+      "physics_ticks": 606,
+      "decision_index": 121,
+      "decision_physics_ticks": 606
+    },
+    {
+      "frame": 192,
+      "physics_ticks": 609,
+      "decision_index": 121,
+      "decision_physics_ticks": 606
+    },
+    {
+      "frame": 193,
+      "physics_ticks": 612,
+      "decision_index": 122,
+      "decision_physics_ticks": 611
+    },
+    {
+      "frame": 194,
+      "physics_ticks": 616,
+      "decision_index": 123,
+      "decision_physics_ticks": 616
+    },
+    {
+      "frame": 195,
+      "physics_ticks": 619,
+      "decision_index": 123,
+      "decision_physics_ticks": 616
+    },
+    {
+      "frame": 196,
+      "physics_ticks": 622,
+      "decision_index": 124,
+      "decision_physics_ticks": 621
+    },
+    {
+      "frame": 197,
+      "physics_ticks": 626,
+      "decision_index": 125,
+      "decision_physics_ticks": 626
+    },
+    {
+      "frame": 198,
+      "physics_ticks": 629,
+      "decision_index": 125,
+      "decision_physics_ticks": 626
+    },
+    {
+      "frame": 199,
+      "physics_ticks": 632,
+      "decision_index": 126,
+      "decision_physics_ticks": 631
+    },
+    {
+      "frame": 200,
+      "physics_ticks": 635,
+      "decision_index": 126,
+      "decision_physics_ticks": 631
+    },
+    {
+      "frame": 201,
+      "physics_ticks": 638,
+      "decision_index": 127,
+      "decision_physics_ticks": 636
+    },
+    {
+      "frame": 202,
+      "physics_ticks": 641,
+      "decision_index": 128,
+      "decision_physics_ticks": 641
+    },
+    {
+      "frame": 203,
+      "physics_ticks": 644,
+      "decision_index": 128,
+      "decision_physics_ticks": 641
+    },
+    {
+      "frame": 204,
+      "physics_ticks": 646,
+      "decision_index": 129,
+      "decision_physics_ticks": 646
+    },
+    {
+      "frame": 205,
+      "physics_ticks": 649,
+      "decision_index": 129,
+      "decision_physics_ticks": 646
+    },
+    {
+      "frame": 206,
+      "physics_ticks": 652,
+      "decision_index": 130,
+      "decision_physics_ticks": 651
+    },
+    {
+      "frame": 207,
+      "physics_ticks": 655,
+      "decision_index": 130,
+      "decision_physics_ticks": 651
+    },
+    {
+      "frame": 208,
+      "physics_ticks": 657,
+      "decision_index": 131,
+      "decision_physics_ticks": 656
+    },
+    {
+      "frame": 209,
+      "physics_ticks": 661,
+      "decision_index": 132,
+      "decision_physics_ticks": 661
+    },
+    {
+      "frame": 210,
+      "physics_ticks": 664,
+      "decision_index": 132,
+      "decision_physics_ticks": 661
+    },
+    {
+      "frame": 211,
+      "physics_ticks": 667,
+      "decision_index": 133,
+      "decision_physics_ticks": 666
+    },
+    {
+      "frame": 212,
+      "physics_ticks": 671,
+      "decision_index": 134,
+      "decision_physics_ticks": 671
+    },
+    {
+      "frame": 213,
+      "physics_ticks": 674,
+      "decision_index": 134,
+      "decision_physics_ticks": 671
+    },
+    {
+      "frame": 214,
+      "physics_ticks": 677,
+      "decision_index": 135,
+      "decision_physics_ticks": 676
+    },
+    {
+      "frame": 215,
+      "physics_ticks": 680,
+      "decision_index": 135,
+      "decision_physics_ticks": 676
+    },
+    {
+      "frame": 216,
+      "physics_ticks": 683,
+      "decision_index": 136,
+      "decision_physics_ticks": 681
+    },
+    {
+      "frame": 217,
+      "physics_ticks": 686,
+      "decision_index": 137,
+      "decision_physics_ticks": 686
+    },
+    {
+      "frame": 218,
+      "physics_ticks": 689,
+      "decision_index": 137,
+      "decision_physics_ticks": 686
+    },
+    {
+      "frame": 219,
+      "physics_ticks": 692,
+      "decision_index": 138,
+      "decision_physics_ticks": 691
+    }
+  ],
+  "synchronization": "latest actual recorded decision at or before each frame physics tick; same-tick rays bitwise float32 validated",
+  "initial_composed_episode_seconds": 0.2999999,
+  "note": "Recorded inputs and activations, not an attention or causal explanation.",
+  "source_reset_frames_excluded": 1
+}

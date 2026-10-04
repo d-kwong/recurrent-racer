@@ -1,0 +1,187 @@
+{
+  "kind": "driving",
+  "evidence": {
+    "seed": 50001,
+    "checkpoint": "policies/procedural-selected.pt",
+    "checkpoint_sha256": "55e3c08236ef676bd5938743375cca8032b3d0b53228d76dfee146fcb8d65a21",
+    "build_sha256": "440f7ab674c5e9ca503f0b6bb6cbdebe923a251317090a9c59b7ef79fcb1ce41",
+    "generation_parameters": {
+      "generatorVersion": "compact-circuit-v1",
+      "parameters": {
+        "segments": 5,
+        "straightMin": 25.0,
+        "straightMax": 55.0,
+        "radiusMin": 22.0,
+        "radiusMax": 42.0,
+        "angleMin": 25.0,
+        "angleMax": 100.0,
+        "spacing": 2.0
+      },
+      "acceptedAttempt": 49,
+      "roadWidth": 9.0,
+      "curbWidth": 1.0,
+      "length": 395.6044921875,
+      "spawnSeed": 7,
+      "spawnDistance": 4.0,
+      "finishDistance": 389.6044921875,
+      "taskDistance": 385.6044921875,
+      "turnEntryDistances": [
+        30.737489700317383,
+        78.48006439208984,
+        124.30084228515625,
+        211.19859313964844,
+        311.55084228515625
+      ],
+      "turnExitDistances": [
+        46.86213684082031,
+        95.36157989501953,
+        170.87991333007812,
+        277.910888671875,
+        375.6044921875
+      ],
+      "activeGateIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        0
+      ]
+    },
+    "requested_track_configuration": {
+      "track_mode": "procedural",
+      "track_train_seeds": [
+        40000,
+        40001,
+        40002,
+        40003,
+        40004,
+        40005,
+        40006,
+        40007,
+        40008,
+        40009,
+        40010,
+        40011,
+        40012,
+        40013,
+        40014,
+        40015,
+        40016,
+        40017,
+        40018,
+        40019,
+        40020,
+        40021,
+        40022,
+        40023,
+        40024,
+        40025,
+        40026,
+        40027,
+        40028,
+        40029,
+        40030,
+        40031
+      ],
+      "track_eval_seeds": [
+        50001
+      ],
+      "track_train_spawn_mode": "curriculum",
+      "track_spawn_seed": 7,
+      "track_eval_spawn_indices": [
+        -1
+      ],
+      "track_eval_spawn_approach": 15,
+      "track_layout": "compact"
+    },
+    "spawn_index": -1,
+    "actual_spawn_position": {
+      "x": 0.0,
+      "y": 0.5550000071525574,
+      "z": 4.0
+    },
+    "spawn_forward": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 1.0
+    },
+    "geometry_sha256": "8b749978c89ace2f1cefe9a463a935f6eb4a858f17201da72f98e8d045a58ada",
+    "task_sha256": "ddb94cf3df9ff39b032b93e544b5125c72b95f5ccea58a9908d25394e3c3045c",
+    "outcome": "Finish",
+    "quality": {
+      "version": "physics-quality-v1",
+      "ticks": 860,
+      "offAsphaltTicks": 0,
+      "offAsphaltFraction": 0.0,
+      "maximumReverseSeconds": 0.0,
+      "maximumStallSeconds": 0.0,
+      "firstCornerPassed": true,
+      "cleanFinish": true,
+      "firstCornerEntryDistance": 26.737489700317383,
+      "firstCornerExitDistance": 42.86213684082031,
+      "failureDistanceToFirstCorner": -356.7991943359375
+    },
+    "physics_ticks": 860,
+    "simulated_seconds": 17.199993133544922,
+    "camera": {
+      "mode": "overview",
+      "vertical_fov": "48",
+      "geometry": "8b749978c89ace2f1cefe9a463a935f6eb4a858f17201da72f98e8d045a58ada",
+      "camera": "overview",
+      "x": "32.5621147",
+      "y": "184.383",
+      "z": "-19.26294",
+      "pitch": "62",
+      "yaw": "0",
+      "aspect": "1.77777779",
+      "bounds_min_x": "-29.9709358",
+      "bounds_min_z": "0",
+      "bounds_max_x": "95.09517",
+      "bounds_max_z": "157.550476",
+      "margin": "1.1",
+      "fixed_during_episode": true
+    },
+    "captured_frames": 278,
+    "contiguous_first_episode_frames": 277,
+    "reset_frames_excluded": 1,
+    "first_visual_episode_seconds": 0.119999953,
+    "last_visual_episode_seconds": 17.1599941,
+    "timing": "Actual physics ticks at .02s; rendered PNG acquisition cadence .05 wall seconds with simulated-time timestamps. Encoded media sidecars define excerpt/hold/playback.",
+    "visual_acquisition_note": "Capture begins at or just after .1 simulated seconds; terminal reset frames are excluded, not failures or stalls."
+  },
+  "source_manifest_sha256": "38f67406ed4e78010ef877d58cd80bb6dd9e967ae1198f219d9039c14f4a521a",
+  "recorded_interval_seconds": [
+    0.119999953,
+    17.1599941
+  ],
+  "excerpt_interval_seconds": [
+    1.0,
+    9.0
+  ],
+  "initial_visual_acquisition_seconds": 0.119999953,
+  "excluded_reset_frames": 1,
+  "playback_speed": "1x recorded simulated/replay time",
+  "median_advancing_frame_gap_seconds": 0.05999999999999961,
+  "maximum_advancing_frame_gap_seconds": 0.08000079999999876,
+  "advancing_gaps_over_twice_median_count": 0,
+  "frozen_timestamp_frames": 0,
+  "extra_encoded_frozen_hold_seconds": 0.0,
+  "timing_column": "episode_seconds",
+  "frame_count": 277,
+  "terminal_hold_frame_count": 0,
+  "asset_sha256": {
+    "50001-overview.mp4": "aea449288221ccbdc773453500140c782eb15882f3f92a19d4a1b781e7dfaa68",
+    "50001-overview.gif": "2cf270053119ba93c98ab150e99c73a36053bbfb09e22b9227ad8bc04e348606"
+  },
+  "note": "Contiguous recorded first episode; gaps and reset trimming are explicit.",
+  "decode_check": "full MP4 and GIF decode passed",
+  "final_visual_to_terminal_seconds": 0.03999903354492318
+}

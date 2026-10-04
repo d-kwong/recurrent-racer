@@ -1,0 +1,25 @@
+{
+  "build_sha256": "136dd515d6ed46d4ecebece29bd0263623c7db95baf81d192fc04e11069b6467",
+  "trace_checks": [
+    {
+      "mode": "fixed",
+      "bitwise_equal": true,
+      "episodes": 3
+    },
+    {
+      "mode": "open",
+      "bitwise_equal": true,
+      "episodes": 8
+    },
+    {
+      "mode": "compact",
+      "bitwise_equal": true,
+      "episodes": 8
+    }
+  ],
+  "python_tests": 26,
+  "default_view_seed": 1009,
+  "default_layout": "compact",
+  "default_view_clean_finish": true,
+  "telemetry_disabled_seed1009_bitwise_equal": true
+}
