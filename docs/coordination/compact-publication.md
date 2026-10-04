@@ -25,3 +25,7 @@ Remote main remains `564133393ee90bb4b8ae0cedfe1170cc1d06d2a1`; the feature bran
 ## Parent final publication approval
 
 Parent approved the exact reviewed source/config/tests/evidence/media/docs scope after the final 26-test Python suite, final compact/open/fixed native smoke checks and viewer compatibility/parity checks passed. The twelve decoded MP4/GIF pairs and actor/ray/ghost driving plus terminal visuals passed hash and parent visual review. Historical assets remain unchanged. Normal feature-branch commit/push and draft PR creation are authorized; merge, force push and deletion are not.
+
+## Published draft
+
+Published the approved 111-file scope in implementation commit `d98d346ea8de38e1ed037b3b46725434454b9c4e`, then pushed `codex/compact-circuit-visuals` normally. Created and attached draft [PR #3](https://github.com/d-kwong/recurrent-racer/pull/3) against `main`; its description includes final 26-test and native/viewer compatibility validation. No merge occurred. A follow-up ledger commit records publication status.
